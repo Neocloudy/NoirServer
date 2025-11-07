@@ -25066,6 +25066,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Port Docking Bay 2";
 	dir = 8
+	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},

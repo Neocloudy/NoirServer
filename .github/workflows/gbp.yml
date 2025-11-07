@@ -52,6 +52,7 @@ jobs:
         with:
           ref: "gbp-balances" # The branch name
           path: gbp-balances
+          token: ${{ secrets.ACTIONSPRIVATE }}
       # This is to ensure we keep the gbp.toml from master
       # without having to update our separate branch.
       - name: Copy configuration

@@ -11,7 +11,8 @@
 	/// Check for these neighboring types when decorating
 	var/static/list/decorate_with = list(
 		/turf/closed/wall,
-		/obj/structure/window,
+		/obj/structure/window/fulltile,
+		/obj/structure/window/reinforced/fulltile,
 		/obj/structure/falsewall,
 		/obj/machinery/door/airlock,
 		/obj/machinery/door/poddoor,

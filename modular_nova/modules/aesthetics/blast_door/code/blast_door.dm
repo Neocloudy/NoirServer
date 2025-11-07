@@ -1,5 +1,4 @@
 /obj/machinery/door/poddoor
-	icon = 'modular_nova/modules/aesthetics/blast_door/icons/blast_door.dmi'
 	animation_sound = 'modular_nova/modules/aesthetics/blast_door/sound/blast_door.ogg'
 
 /obj/machinery/door/poddoor/shutters

@@ -31,6 +31,10 @@
 	if(show_nav_computer_icon)
 		AddElement(/datum/element/nav_computer_icon, 'icons/effects/nav_computer_indicators.dmi', "airlock", TRUE)
 
+/obj/machinery/door/poddoor/post_machine_initialize()
+	. = ..()
+	AddComponent(/datum/component/neighbor_based_rotation)
+
 /obj/machinery/door/poddoor/Destroy()
 	owner = null
 	return ..()

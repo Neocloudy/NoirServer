@@ -122,13 +122,13 @@
 /turf/open/misc/asteroid/airless,
 /area/station/asteroid)
 "aaF" = (
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/external{ 
 	name = "Port Docking Bay 2";
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/light/directional/west,
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "aaG" = (

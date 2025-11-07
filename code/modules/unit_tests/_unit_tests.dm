@@ -331,7 +331,6 @@
 #include "wizard_loadout.dm"
 #include "worn_icons.dm"
 // NOVA EDIT START
-#include "~nova\automapper.dm"
 #include "~nova\liver_nova.dm"
 #include "~nova\opposing_force.dm"
 #include "~nova\shuttle.dm"

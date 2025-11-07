@@ -8177,10 +8177,8 @@
 /turf/open/floor/plating,
 /area/station/construction/mining/aux_base)
 "cuJ" = (
-/obj/machinery/vending/dorms,
-/obj/item/toy/figure/assistant{
-	pixel_y = 17;
-	pixel_x = -7
+/obj/item/kirbyplants/organic/plant7{
+	pixel_x = 4
 	},
 /turf/open/floor/iron/dark/small,
 /area/station/commons/dorms/room4)
@@ -15227,9 +15225,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "etY" = (
-/obj/item/kirbyplants/organic/plant7{
-	pixel_x = 4
-	},
 /obj/machinery/light/small/blacklight/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -40288,8 +40283,8 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/vending/dorms,
 /obj/machinery/light/warm/directional/south,
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/dark,
 /area/station/security/prison)
 "lCY" = (
@@ -48937,11 +48932,11 @@
 /turf/open/openspace,
 /area/station/commons/storage/primary)
 "oaf" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/siding/white{
 	dir = 5
 	},
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/dark/small,
 /area/station/common/cryopods)
 "oah" = (

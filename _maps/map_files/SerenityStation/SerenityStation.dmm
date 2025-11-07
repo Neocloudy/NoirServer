@@ -302,10 +302,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/rd)
-"adw" = (
-/obj/machinery/vending/dorms,
-/turf/open/floor/iron/dark/small,
-/area/station/common/night_club/back_stage)
 "adI" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
@@ -38615,12 +38611,6 @@
 	name = "Night Club"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/curtain/cloth/fancy/mechanical{
-	icon_state = "bounty-open";
-	icon_type = "bounty";
-	id = "Nightclub";
-	name = "curtain"
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark/small,
 /area/station/service/bar)
@@ -52791,7 +52781,6 @@
 "pox" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/dark/opposingcorners{
 	dir = 1
@@ -68591,12 +68580,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/curtain/cloth/fancy/mechanical{
-	icon_state = "bounty-open";
-	icon_type = "bounty";
-	id = "Nightclub";
-	name = "curtain"
-	},
 /turf/open/floor/iron/dark/small,
 /area/station/service/bar)
 "tQR" = (
@@ -74230,7 +74213,6 @@
 	},
 /obj/machinery/light/cold/directional/west,
 /obj/structure/sign/poster/official/random/directional/west,
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/cafeteria,
 /area/station/commons/dorms/laundry)
 "vAC" = (
@@ -115681,7 +115663,7 @@ mSs
 bwa
 dAy
 gGt
-adw
+kvF
 igu
 rlF
 rlF

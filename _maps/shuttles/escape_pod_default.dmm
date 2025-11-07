@@ -12,6 +12,16 @@
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
+"I" = (
+/turf/closed/wall/mineral/titanium{
+	icon_state = "shuttle_wall-6-d"
+	},
+/area/shuttle/pod_1)
+"J" = (
+/turf/closed/wall/mineral/titanium{
+	icon_state = "shuttle_wall-10-d"
+	},
+/area/shuttle/pod_1)
 "N" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Escape Pod Airlock"
@@ -40,7 +50,7 @@
 /area/shuttle/pod_1)
 
 (1,1,1) = {"
-B
+I
 B
 B
 Z
@@ -52,7 +62,7 @@ U
 N
 "}
 (3,1,1) = {"
-B
+J
 B
 B
 Z

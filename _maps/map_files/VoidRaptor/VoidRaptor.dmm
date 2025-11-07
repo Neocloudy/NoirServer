@@ -49970,7 +49970,6 @@
 	},
 /area/station/cargo/storage)
 "nWu" = (
-/obj/machinery/vending/dorms,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/large,
 /area/station/commons/toilet)
@@ -67267,7 +67266,6 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 5
 	},
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/station/security/prison)

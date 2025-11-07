@@ -28789,7 +28789,6 @@
 /turf/open/floor/iron/smooth,
 /area/station/engineering/atmos)
 "fwm" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -47499,7 +47498,6 @@
 /area/station/commons/vacant_room/commissary)
 "jfj" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/vending/dorms,
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark/side{
 	dir = 8
@@ -70504,7 +70502,6 @@
 /area/station/ai_monitored/security/armory)
 "nzX" = (
 /obj/structure/table/reinforced,
-/obj/structure/curtain/bounty,
 /obj/item/clipboard,
 /obj/item/folder,
 /obj/structure/cable,
@@ -79882,7 +79879,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "pnW" = (
-/obj/structure/curtain/bounty,
 /obj/machinery/duct,
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/stairs,
@@ -88589,7 +88585,6 @@
 /area/station/service/hydroponics)
 "qVi" = (
 /obj/structure/table/reinforced,
-/obj/structure/curtain/bounty,
 /obj/item/paper_bin{
 	pixel_y = 3
 	},
@@ -95859,7 +95854,6 @@
 	},
 /area/station/security/prison/safe)
 "spj" = (
-/obj/machinery/vending/dorms,
 /obj/machinery/barsign{
 	pixel_y = 32
 	},
@@ -98647,10 +98641,10 @@
 /turf/open/floor/carpet,
 /area/station/service/chapel/office)
 "sQa" = (
-/obj/structure/sign/poster/contraband/lusty_xenomorph/directional/east,
 /obj/structure/table,
 /obj/structure/etherealball,
 /obj/machinery/duct,
+/obj/structure/sign/poster/random/directional/east,
 /turf/open/floor/carpet/purple,
 /area/station/common/night_club)
 "sQf" = (
@@ -111802,7 +111796,6 @@
 /turf/closed/wall/rust,
 /area/station/maintenance/department/security)
 "voy" = (
-/obj/machinery/vending/dorms,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/carpet/purple,
 /area/station/common/night_club/back_stage)
@@ -114082,7 +114075,6 @@
 /area/station/hallway/primary/upper)
 "vIB" = (
 /obj/structure/table/reinforced,
-/obj/structure/curtain/bounty,
 /obj/item/flashlight/lamp,
 /turf/open/floor/iron/dark,
 /area/station/common/night_club)
@@ -122807,7 +122799,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/upper)
 "xrB" = (
-/obj/structure/sign/poster/contraband/lizard/directional/east,
+/obj/structure/sign/poster/random/directional/east,
 /turf/open/floor/carpet/purple,
 /area/station/common/night_club/back_stage)
 "xrD" = (
@@ -126686,7 +126678,7 @@
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/fore)
 "ydz" = (
-/obj/structure/sign/poster/contraband/lizard/directional/north,
+/obj/structure/sign/poster/random/directional/north,
 /turf/open/floor/carpet/purple,
 /area/station/common/night_club)
 "ydD" = (
@@ -126970,7 +126962,6 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/maintenance/abandon_diner)
 "yga" = (
-/obj/structure/curtain/bounty,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,

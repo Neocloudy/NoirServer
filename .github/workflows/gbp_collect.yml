@@ -19,6 +19,8 @@ jobs:
       - name: Checkout
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.ACTIONSPRIVATE }} # CHANGED FOR PRIVATE REPO
       - name: Setup git
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |
@@ -29,7 +31,8 @@ jobs:
         uses: actions/checkout@v5
         with:
           ref: "gbp-balances" # The branch name
-          path: gbp-balances
+          path: gbp-balances`
+          token: ${{ secrets.ACTIONSPRIVATE }} # CHANGED FOR PRIVATE REPO
       # This is to ensure we keep the gbp.toml from master
       # without having to update our separate branch.
       - name: Copy configuration
@@ -41,4 +44,4 @@ jobs:
         with:
           collect: "true"
           directory: ./gbp-balances
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONSPRIVATE }} # CHANGED FOR PRIVATE REPO, WAS GITHUB_TOKEN

@@ -205,6 +205,10 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_GREY_TIDE, PROC_REF(grey_tide))
 
+/obj/machinery/door/airlock/post_machine_initialize()
+	. = ..()
+	AddComponent(/datum/component/neighbor_based_rotation)
+
 // if dragging, block 'Click on the floor to close airlocks'
 /obj/machinery/door/airlock/proc/drag_check(mob/user)
 	if (user.pulling)

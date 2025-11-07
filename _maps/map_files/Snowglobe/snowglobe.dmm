@@ -12146,7 +12146,6 @@
 /area/station/security/prison/work)
 "dlp" = (
 /obj/machinery/firealarm/directional/north,
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/dark,
 /area/station/security/prison)
 "dlu" = (
@@ -39707,7 +39706,6 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
 	},
-/obj/machinery/vending/dorms,
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
 /turf/open/floor/wood/tile,
 /area/station/commons/dorms)

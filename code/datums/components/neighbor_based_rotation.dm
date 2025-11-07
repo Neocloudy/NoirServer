@@ -1,5 +1,3 @@
-// TODO: actually get shutters to decorate properly
-
 /**
  * # Neighbor-based Rotation Component
  *
@@ -15,17 +13,18 @@
 		/turf/closed/wall,
 		/obj/structure/window,
 		/obj/structure/falsewall,
-		/obj/structure/mineral_door,
 		/obj/machinery/door/airlock,
 		/obj/machinery/door/poddoor,
 	)
 
-/datum/component/neighbor_based_rotation/RegisterWithParent()
+/datum/component/neighbor_based_rotation/Initialize(...)
 	. = ..()
-	var/atom/movable/target = parent
-	if(!ismovable(target))
+	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
 	check_and_rotate()
+
+/datum/component/neighbor_based_rotation/RegisterWithParent()
+	var/atom/movable/target = parent
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf = get_step(target, direction)
 		if(!istype(turf))

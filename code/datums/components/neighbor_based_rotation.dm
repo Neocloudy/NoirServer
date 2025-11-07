@@ -4,8 +4,7 @@
  * # Neighbor-based Rotation Component
  *
  * Sets the direction of an atom according to if it has a certain
- * atom neighboring it in any cardinal direction. Also sets direction
- * of neighboring atoms that have this component.
+ * atom neighboring it in any cardinal direction.
  *
  * Using the icon cutter or mapping airlock/podlock directions in
  * would be misery incarnate so this is the solution.
@@ -26,7 +25,7 @@
 	var/atom/movable/target = parent
 	if(!ismovable(target))
 		return COMPONENT_INCOMPATIBLE
-	check_and_rotate() // handle rotation right now
+	check_and_rotate()
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf = get_step(target, direction)
 		if(!istype(turf))
@@ -61,11 +60,11 @@
 		if(!istype(turf_check))
 			continue
 		for(var/possible_neighbor in decorate_with)
-			if(istype(turf_check, possible_neighbor)) // decorating with a closed turf
+			if(istype(turf_check, possible_neighbor)) // our candidate is a closed turf
 				. |= direction
 				break
 			for(var/neighbor_content in turf_check)
-				if(istype(neighbor_content, possible_neighbor)) // decorating with contents of an open turf
+				if(istype(neighbor_content, possible_neighbor)) // our candidate is a content of an open turf
 					. |= direction
 					break
 

@@ -63,4 +63,4 @@ jobs:
         with:
           branch: "gbp-balances"
           directory: ./gbp-balances
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONSPRIVATE }} # CHANGED FOR PRIVATE REPO, WAS GITHUB_TOKEN

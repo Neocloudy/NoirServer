@@ -41,6 +41,8 @@ jobs:
       - name: Checkout
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.ACTIONSPRIVATE }} # CHANGED FOR PRIVATE REPO
       - name: Setup git
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |

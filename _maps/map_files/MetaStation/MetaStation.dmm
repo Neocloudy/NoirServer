@@ -14109,6 +14109,7 @@
 	cycle_id = "perma-entrance"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "eOJ" = (
@@ -24583,6 +24584,7 @@
 	name = "Engineering Security Doors"
 	},
 /obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron/dark,
 /area/station/engineering/break_room)
 "iug" = (
@@ -26719,6 +26721,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/duct,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron/dark,
 /area/station/engineering/break_room)
 "jcR" = (
@@ -33073,6 +33076,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/duct,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "liD" = (
@@ -36741,6 +36745,12 @@
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science)
+"mzi" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
+/turf/open/floor/plating,
+/area/station/security/brig)
 "mzm" = (
 /obj/structure/table,
 /obj/item/reagent_containers/condiment/saltshaker{
@@ -48905,6 +48915,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron/dark,
 /area/station/engineering/break_room)
 "qGP" = (
@@ -54390,6 +54401,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
+/obj/effect/mapping_helpers/neighbor_based_rotation_ignore,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "swu" = (
@@ -97017,7 +97029,7 @@ kBg
 pRC
 feY
 gYi
-wsX
+mzi
 xyt
 vQO
 wsX

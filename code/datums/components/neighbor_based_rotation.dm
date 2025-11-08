@@ -1,3 +1,11 @@
+/atom
+	/// If true, neighbors will ignore us when checking if they should rotate
+	var/neighbor_based_rotation_ignore
+
+/atom/movable
+	/// If true, we will never receive [/datum/component/neighbor_based_rotation]
+	var/never_set_neighbor_based_rotation
+
 /**
  * # Neighbor-based Rotation Component
  *
@@ -6,11 +14,17 @@
  *
  * Using the icon cutter or mapping airlock/podlock directions in
  * would be misery incarnate so this is the solution.
+ *
+ * ## Options for *when* this is being dumb:
+ * * Prevent atoms from receiving this using [/obj/effect/mapping_helpers/no_neighbor_based_rotation]
+ *   * Makes it so an atom will never be affected by this component
+ * * Manually prevent an atom that's in `decorate_with` from being checked using [/obj/effect/mapping_helpers/neighbor_based_rotation_blacklist]
+ *   * Makes it so atoms with this component will not mind another atom even if it's in `decorate_with`
  */
 /datum/component/neighbor_based_rotation
 	/// Check for these neighboring types when decorating
 	var/static/list/decorate_with = list(
-		/turf/closed/wall,
+		/turf/closed,
 		/obj/structure/window/fulltile,
 		/obj/structure/window/reinforced/fulltile,
 		/obj/structure/falsewall,
@@ -20,7 +34,8 @@
 
 /datum/component/neighbor_based_rotation/Initialize(...)
 	. = ..()
-	if(!ismovable(parent))
+	var/atom/movable/target = parent
+	if(!ismovable(target) || target.never_set_neighbor_based_rotation)
 		return COMPONENT_INCOMPATIBLE
 	check_and_rotate()
 
@@ -45,6 +60,7 @@
 /// wrapper for [/datum/component/neighbor_based_rotation/proc/check_and_rotate]
 /// as passing that directly would break shit in wonderful ways
 /datum/component/neighbor_based_rotation/proc/check_wrapper(turf/source, atom/incoming, mapload)
+	SIGNAL_HANDLER
 	check_and_rotate()
 
 /// Checks for applicable directions and handles direction if so
@@ -54,7 +70,7 @@
 /// Returns an applicable cardinal direction to work with
 /datum/component/neighbor_based_rotation/proc/find_applicable_direction()
 	var/atom/movable/target = parent
-	. = SOUTH
+	. = 0
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_check = get_step(target, direction)
 		if(!istype(turf_check))
@@ -63,14 +79,16 @@
 			if(istype(turf_check, possible_neighbor)) // our candidate is a closed turf
 				. |= direction
 				break
-			for(var/neighbor_content in turf_check)
-				if(istype(neighbor_content, possible_neighbor)) // our candidate is a content of an open turf
+			for(var/atom/neighbor_content as anything in turf_check)
+				if(istype(neighbor_content, possible_neighbor) && !neighbor_content.neighbor_based_rotation_ignore) // our candidate is a content of an open turf
 					. |= direction
 					break
 
 /// Sets our parent's direction according to a neighbor's direction
 /datum/component/neighbor_based_rotation/proc/set_direction(junction)
 	var/atom/movable/target = parent
+	if(!junction)
+		junction |= SOUTH
 	if(junction & (NORTH|SOUTH))
 		target.setDir(WEST)
 	else if(junction & (WEST|EAST))

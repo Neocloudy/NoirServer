@@ -56,7 +56,6 @@
 	if(QDELETED(src))
 		return
 	var/frame_state
-	var/light_state = AIRLOCK_LIGHT_POWERON
 	var/pre_light_color
 	if(machine_stat & MAINT) // in the process of being emagged
 		frame_state = AIRLOCK_FRAME_CLOSED

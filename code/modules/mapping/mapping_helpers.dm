@@ -205,7 +205,7 @@
 /obj/effect/mapping_helpers/neighbor_based_rotation_exclude/Initialize(mapload)
 	. = ..()
 	var/static/list/whitelist = /datum/component/neighbor_based_rotation::decorate_with - /turf/closed
-	for(var/atom/movable/check as anything in loc)
+	for(var/atom/movable/check in loc)
 		if(!is_type_in_list(check, whitelist))
 			continue
 		check.never_set_neighbor_based_rotation = TRUE
@@ -217,7 +217,7 @@
 /obj/effect/mapping_helpers/neighbor_based_rotation_ignore/Initialize(mapload)
 	. = ..()
 	var/static/list/whitelist = /datum/component/neighbor_based_rotation::decorate_with - /turf/closed
-	for(var/atom/movable/check as anything in loc)
+	for(var/atom/movable/check in loc)
 		if(!is_type_in_list(check, whitelist))
 			continue
 		check.neighbor_based_rotation_ignore = TRUE

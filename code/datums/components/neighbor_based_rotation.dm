@@ -54,7 +54,7 @@
 /// Returns an applicable cardinal direction to work with
 /datum/component/neighbor_based_rotation/proc/find_applicable_direction()
 	var/atom/movable/target = parent
-	. = 0
+	. = SOUTH
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_check = get_step(target, direction)
 		if(!istype(turf_check))

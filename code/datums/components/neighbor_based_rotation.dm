@@ -77,7 +77,7 @@
 			if(istype(turf_check, possible_neighbor)) // our candidate is a closed turf
 				. |= direction
 				break
-			for(var/atom/neighbor_content as anything in turf_check)
+			for(var/atom/movable/neighbor_content in turf_check)
 				if(istype(neighbor_content, possible_neighbor) && !neighbor_content.neighbor_based_rotation_ignore) // our candidate is a content of an open turf
 					. |= direction
 					break

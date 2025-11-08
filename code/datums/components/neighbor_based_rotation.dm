@@ -1,8 +1,6 @@
-/atom
+/atom/movable
 	/// If true, neighbors will ignore us when checking if they should rotate
 	var/neighbor_based_rotation_ignore
-
-/atom/movable
 	/// If true, we will never receive [/datum/component/neighbor_based_rotation]
 	var/never_set_neighbor_based_rotation
 

@@ -1,5 +1,5 @@
 /mob/living/basic/bot/proc/diag_hud_set_bothealth()
-	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/maxHealth)]")
+	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/max_health)]")
 
 /mob/living/basic/bot/proc/diag_hud_set_botstat() //On (With wireless on or off), Off, EMP'ed
 	if(bot_mode_flags & BOT_MODE_ON)

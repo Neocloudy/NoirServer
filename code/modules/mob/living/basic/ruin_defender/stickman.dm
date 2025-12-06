@@ -7,7 +7,7 @@
 	mob_biotypes = MOB_HUMANOID
 	gender = MALE
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	speed = 0.5
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
@@ -25,7 +25,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/stickman
 
 /mob/living/basic/stickman/lesser
-	maxHealth = 25
+	max_health = 25
 	health = 25
 
 /mob/living/basic/stickman/Initialize(mapload)

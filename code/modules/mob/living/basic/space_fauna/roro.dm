@@ -6,7 +6,7 @@
 	icon_dead = "roro_dead"
 	mob_biotypes = MOB_ORGANIC
 	speed = 0.5
-	maxHealth = 50
+	max_health = 50
 	health = 50
 
 	butcher_results = list(

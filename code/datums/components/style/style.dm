@@ -431,10 +431,10 @@
 	if(ismegafauna(died))
 		add_action(ACTION_MAJOR_KILL, 350)
 
-	else if(died.maxHealth >= 75) //at least legions
+	else if(died.max_health >= 75) //at least legions
 		add_action(ACTION_KILL, 125)
 
-	else if(died.maxHealth >= 30) //at least goliath children, dont count legion skulls
+	else if(died.max_health >= 30) //at least goliath children, dont count legion skulls
 		add_action(ACTION_MINOR_KILL, 75)
 
 #undef STYLE_DULL

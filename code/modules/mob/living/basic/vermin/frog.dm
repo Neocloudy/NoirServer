@@ -9,7 +9,7 @@
 	verb_ask = "ribbits inquisitively"
 	verb_exclaim = "croaks"
 	verb_yell = "croaks loudly"
-	maxHealth = 15
+	max_health = 15
 	health = 15
 	speed = 1.1
 	melee_damage_lower = 5
@@ -92,7 +92,7 @@
 	icon_living = "frog_trash"
 	icon_dead = "frog_trash_dead"
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	melee_damage_lower = 6
 	melee_damage_upper = 15
 	obj_damage = 20
@@ -136,7 +136,7 @@
 	icon_state = "frog_trash"
 	icon_living = "frog_trash"
 	icon_dead = "frog_trash_dead"
-	maxHealth = 5
+	max_health = 5
 	health = 5
 	ai_controller = /datum/ai_controller/basic_controller/frog/suicide_frog
 	minion_type = null

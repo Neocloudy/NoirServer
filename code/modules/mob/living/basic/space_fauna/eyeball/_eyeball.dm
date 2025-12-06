@@ -16,7 +16,7 @@
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
 
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	obj_damage = 10
 	melee_damage_lower = 8
@@ -72,7 +72,7 @@
 		return
 
 	if(istype(attack_target, /obj/item/food/grown/carrot))
-		adjustBruteLoss(-5)
+		adjust_brute_loss(-5)
 		to_chat(src, span_warning("You eat [attack_target]! It restores some health!"))
 		qdel(attack_target)
 		return TRUE

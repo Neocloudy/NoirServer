@@ -34,7 +34,7 @@
 	icon_state = "wizard_start"
 	icon_living = "wizard_start"
 	base_icon_state = "wizard"
-	maxHealth = 800
+	max_health = 800
 	health = 800
 	melee_damage_lower = 20
 	melee_damage_upper = 30

@@ -5,7 +5,7 @@
 	action_cooldown = 7.5 SECONDS
 
 /datum/ai_behavior/find_hunt_target/injured_raptor/valid_dinner(mob/living/source, mob/living/target, radius)
-	return (source != target && target.health < target.maxHealth)
+	return (source != target && target.health < target.max_health)
 
 /datum/ai_behavior/find_hunt_target/raptor_baby/valid_dinner(mob/living/source, mob/living/target, radius)
 	return can_see(source, target, radius) && target.stat != DEAD

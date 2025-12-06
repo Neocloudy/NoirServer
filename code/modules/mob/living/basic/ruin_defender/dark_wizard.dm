@@ -5,7 +5,7 @@
 	icon = 'icons/mob/simple/simple_human.dmi'
 	icon_state = "dark_wizard"
 	icon_living = "dark_wizard"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	melee_damage_lower = 5
 	melee_damage_upper = 5

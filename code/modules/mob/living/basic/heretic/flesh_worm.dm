@@ -10,7 +10,7 @@
 	icon_state = "armsy_start"
 	icon_living = "armsy_start"
 	base_icon_state = "armsy"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	melee_damage_lower = 30
 	melee_damage_upper = 50
@@ -62,8 +62,8 @@
 /mob/living/basic/heretic_summon/armsy/proc/build_tail(worm_length)
 	worm_length = max(worm_length, MINIMUM_ARMSY_LENGTH)
 	// Sets the hp of the head to be exactly the (length * hp), so the head is de facto the hardest to destroy.
-	maxHealth = worm_length * maxHealth
-	health = maxHealth
+	max_health = worm_length * max_health
+	health = max_health
 
 	AddComponent(/datum/component/mob_chain, vary_icon_state = TRUE) // We're the front
 
@@ -111,10 +111,10 @@
 		back.on_arm_eaten()
 		return
 
-	adjustBruteLoss(-maxHealth * 0.5, FALSE)
-	adjustFireLoss(-maxHealth * 0.5, FALSE)
+	adjust_brute_loss(-max_health * 0.5, FALSE)
+	adjust_fire_loss(-max_health * 0.5, FALSE)
 
-	if(health < maxHealth * 0.8)
+	if(health < max_health * 0.8)
 		return
 
 	current_stacks++

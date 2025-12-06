@@ -86,7 +86,7 @@
 	target = get_turf(target)
 	var/mob/living/living_owner = owner
 	var/delay = 1 SECONDS
-	if((living_owner.health <= living_owner.maxHealth/3) ? 2 : 1)
+	if((living_owner.health <= living_owner.max_health/3) ? 2 : 1)
 		delay += 1 SECONDS
 		new /obj/effect/temp_visual/telegraphing/big(target, delay)
 	else
@@ -95,7 +95,7 @@
 
 /datum/action/cooldown/mob_cooldown/the_thing/big_tendrils/proc/make_spikes(atom/epicenter)
 	var/mob/living/living_owner = owner
-	var/radius = living_owner.health <= living_owner.maxHealth/3 ? 2 : 1
+	var/radius = living_owner.health <= living_owner.max_health/3 ? 2 : 1
 	for(var/turf/open/target in RANGE_TURFS(radius, epicenter))
 		if(locate(/obj/structure/thing_boss_spike) in target)
 			continue

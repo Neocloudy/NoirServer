@@ -36,7 +36,7 @@
 	else if (scanned_slime.nutrition < SLIME_HUNGER_NUTRITION)
 		to_render += "\n[span_warning("Warning: slime is hungry")]"
 
-	to_render += "\nElectric charge strength: [scanned_slime.powerlevel]\nHealth: [round(scanned_slime.health/scanned_slime.maxHealth,0.01)*100]%"
+	to_render += "\nElectric charge strength: [scanned_slime.powerlevel]\nHealth: [round(scanned_slime.health/scanned_slime.max_health,0.01)*100]%"
 
 	to_render += "\nPossible mutation[scanned_slime.slime_type.mutations.len > 1 ? "s" : ""]: "
 	var/list/mutation_text = list()

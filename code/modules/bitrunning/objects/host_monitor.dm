@@ -30,4 +30,4 @@
 		balloon_alert(user, "host not recognized")
 		return
 
-	to_chat(user, span_notice("Current host health: [pilot.health / pilot.maxHealth * 100]%"))
+	to_chat(user, span_notice("Current host health: [pilot.health / pilot.max_health * 100]%"))

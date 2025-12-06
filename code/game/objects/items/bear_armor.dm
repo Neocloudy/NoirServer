@@ -13,7 +13,7 @@
 		to_chat(user, span_warning("[bear] has already been armored up!"))
 		return ITEM_INTERACT_BLOCKING
 	bear.armored = TRUE
-	bear.maxHealth += 60
+	bear.max_health += 60
 	bear.health += 60
 	bear.armour_penetration += 20
 	bear.melee_damage_lower += 3

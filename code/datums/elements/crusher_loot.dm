@@ -51,9 +51,9 @@
 		return
 
 	if (guaranteed_drop)
-		if (damage.total_damage / target.maxHealth < guaranteed_drop)
+		if (damage.total_damage / target.max_health < guaranteed_drop)
 			return
-	else if (!prob((damage.total_damage / target.maxHealth) * drop_mod)) // On average, you'll need to kill 4 creatures before getting the item. by default.
+	else if (!prob((damage.total_damage / target.max_health) * drop_mod)) // On average, you'll need to kill 4 creatures before getting the item. by default.
 		return
 	*/
 	var/datum/status_effect/crusher_damage/damage = target.has_status_effect(/datum/status_effect/crusher_damage)
@@ -64,9 +64,9 @@
 		return
 
 	if (guaranteed_drop)
-		if (final_damage_total / target.maxHealth < guaranteed_drop)
+		if (final_damage_total / target.max_health < guaranteed_drop)
 			return
-	else if (!prob((final_damage_total / target.maxHealth) * drop_mod)) // On average, you'll need to kill 4 creatures before getting the item. by default.
+	else if (!prob((final_damage_total / target.max_health) * drop_mod)) // On average, you'll need to kill 4 creatures before getting the item. by default.
 		return
 	// NOVA EDIT END
 

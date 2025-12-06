@@ -26,7 +26,7 @@
 	melee_damage_lower = 3
 	melee_damage_upper = 3
 	health = 160
-	maxHealth = 160
+	max_health = 160
 	attack_sound = 'sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SMASH
 	attack_verb_continuous = "attempts to assimilate"

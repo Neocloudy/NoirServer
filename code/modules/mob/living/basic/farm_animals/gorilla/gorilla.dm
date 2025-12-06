@@ -14,7 +14,7 @@
 	icon_dead = "dead"
 	health_doll_icon = "crawling"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	maxHealth = 220
+	max_health = 220
 	health = 220
 	initial_language_holder = /datum/language_holder/monkey
 	response_help_continuous = "prods"
@@ -138,7 +138,7 @@
 /mob/living/basic/gorilla/lesser
 	name = "lesser Gorilla"
 	desc = "An adolescent Gorilla. It may not be fully grown but, much like a banana, that just means it's sturdier and harder to chew!"
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	speed = 0.35
 	melee_damage_lower = 10
@@ -153,7 +153,7 @@
 	name = "Cargorilla" // Overriden, normally
 	icon = 'icons/mob/simple/cargorillia.dmi'
 	desc = "Cargo's pet gorilla. They seem to have an 'I love Mom' tattoo."
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	faction = list(FACTION_NEUTRAL, FACTION_MONKEY, FACTION_JUNGLE)
 	unique_name = FALSE
@@ -167,7 +167,7 @@
 /// A version of the gorilla achieved by reaching enough genetic damage as a monkey
 /mob/living/basic/gorilla/genetics
 	name = "Lab Gorilla"
-	maxHealth = 180
+	max_health = 180
 	health = 180
 	desc = "A gorilla created via \"advanced genetic science\". While not quite as strong as their wildborne brethren, this simian still packs a punch."
 	melee_damage_lower = 15
@@ -179,7 +179,7 @@
 
 /mob/living/basic/gorilla/hostile
 	name = "Feral Gorilla"
-	maxHealth = 180
+	max_health = 180
 	health = 180
 	desc = "A gorilla created via \"advanced genetic science\". While not quite as strong as their wildborne brethren, this simian still packs a punch."
 	melee_damage_lower = 15

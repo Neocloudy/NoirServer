@@ -9,7 +9,7 @@
 	icon_dead = "regalrat_dead"
 	gender = MALE
 
-	maxHealth = 70
+	max_health = 70
 	health = 70
 	max_stamina = 120
 
@@ -241,7 +241,7 @@
  * place.
  */
 /mob/living/basic/regal_rat/proc/cheese_heal(obj/item/target, amount, message)
-	if(health >= maxHealth)
+	if(health >= max_health)
 		balloon_alert(src, "you feel full!")
 		return
 

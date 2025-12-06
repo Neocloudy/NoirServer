@@ -20,7 +20,7 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 	health = 5
-	maxHealth = 5
+	max_health = 5
 	death_message = "lets out a final hiss..."
 	player_speed_modifier = 0
 	spider_growth_time = 40 SECONDS

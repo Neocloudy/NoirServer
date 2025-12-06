@@ -7,7 +7,7 @@
 	icon_state = "orbie"
 	icon_living = "orbie"
 	speed = 0
-	maxHealth = 100
+	max_health = 100
 	status_flags = CANPUSH
 	light_on = FALSE
 	light_system = OVERLAY_LIGHT
@@ -87,12 +87,12 @@
 /mob/living/basic/orbie/proc/on_level_up(datum/source, new_level)
 	SIGNAL_HANDLER
 
-	if(maxHealth >= ORBIE_MAXIMUM_HEALTH)
+	if(max_health >= ORBIE_MAXIMUM_HEALTH)
 		UnregisterSignal(src, COMSIG_VIRTUAL_PET_LEVEL_UP)
 		return
 
-	maxHealth += 100
-	heal_overall_damage(maxHealth - health)
+	max_health += 100
+	heal_overall_damage(max_health - health)
 
 
 /mob/living/basic/orbie/update_overlays()

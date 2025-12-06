@@ -55,16 +55,16 @@
 	var/delta_time_capped = min(delta_time, 8)
 	//If there are alien weeds on the ground then heal if needed or give some plasma
 	if(locate(/obj/structure/alien/weeds) in owner.loc)
-		if(owner.health >= owner.maxHealth)
+		if(owner.health >= owner.max_health)
 			owner.adjustPlasma(plasma_rate * delta_time)
 		else
 			var/heal_amt = heal_rate
 			if(!isalien(owner))
 				heal_amt *= 0.2
 			owner.adjustPlasma(0.5 * plasma_rate * delta_time_capped)
-			owner.adjustBruteLoss(-heal_amt * delta_time_capped)
-			owner.adjustFireLoss(-heal_amt * delta_time_capped)
-			owner.adjustOxyLoss(-heal_amt * delta_time_capped)
+			owner.adjust_brute_loss(-heal_amt * delta_time_capped)
+			owner.adjust_fire_loss(-heal_amt * delta_time_capped)
+			owner.adjust_oxy_loss(-heal_amt * delta_time_capped)
 	else
 		owner.adjustPlasma(0.1 * plasma_rate * delta_time)
 
@@ -246,7 +246,7 @@
 
 	apply_organ_damage(impact)
 
-	var/damage_ratio = damage / max(maxHealth, 1)
+	var/damage_ratio = damage / max(max_health, 1)
 	if(owner)
 		var/obj/item/bodypart/part = owner.get_bodypart(BODY_ZONE_CHEST)
 		// Brute damage to the mob is less then to the organ, so there's a higher chance of the explosion happening before xeno death

@@ -10,7 +10,7 @@
 	melee_damage_upper = 25
 
 	health = 200
-	maxHealth = 200
+	max_health = 200
 
 	obj_damage = 50
 	speed = 0.2

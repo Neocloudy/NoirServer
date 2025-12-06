@@ -38,7 +38,7 @@
 	if(master_mind)
 		linked_alert.desc += " You are an eldritch monster reanimated to serve its master, [master_mind]."
 	if(isnum(new_max_health))
-		if(new_max_health > initial(new_owner.maxHealth))
+		if(new_max_health > initial(new_owner.max_health))
 			linked_alert.desc += " You are stronger in this form."
 		else
 			linked_alert.desc += " You are more fragile in this form."
@@ -53,10 +53,10 @@
 	human_target.revive(ADMIN_HEAL_ALL) // Have to do an admin heal here, otherwise they'll likely just die due to missing organs or limbs
 
 	if(new_max_health)
-		if(new_max_health < human_target.maxHealth)
-			stamina_mod_applied = (new_max_health / human_target.maxHealth)
+		if(new_max_health < human_target.max_health)
+			stamina_mod_applied = (new_max_health / human_target.max_health)
 			human_target.physiology.stamina_mod *= stamina_mod_applied
-		human_target.setMaxHealth(new_max_health)
+		human_target.set_max_health(new_max_health)
 		human_target.health = new_max_health
 
 	on_made_callback?.Invoke(human_target)
@@ -88,7 +88,7 @@
 	if(new_max_health)
 		if(isnum(stamina_mod_applied))
 			human_target.physiology.stamina_mod /= stamina_mod_applied
-		human_target.setMaxHealth(initial(human_target.maxHealth))
+		human_target.set_max_health(initial(human_target.max_health))
 
 	on_lost_callback?.Invoke(human_target)
 	REMOVE_TRAIT(human_target, TRAIT_FAKEDEATH, TRAIT_STATUS_EFFECT(id))

@@ -5,7 +5,7 @@
 	light_color = "#f84e4e"
 	density = TRUE
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	obj_damage = 60
 	environment_smash = ENVIRONMENT_SMASH_WALLS //Walls can't stop THE LAW
 	mob_size = MOB_SIZE_LARGE

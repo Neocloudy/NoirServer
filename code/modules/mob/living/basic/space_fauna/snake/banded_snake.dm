@@ -7,7 +7,7 @@
 	venom_dose = 2
 	var/poison_reagent = /datum/reagent/toxin/cyanide
 	health = 30
-	maxHealth = 30
+	max_health = 30
 	melee_damage_upper = 10
 	gold_core_spawnable = HOSTILE_SPAWN
 

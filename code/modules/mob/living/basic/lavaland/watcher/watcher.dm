@@ -11,7 +11,7 @@
 	base_pixel_x = -12
 	speak_emote = list("chimes")
 	speed = 3
-	maxHealth = 160
+	max_health = 160
 	health = 160
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -87,7 +87,7 @@
 	icon_living = "watcher_magmawing"
 	icon_dead = "watcher_magmawing_dead"
 	eye_glow = "fire_glow"
-	maxHealth = 175 //Compensate for the lack of slowdown on projectiles with a bit of extra health
+	max_health = 175 //Compensate for the lack of slowdown on projectiles with a bit of extra health
 	health = 175
 	projectile_type = /obj/projectile/temp/watcher/magma_wing
 	gaze_attack = /datum/action/cooldown/mob_cooldown/watcher_gaze/fire
@@ -102,7 +102,7 @@
 	icon_living = "watcher_icewing"
 	icon_dead = "watcher_icewing_dead"
 	eye_glow = "ice_glow"
-	maxHealth = 130
+	max_health = 130
 	health = 130
 	projectile_type = /obj/projectile/temp/watcher/ice_wing
 	gaze_attack = /datum/action/cooldown/mob_cooldown/watcher_gaze/ice

@@ -5,7 +5,7 @@
 	grow_as = /mob/living/basic/spider/giant/guard
 	name = "young guard spider"
 	desc = "Furry and brown, it looks defenseless. This one has sparkling red eyes."
-	maxHealth = 70
+	max_health = 70
 	health = 70
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -24,7 +24,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_ambush"
 	icon_dead = "young_ambush_dead"
-	maxHealth = 55
+	max_health = 55
 	health = 55
 	melee_damage_lower = 12
 	melee_damage_upper = 18
@@ -44,7 +44,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_scout"
 	icon_dead = "young_scout_dead"
-	maxHealth = 35
+	max_health = 35
 	health = 35
 	melee_damage_lower = 2
 	melee_damage_upper = 4
@@ -65,7 +65,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_hunter"
 	icon_dead = "young_hunter_dead"
-	maxHealth = 45
+	max_health = 45
 	health = 45
 	melee_damage_lower = 8
 	melee_damage_upper = 12
@@ -85,7 +85,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_nurse"
 	icon_dead = "young_nurse_dead"
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	melee_damage_lower = 2
 	melee_damage_upper = 4
@@ -116,7 +116,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_tangle"
 	icon_dead = "young_tangle_dead"
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	melee_damage_lower = 1
 	melee_damage_upper = 1
@@ -158,7 +158,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_tank"
 	icon_dead = "young_tank_dead"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	damage_coeff = list(BRUTE = 0.5, BURN = 0.5, TOX = 0.5, STAMINA = 0.5, OXY = 1)
 	melee_damage_lower = 10
@@ -196,7 +196,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_breacher"
 	icon_dead = "young_breacher_dead"
-	maxHealth = 60
+	max_health = 60
 	health = 60
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -215,7 +215,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_midwife"
 	icon_dead = "young_midwife_dead"
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -236,7 +236,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_viper"
 	icon_dead = "young_viper_dead"
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	melee_damage_lower = 5
 	melee_damage_upper = 5
@@ -252,7 +252,7 @@
 	icon = 'icons/mob/simple/arachnoid.dmi'
 	icon_state = "young_tarantula"
 	icon_dead = "young_tarantula_dead"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	melee_damage_lower = 20
 	melee_damage_upper = 25

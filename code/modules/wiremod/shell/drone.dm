@@ -7,7 +7,7 @@
 	name = "drone"
 	icon = 'icons/obj/science/circuits.dmi'
 	icon_state = "setup_medium_med"
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	mob_biotypes = MOB_ROBOTIC
 	living_flags = NONE
@@ -23,8 +23,8 @@
 
 /mob/living/circuit_drone/examine(mob/user)
 	. = ..()
-	if(health < maxHealth)
-		if(health > maxHealth/3)
+	if(health < max_health)
+		if(health > max_health/3)
 			. += "[src]'s parts look loose."
 		else
 			. += "[src]'s parts look very loose!"
@@ -38,7 +38,7 @@
 
 /mob/living/circuit_drone/welder_act(mob/living/user, obj/item/tool)
 	. = ..()
-	if(health == maxHealth)
+	if(health == max_health)
 		balloon_alert(user, "already at maximum integrity!")
 		return TRUE
 	if(tool.use_tool(src, user, 1 SECONDS, volume = 50))

@@ -53,7 +53,7 @@
 		)
 
 		victim.apply_damage(15, BRUTE, wound_bonus = CANT_WOUND)
-		living_owner.adjustBruteLoss(-15)
+		living_owner.adjust_brute_loss(-15)
 
 		if(victim.blood_volume)
 			victim.blood_volume -= 15

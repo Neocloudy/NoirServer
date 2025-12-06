@@ -85,18 +85,18 @@
 		return
 	animate_filter()
 	ADD_TRAIT(contained_frog, TRAIT_AI_PAUSED, MAGIC_TRAIT)
-	if(contained_frog.health < contained_frog.maxHealth)
+	if(contained_frog.health < contained_frog.max_health)
 		START_PROCESSING(SSobj, src)
 
 /obj/item/frog_statue/process(seconds_per_tick)
 	if(isnull(contained_frog))
 		return
-	if(contained_frog.health == contained_frog.maxHealth)
+	if(contained_frog.health == contained_frog.max_health)
 		STOP_PROCESSING(SSobj, src)
 		return
 	if(contained_frog.stat == DEAD)
 		contained_frog.revive()
-	contained_frog.adjustBruteLoss(-5)
+	contained_frog.adjust_brute_loss(-5)
 
 /obj/item/frog_statue/proc/animate_filter(mob/living/frog)
 	add_filter(STATUE_FILTER, 2, list("type" = "outline", "color" = FILTER_COLOR, "size" = 1))

@@ -15,7 +15,7 @@
 	friendly_verb_continuous = "nudges"
 	friendly_verb_simple = "nudge"
 
-	maxHealth = 2
+	max_health = 2
 	health = 2
 
 	density = FALSE

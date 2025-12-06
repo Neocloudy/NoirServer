@@ -18,7 +18,7 @@
 
 	//Base physiology
 
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	mob_biotypes = MOB_SLIME
 	melee_damage_lower = 7
@@ -254,7 +254,7 @@
 	life_stage = new_life_stage
 	if(life_stage == SLIME_LIFE_STAGE_ADULT)
 		health /= 0.75
-		maxHealth /= 0.75
+		max_health /= 0.75
 		melee_damage_lower *= 2
 		melee_damage_upper *= 2
 		obj_damage = 15
@@ -262,7 +262,7 @@
 
 	else if(!initial)
 		health *= 0.75
-		maxHealth *= 0.75
+		max_health *= 0.75
 		melee_damage_lower *= 0.5
 		melee_damage_upper *= 0.5
 		obj_damage = initial(obj_damage)
@@ -345,7 +345,7 @@
 			target_slime.adjust_nutrition(-stolen_nutrition)
 			our_slime.adjust_nutrition(stolen_nutrition)
 		if(target_slime.health > 0)
-			our_slime.adjustBruteLoss(is_adult_slime ? -20 : -10)
+			our_slime.adjust_brute_loss(is_adult_slime ? -20 : -10)
 
 
 ///Spawns a crossed slimecore item

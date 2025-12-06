@@ -10,7 +10,7 @@
 	base_icon_state = "ded_drone"
 	req_one_access = list(ACCESS_SYNDICATE)
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	light_range = 1

@@ -9,7 +9,7 @@
 
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY
-	maxHealth = 0.5 * STANDARD_ORGAN_THRESHOLD //half the normal health max since we go blind at 30, a permanent blindness at 50 therefore makes sense unless medicine is administered
+	max_health = 0.5 * STANDARD_ORGAN_THRESHOLD //half the normal health max since we go blind at 30, a permanent blindness at 50 therefore makes sense unless medicine is administered
 	high_threshold = 0.3 * STANDARD_ORGAN_THRESHOLD //threshold at 30
 	low_threshold = 0.2 * STANDARD_ORGAN_THRESHOLD //threshold at 20
 
@@ -246,7 +246,7 @@
 	var/picked_side = pick(valid_sides)
 	to_chat(owner, span_userdanger("You feel searing pain shoot though your [picked_side == RIGHT_EYE_SCAR ? "right" : "left"] eye!"))
 	// oof ouch my eyes
-	apply_organ_damage(rand((maxHealth - high_threshold) * 0.5, maxHealth - low_threshold))
+	apply_organ_damage(rand((max_health - high_threshold) * 0.5, max_health - low_threshold))
 	var/datum/wound/pierce/bleed/severe/eye/eye_puncture = new
 	eye_puncture.apply_wound(bodypart_owner, wound_source = "bullet impact", right_side = picked_side)
 	apply_scar(picked_side)
@@ -400,7 +400,7 @@
 	if (scarring & side)
 		return
 	scarring |= side
-	maxHealth -= 15
+	max_health -= 15
 	update_appearance()
 	apply_scarring_effects()
 
@@ -420,7 +420,7 @@
 	if (!(scarring & side))
 		return
 	scarring &= ~side
-	maxHealth += 15
+	max_health += 15
 	update_appearance()
 	if (!owner)
 		return

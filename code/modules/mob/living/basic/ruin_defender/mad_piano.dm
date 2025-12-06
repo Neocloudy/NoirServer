@@ -10,7 +10,7 @@
 	move_resist = INFINITY
 	combat_mode = TRUE
 	faction = list(FACTION_HOSTILE, FACTION_TURRET)
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	melee_damage_lower = 24
 	melee_damage_upper = 26

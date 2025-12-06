@@ -16,7 +16,7 @@
 	gender = PLURAL
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 	health = 15
-	maxHealth = 15
+	max_health = 15
 	mob_size = MOB_SIZE_SMALL
 	can_be_held = TRUE
 	density = FALSE

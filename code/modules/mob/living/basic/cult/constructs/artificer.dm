@@ -4,7 +4,7 @@
 	desc = "A bulbous construct dedicated to building and maintaining the Cult of Nar'Sie's armies."
 	icon_state = "artificer"
 	icon_living = "artificer"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	response_harm_continuous = "viciously beats"
 	response_harm_simple = "viciously beat"

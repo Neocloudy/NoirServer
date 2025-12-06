@@ -7,7 +7,7 @@
 	icon_dead = "poppypossum_dead"
 	gender = FEMALE
 	unique_pet = TRUE
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	speak_emote = list("hisses")
 	/// Is the inspection currently being passed?

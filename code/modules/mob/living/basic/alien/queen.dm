@@ -4,7 +4,7 @@
 	icon_living = "alienq"
 	icon_dead = "alienq_dead"
 	health = 250
-	maxHealth = 250
+	max_health = 250
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	status_flags = NONE //can't shove the queen, kiddo.
@@ -29,7 +29,7 @@
 	icon_dead = "alienq_dead"
 	health_doll_icon = "alienq"
 	bubble_icon = "alienroyal"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	butcher_results = list(
 		/obj/item/food/meat/slab/xeno = 10,

@@ -24,7 +24,7 @@
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 
 	health = 40
-	maxHealth = 40
+	max_health = 40
 	melee_damage_lower = 1
 	melee_damage_upper = 2
 	environment_smash = ENVIRONMENT_SMASH_NONE
@@ -72,7 +72,7 @@
 	if(!(living_target.mob_biotypes & MOB_PLANT))
 		return
 
-	living_target.adjustBruteLoss(20)
+	living_target.adjust_brute_loss(20)
 	playsound(src, 'sound/items/eatfood.ogg', rand(30, 50), TRUE)
 	var/obj/item/bodypart/edible_bodypart
 

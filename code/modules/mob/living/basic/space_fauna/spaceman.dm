@@ -14,7 +14,7 @@
 	response_harm_continuous = "punches"
 	response_harm_simple = "punch"
 	combat_mode = TRUE
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	speed = 0
 	melee_damage_lower = 10

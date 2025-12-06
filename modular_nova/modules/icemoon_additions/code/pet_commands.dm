@@ -19,11 +19,11 @@
 	if (!(user in source.ai_controller?.blackboard[BB_FRIENDS_LIST]))
 		return
 
-	if (source.health < source.maxHealth*0.2)
+	if (source.health < source.max_health*0.2)
 		examine_list += span_bolddanger("[source.p_They()] look[source.p_s()] severely injured.")
-	else if (source.health < source.maxHealth*0.5)
+	else if (source.health < source.max_health*0.5)
 		examine_list += span_danger("[source.p_They()] look[source.p_s()] moderately injured.")
-	else if (source.health < source.maxHealth*0.8)
+	else if (source.health < source.max_health*0.8)
 		examine_list += span_warning("[source.p_They()] look[source.p_s()] slightly injured.")
 	else
 		examine_list += span_notice("[source.p_They()] look[source.p_s()] to be in good condition.")

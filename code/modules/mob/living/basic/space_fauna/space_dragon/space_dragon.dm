@@ -21,7 +21,7 @@
 	status_flags = CANPUSH
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
 	gender = NEUTER
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	unsuitable_cold_damage = 0
 	unsuitable_heat_damage = 0
@@ -213,7 +213,7 @@
 
 /// Succeed in putting something inside us
 /mob/living/basic/space_dragon/proc/eat(mob/living/food)
-	var/health_recovered = food.maxHealth * 0.25
+	var/health_recovered = food.max_health * 0.25
 	if(shark_form)
 		if(istype(food, /mob/living/basic/carp))
 			health_recovered *= 1.75 // plus 7.5 points when eating advanced space carps (from the rift)
@@ -303,7 +303,7 @@
 	if (severity != EXPLODE_DEVASTATE)
 		return
 	var/damage_coefficient = rand(devastation_damage_min_percentage, devastation_damage_max_percentage)
-	adjustBruteLoss(initial(maxHealth)*damage_coefficient)
+	adjust_brute_loss(initial(max_health)*damage_coefficient)
 	return COMPONENT_CANCEL_EX_ACT // we handled it
 
 /// Subtype used by the midround/event

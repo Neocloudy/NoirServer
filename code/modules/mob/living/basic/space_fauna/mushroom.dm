@@ -16,7 +16,7 @@
 	speed = 1
 	melee_damage_lower = 4
 	melee_damage_upper = 4
-	maxHealth = 60
+	max_health = 60
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
 	attack_sound = 'sound/items/weapons/bite.ogg'
@@ -45,12 +45,12 @@
 	. = ..()
 	melee_damage_lower = rand(3, 5)
 	melee_damage_upper = rand(10,20)
-	maxHealth = rand(50,70)
+	max_health = rand(50,70)
 	cap_living = cap_living || mutable_appearance(icon, "mushroom_cap")
 	cap_dead = cap_dead || mutable_appearance(icon, "mushroom_cap_dead")
 	cap_color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
 	update_mushroomcap()
-	health = maxHealth
+	health = max_health
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_WALKING_MUSHROOM, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 
@@ -110,7 +110,7 @@
 	var/level_gain = (consumed.powerlevel - powerlevel)
 	if(level_gain >= 0 && !ckey && !consumed.bruised)//Player shrooms can't level up to become robust gods.
 		consumed.level_up(level_gain)
-	adjustBruteLoss(-consumed.maxHealth)
+	adjust_brute_loss(-consumed.max_health)
 	qdel(consumed)
 
 /mob/living/basic/mushroom/revive(full_heal_flags = NONE, excess_healing = 0, force_grab_ghost = FALSE)
@@ -144,11 +144,11 @@
 	if(stat == DEAD)
 		revive(HEAL_ALL)
 	else
-		adjustBruteLoss(-5)
+		adjust_brute_loss(-5)
 	COOLDOWN_START(src, recovery_cooldown, 5 MINUTES)
 
 /mob/living/basic/mushroom/proc/level_up(level_gain)
-	adjustBruteLoss(-maxHealth) //They'll always heal, even if they don't gain a level
+	adjust_brute_loss(-max_health) //They'll always heal, even if they don't gain a level
 	if(powerlevel > 9)
 		return
 	if(level_gain == 0)
@@ -158,7 +158,7 @@
 		melee_damage_lower += (level_gain * rand(1,5))
 	else
 		melee_damage_upper += (level_gain * rand(1,5))
-	maxHealth += (level_gain * rand(1,5))
+	max_health += (level_gain * rand(1,5))
 
 /mob/living/basic/mushroom/attackby(obj/item/mush, mob/living/carbon/human/user, list/modifiers, list/attack_modifiers)
 	if(istype(mush, /obj/item/food/grown/mushroom))

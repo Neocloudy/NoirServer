@@ -215,7 +215,7 @@
 	// alcoholic livers have 25% less health and healing
 	var/obj/item/organ/liver/alcohol_liver = quirk_holder.get_organ_slot(ORGAN_SLOT_LIVER)
 	if(alcohol_liver && IS_ORGANIC_ORGAN(alcohol_liver)) // robotic livers aren't affected
-		alcohol_liver.maxHealth = alcohol_liver.maxHealth * 0.75
+		alcohol_liver.max_health = alcohol_liver.max_health * 0.75
 		alcohol_liver.healing_factor = alcohol_liver.healing_factor * 0.75
 
 /datum/quirk/item_quirk/addict/alcoholic/remove()

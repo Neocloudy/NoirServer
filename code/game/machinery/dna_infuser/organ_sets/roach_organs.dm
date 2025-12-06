@@ -42,7 +42,7 @@
 /obj/item/organ/heart/roach
 	name = "mutated roach-heart"
 	desc = "Roach DNA infused into what was once a normal heart."
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 
 	icon = 'icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/heart/roach"
@@ -157,7 +157,7 @@
 /obj/item/organ/stomach/roach
 	name = "mutated roach-stomach"
 	desc = "Roach DNA infused into what was once a normal stomach."
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 32 // Demolishes any disgust we have
 	metabolism_efficiency = 0.033 // Slightly worse at transferring reagents
 	hunger_modifier = 3
@@ -177,7 +177,7 @@
 /obj/item/organ/liver/roach
 	name = "mutated roach-liver"
 	desc = "Roach DNA infused into what was once a normal liver."
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	toxTolerance = 5 // More tolerance for toxins
 	liver_resistance = 0.25 // But if they manage to get in you're screwed
 
@@ -212,7 +212,7 @@
 /obj/item/organ/appendix/roach
 	name = "mutated roach-appendix"
 	desc = "Roach DNA infused into what was once a normal appendix. It could get <i>worse</i>?"
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 
 	icon = 'icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/organ/appendix/roach"

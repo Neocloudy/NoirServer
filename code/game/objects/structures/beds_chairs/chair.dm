@@ -494,7 +494,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 	if(!HAS_TRAIT(give_this_fucker_the_chair, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED))
 		if(vulnerable_hit || give_this_fucker_the_chair.get_timed_status_effect_duration(/datum/status_effect/staggered))
 			give_this_fucker_the_chair.Knockdown(2 SECONDS, daze_amount = daze_amount)
-			if(give_this_fucker_the_chair.health < give_this_fucker_the_chair.maxHealth*0.5)
+			if(give_this_fucker_the_chair.health < give_this_fucker_the_chair.max_health*0.5)
 				give_this_fucker_the_chair.adjust_confusion(10 SECONDS)
 
 	smash(user)

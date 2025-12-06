@@ -142,7 +142,7 @@
 			iter_wound.on_xadone(4 * REM * seconds_per_tick)
 			organ_owner.reagents.remove_reagent(chem.type, min(chem.volume * 0.22, 10))
 		if(organ_owner.blood_volume > BLOOD_VOLUME_SLIME_SPLIT)
-			organ_owner.adjustOrganLoss(
+			organ_owner.adjust_organ_loss(
 			pick(organs_we_mend),
 			- 2 * seconds_per_tick,
 		)
@@ -321,7 +321,7 @@
 
 /obj/item/organ/brain/slime/proc/regenerate()
 	//we have the plasma. we can rebuild them.
-	set_organ_damage(-maxHealth) //fully heals the brain
+	set_organ_damage(-max_health) //fully heals the brain
 	if(gps_active) // making sure the gps signal is removed if it's active on revival
 		gps_active = FALSE
 		qdel(GetComponent(/datum/component/gps))
@@ -376,10 +376,10 @@
 	// Determine if water-breathing logic should be inverted
 	var/inverted = HAS_TRAIT(slime, TRAIT_WATER_BREATHING)
 	var/blood_units_to_lose = 0
-	
+
 	if(inverted)
 		// Water-breathing slimes: damaged when dry, heal only when wet
-		if(wetness_amount <= REGEN_WATER_STACKS) 
+		if(wetness_amount <= REGEN_WATER_STACKS)
 			blood_units_to_lose = 2 * seconds_per_tick
 			healing = FALSE
 			if(SPT_PROB(25, seconds_per_tick))
@@ -387,8 +387,8 @@
 					span_danger("[slime]'s form begins to lose cohesion, seemingly drying out!"),
 					span_warning("Your body loses cohesion as it dries, only immersion can restore it!"),
 				)
-		
-	else 
+
+	else
 		// Normal slimes: damaged when too wet, cannot heal if too wet
 		if(wetness_amount > DAMAGE_WATER_STACKS)
 			blood_units_to_lose += 2 * seconds_per_tick
@@ -397,7 +397,7 @@
 					span_danger("[slime]'s form begins to lose cohesion, seemingly diluting with the water!"),
 					span_warning("The water starts to dilute your body, dry it off!"),
 				)
-		if(wetness_amount > REGEN_WATER_STACKS) 
+		if(wetness_amount > REGEN_WATER_STACKS)
 			healing = FALSE
 			blood_units_to_lose += 1 * seconds_per_tick
 			if(SPT_PROB(1, seconds_per_tick))
@@ -410,8 +410,8 @@
 		if(slime.stat != CONSCIOUS)
 			return
 		slime.heal_overall_damage(brute = 1.5 * seconds_per_tick, burn = 1.5 * seconds_per_tick, required_bodytype = BODYTYPE_ORGANIC)
-		slime.adjustOxyLoss(-1 * seconds_per_tick)
-		if(slime.health < slime.maxHealth)
+		slime.adjust_oxy_loss(-1 * seconds_per_tick)
+		if(slime.health < slime.max_health)
 			new /obj/effect/temp_visual/heal(get_turf(slime), COLOR_EFFECT_HEAL_RED)
 
 /**

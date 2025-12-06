@@ -11,4 +11,4 @@
 	. = ..()
 	attack = parent.melee_damage_lower
 	speed = parent.speed
-	health = parent.maxHealth
+	health = parent.max_health

@@ -11,7 +11,7 @@
 	gender = MALE // Female ones are the bipedal elites
 	speed = 30
 	basic_mob_flags = IMMUNE_TO_FISTS
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	friendly_verb_continuous = "wails at"
 	friendly_verb_simple = "wail at"
@@ -201,7 +201,7 @@
 	name = "immortal goliath"
 	desc = "Goliaths are biologically immortal, and rare specimens have survived for centuries. \
 		This one is clearly ancient, and its tentacles constantly churn the earth around it."
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	crusher_drop_chance = 30 // Wow a whole 5% more likely, how generous
 	/// Don't re-check nearby turfs for this long

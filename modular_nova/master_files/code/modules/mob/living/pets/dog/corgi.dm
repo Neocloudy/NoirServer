@@ -8,7 +8,7 @@
 	gender = NEUTER
 	unique_pet = TRUE
 	can_be_held = FALSE
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	butcher_results = list(
 		/obj/item/clothing/head/costume/nova/en = 1,
@@ -121,7 +121,7 @@
 		if(hitting_projectile.damage_type != BRUTE && hitting_projectile.damage_type != BURN)
 			return
 
-		adjustBruteLoss(hitting_projectile.damage)
+		adjust_brute_loss(hitting_projectile.damage)
 		if(!isliving(target) || health <= 0)
 			return
 

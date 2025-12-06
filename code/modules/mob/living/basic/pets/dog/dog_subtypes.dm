@@ -52,7 +52,7 @@
 	collar_icon_state = "spiked"
 	//slightly weaker than a bear, but not as slow
 	health = 60
-	maxHealth = 60
+	max_health = 60
 	obj_damage = 20
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -88,7 +88,7 @@
 	icon_dead = "breaddog_dead"
 	head_icon = 'icons/mob/clothing/head/pets_head.dmi'
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	gender = NEUTER
 	damage_coeff = list(BRUTE = 3, BURN = 3, TOX = 1, STAMINA = 1, OXY = 1)
 	butcher_results = list(/obj/item/organ/brain = 1, /obj/item/organ/heart = 1, /obj/item/food/breadslice/plain = 3,  \
@@ -124,8 +124,8 @@
 	if(stat) // consciousness check
 		return
 
-	if(health < maxHealth)
-		adjustBruteLoss(-4 * seconds_per_tick) //Fast life regen
+	if(health < max_health)
+		adjust_brute_loss(-4 * seconds_per_tick) //Fast life regen
 
 	for(var/mob/living/carbon/humanoid_entities in view(3, src)) //Mood aura which stay as long you do not wear Sanallite as hat or carry(I will try to make it work with hat someday(obviously weaker than normal one))
 		humanoid_entities.add_mood_event("kobun", /datum/mood_event/kobun)

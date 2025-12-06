@@ -8,7 +8,7 @@
 	speak_emote = list("hisses")
 
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	melee_damage_lower = 5
 	melee_damage_upper = 6
 	obj_damage = 0

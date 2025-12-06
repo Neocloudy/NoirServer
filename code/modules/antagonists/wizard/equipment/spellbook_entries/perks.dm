@@ -147,7 +147,7 @@
 
 /datum/spellbook_entry/perks/transparence/buy_spell(mob/living/carbon/human/user, obj/item/spellbook/book, log_buy)
 	. = ..()
-	user.maxHealth *= 0.75
+	user.max_health *= 0.75
 	user.alpha = 125
 	ADD_TRAIT(user, TRAIT_UNHITTABLE_BY_PROJECTILES, REF(src))
 	RegisterSignal(user, COMSIG_ENTER_AREA, PROC_REF(make_stalker))

@@ -78,29 +78,29 @@
 /datum/unit_test/organ_damage/proc/test_organ(mob/living/carbon/human/dummy, obj/item/organ/test_organ)
 	var/slot_to_use = test_organ.slot
 
-	// Tests [mob/living/proc/adjustOrganLoss]
-	TEST_ASSERT_EQUAL(dummy.adjustOrganLoss(slot_to_use, test_organ.maxHealth * 10), -test_organ.maxHealth, \
+	// Tests [mob/living/proc/adjust_organ_loss]
+	TEST_ASSERT_EQUAL(dummy.adjust_organ_loss(slot_to_use, test_organ.max_health * 10), -test_organ.max_health, \
 		"Mob level \"apply organ damage\" returned the wrong value for [slot_to_use] organ with default arguments.")
-	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.max_health, \
 		"Mob level \"apply organ damage\" can exceed the [slot_to_use] organ's damage cap with default arguments.")
-	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use, required_organ_flag = test_organ.organ_flags), test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use, required_organ_flag = test_organ.organ_flags), test_organ.max_health, \
 		"(Testing get_organ_loss() with required_organ_flag = [test_organ.organ_flags]) \
 			Mob level \"apply organ damage\" can exceed the [slot_to_use] organ's damage cap with default arguments.")
 	dummy.fully_heal(HEAL_ORGANS)
 
 	// Tests [mob/living/proc/set_organ_damage]
-	TEST_ASSERT_EQUAL(dummy.setOrganLoss(slot_to_use, test_organ.maxHealth * 10), -test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.set_organ_loss(slot_to_use, test_organ.max_health * 10), -test_organ.max_health, \
 		"Mob level \"set organ damage\" returned the wrong value for [slot_to_use] organ with default arguments.")
-	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.max_health, \
 		"Mob level \"set organ damage\" can exceed the [slot_to_use] organ's damage cap with default arguments.")
 	dummy.fully_heal(HEAL_ORGANS)
 
-	// Tests [mob/living/proc/adjustOrganLoss] with a large max supplied
-	TEST_ASSERT_EQUAL(dummy.adjustOrganLoss(slot_to_use, test_organ.maxHealth * 10, INFINITY), -test_organ.maxHealth, \
+	// Tests [mob/living/proc/adjust_organ_loss] with a large max supplied
+	TEST_ASSERT_EQUAL(dummy.adjust_organ_loss(slot_to_use, test_organ.max_health * 10, INFINITY), -test_organ.max_health, \
 		"Mob level \"apply organ damage\" returned the wrong value for [slot_to_use] organ with a large maximum supplied.")
-	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use), test_organ.max_health, \
 		"Mob level \"apply organ damage\" can exceed the [slot_to_use] organ's damage cap with a large maximum supplied.")
-	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use, required_organ_flag = test_organ.organ_flags), test_organ.maxHealth, \
+	TEST_ASSERT_EQUAL(dummy.get_organ_loss(slot_to_use, required_organ_flag = test_organ.organ_flags), test_organ.max_health, \
 		"(Testing get_organ_loss() with required_organ_flag = [test_organ.organ_flags]) \
 			Mob level \"apply organ damage\" can exceed the [slot_to_use] organ's damage cap with a large maximum supplied.")
 	dummy.fully_heal(HEAL_ORGANS)

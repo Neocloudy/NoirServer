@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 	icon_dead = "parrot_dead"
 	density = FALSE
 	health = 80
-	maxHealth = 80
+	max_health = 80
 	pass_flags = PASSTABLE | PASSMOB
 
 	guaranteed_butcher_results = list(/obj/item/food/cracker = 1)
@@ -349,8 +349,8 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 	if(!istype(thing, /obj/item/food/cracker))
 		return TRUE // we still ate it
 
-	if(health < maxHealth)
-		adjustBruteLoss(-10)
+	if(health < max_health)
+		adjust_brute_loss(-10)
 	speech_probability_rate *= 1.27
 	speech_shuffle_rate += 10
 	update_speech_blackboards()

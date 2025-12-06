@@ -1,4 +1,4 @@
-#define BUBBLEGUM_SMASH (health <= maxHealth*0.5) // angery
+#define BUBBLEGUM_SMASH (health <= max_health*0.5) // angery
 #define BUBBLEGUM_CAN_ENRAGE (enrage_till + (enrage_time * 2) <= world.time)
 #define BUBBLEGUM_IS_ENRAGED (enrage_till > world.time)
 
@@ -31,7 +31,7 @@ Difficulty: Hard
 	name = "bubblegum"
 	desc = "In what passes for a hierarchy among slaughter demons, this one is king."
 	health = 2500
-	maxHealth = 2500
+	max_health = 2500
 	attack_verb_continuous = "rends"
 	attack_verb_simple = "rend"
 	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
@@ -275,9 +275,9 @@ Difficulty: Hard
 	set_varspeed(move_to_delay)
 	handle_automated_action() // need to recheck movement otherwise move_to_delay won't update until the next checking aka will be wrong speed for a bit
 
-/mob/living/simple_animal/hostile/megafauna/bubblegum/adjustBruteLoss(amount, updating_health = TRUE, forced = FALSE, required_bodytype)
+/mob/living/simple_animal/hostile/megafauna/bubblegum/adjust_brute_loss(amount, updating_health = TRUE, forced = FALSE, required_bodytype)
 	. = ..()
-	anger_modifier = clamp(((maxHealth - health)/60),0,20)
+	anger_modifier = clamp(((max_health - health)/60),0,20)
 	enrage_time = initial(enrage_time) * clamp(anger_modifier / 20, 0.5, 1)
 	if(hallucination_charge)
 		hallucination_charge.enraged = BUBBLEGUM_SMASH
@@ -320,7 +320,7 @@ Difficulty: Hard
 	name = "bubblegum's hallucination"
 	desc = "Is that really just a hallucination?"
 	health = 1
-	maxHealth = 1
+	max_health = 1
 	alpha = 127.5
 	crusher_loot = null
 	loot = null
@@ -344,7 +344,7 @@ Difficulty: Hard
 /mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	return
 
-/mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/adjustBruteLoss(amount, updating_health = TRUE, forced = FALSE, required_bodytype)
+/mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/adjust_brute_loss(amount, updating_health = TRUE, forced = FALSE, required_bodytype)
 	return
 
 /mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/OpenFire()

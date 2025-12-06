@@ -23,7 +23,7 @@
 
 	data["raptor_image"] = icon2base64(icon(icon = my_raptor.icon, icon_state = my_raptor.icon_state, frame = 1))
 	data["raptor_attack"] = my_raptor.melee_damage_lower
-	data["raptor_health"] = my_raptor.maxHealth
+	data["raptor_health"] = my_raptor.max_health
 	data["raptor_speed"] = my_raptor.speed
 	data["raptor_color"] = my_raptor.name
 	data["raptor_gender"] = my_raptor.gender

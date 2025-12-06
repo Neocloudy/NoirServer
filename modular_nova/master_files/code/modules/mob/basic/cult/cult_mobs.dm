@@ -8,7 +8,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 2.5
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -49,7 +49,7 @@
 	desc = "A ghostly follower of the Blood Mother."
 	icon_state = "cultghost"
 	icon_living = "cultghost"
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -67,7 +67,7 @@
 	desc = "A construct of runed metal and red crystals, a living mannequin."
 	icon_state = "mannequin_cult"
 	icon_living = "mannequin_cult"
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -86,7 +86,7 @@
 	desc = "A follower of the Blood Mother, either experimented on or just devout enough to be turned into a monster."
 	icon_state = "culthorror"
 	icon_living = "culthorror"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -104,7 +104,7 @@
 	desc = "A follower of the Blood Mother, covered in thick armor and armed with a sword and shield."
 	icon_state = "cultwarrior"
 	icon_living = "cultwarrior"
-	maxHealth = 180
+	max_health = 180
 	health = 180
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -122,7 +122,7 @@
 	desc = "A follower of the Blood Mother, armed with a blood-spear."
 	icon_state = "cultspear"
 	icon_living = "cultspear"
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -140,7 +140,7 @@
 	desc = "A follower of the Blood Mother, armed with two ritual daggers."
 	icon_state = "cultliz"
 	icon_living = "cultliz"
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -160,7 +160,7 @@
 	icon = 'modular_nova/master_files/icons/mob/newmobs.dmi'
 	icon_state = "cultmage"
 	icon_living = "cultmage"
-	maxHealth = 115
+	max_health = 115
 	health = 115
 	obj_damage = 20
 	melee_damage_lower = 12
@@ -196,7 +196,7 @@
 	desc = "A cultist with powerful command over blood magic, seeming to be at a much higher rank in the cult."
 	icon_state = "cultelite"
 	icon_living = "cultelite"
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	projectilesound = 'sound/items/weapons/barragespellhit.ogg'
 	casingtype = /obj/item/ammo_casing/magic/arcane_barrage
@@ -215,7 +215,7 @@
 	desc = "A cultist with powerful command over blood magic, seeming to be at a much higher rank in the cult."
 	icon_state = "cultelite"
 	icon_living = "cultelite"
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	projectilesound = 'sound/items/weapons/barragespellhit.ogg'
 	casingtype = /obj/item/ammo_casing/magic/fireball
@@ -240,7 +240,7 @@
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
 	speak_emote = list("cackles manically")
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	speed = 2
 	obj_damage = 50
@@ -269,7 +269,7 @@
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
 	speed = 2
-	maxHealth = 450
+	max_health = 450
 	health = 450
 	obj_damage = 80
 	melee_damage_lower = 35

@@ -10,7 +10,7 @@
 	base_pixel_x = -12
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 
-	maxHealth = 180
+	max_health = 180
 	health = 180
 	speed = 5
 	obj_damage = 15

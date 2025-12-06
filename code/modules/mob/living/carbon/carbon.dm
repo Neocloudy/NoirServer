@@ -344,14 +344,14 @@
 	var/turf/location = get_turf(src)
 	if(!blood)
 		adjust_nutrition(-lost_nutrition)
-		need_mob_update += adjustToxLoss(-3, updating_health = FALSE)
+		need_mob_update += adjust_tox_loss(-3, updating_health = FALSE)
 
 	for(var/i = 0 to distance)
 		if(blood)
 			if(location)
 				add_splatter_floor(location)
 			if(vomit_flags & MOB_VOMIT_HARM)
-				need_mob_update += adjustBruteLoss(3, updating_health = FALSE)
+				need_mob_update += adjust_brute_loss(3, updating_health = FALSE)
 		else
 			if(location)
 				location.add_vomit_floor(src, vomit_type, vomit_flags, purge_ratio) // call purge when doing detoxicfication to pump more chems out of the stomach.
@@ -423,14 +423,14 @@
 		var/obj/item/bodypart/BP = X
 		total_brute += (BP.brute_dam * BP.body_damage_coeff)
 		total_burn += (BP.burn_dam * BP.body_damage_coeff)
-	set_health(round(maxHealth - getOxyLoss() - getToxLoss() - total_burn - total_brute, DAMAGE_PRECISION))
+	set_health(round(max_health - get_oxy_loss() - get_tox_loss() - total_burn - total_brute, DAMAGE_PRECISION))
 	update_stat()
 	update_stamina()
 
 	/// The amount of burn damage needed to be done for this mob to be husked
 	var/husk_threshold = get_bodypart(BODY_ZONE_CHEST).max_damage * -1
 
-	if(((maxHealth - total_burn) < husk_threshold) && stat == DEAD )
+	if(((max_health - total_burn) < husk_threshold) && stat == DEAD )
 		become_husk(BURN)
 	med_hud_set_health()
 	if(stat == SOFT_CRIT)
@@ -605,7 +605,7 @@
 		clear_fullscreen("oxy")
 
 	//Fire and Brute damage overlay (BSSR)
-	var/hurtdamage = getBruteLoss() + getFireLoss() + damageoverlaytemp
+	var/hurtdamage = get_brute_loss() + get_fire_loss() + damageoverlaytemp
 	if(hurtdamage && !HAS_TRAIT(src, TRAIT_NO_DAMAGE_OVERLAY))
 		var/severity = 0
 		switch(hurtdamage)
@@ -639,19 +639,19 @@
 	if(shown_health_amount == null)
 		shown_health_amount = health
 
-	if(shown_health_amount >= maxHealth)
+	if(shown_health_amount >= max_health)
 		hud_used.healths.icon_state = "health0"
 
-	else if(shown_health_amount > maxHealth * 0.8)
+	else if(shown_health_amount > max_health * 0.8)
 		hud_used.healths.icon_state = "health1"
 
-	else if(shown_health_amount > maxHealth * 0.6)
+	else if(shown_health_amount > max_health * 0.6)
 		hud_used.healths.icon_state = "health2"
 
-	else if(shown_health_amount > maxHealth * 0.4)
+	else if(shown_health_amount > max_health * 0.4)
 		hud_used.healths.icon_state = "health3"
 
-	else if(shown_health_amount > maxHealth*0.2)
+	else if(shown_health_amount > max_health*0.2)
 		hud_used.healths.icon_state = "health4"
 
 	else if(shown_health_amount > 0)
@@ -664,24 +664,24 @@
 	if(!client || !hud_used?.stamina)
 		return
 
-	var/stam_crit_threshold = maxHealth - crit_threshold
+	var/stam_crit_threshold = max_health - crit_threshold
 
 	if(stat == DEAD)
 		hud_used.stamina.icon_state = "stamina_dead"
 	else
 
 		if(shown_stamina_loss == null)
-			shown_stamina_loss = getStaminaLoss()
+			shown_stamina_loss = get_stamina_loss()
 
 		if(shown_stamina_loss >= stam_crit_threshold)
 			hud_used.stamina.icon_state = "stamina_crit"
-		else if(shown_stamina_loss > maxHealth*0.8)
+		else if(shown_stamina_loss > max_health*0.8)
 			hud_used.stamina.icon_state = "stamina_5"
-		else if(shown_stamina_loss > maxHealth*0.6)
+		else if(shown_stamina_loss > max_health*0.6)
 			hud_used.stamina.icon_state = "stamina_4"
-		else if(shown_stamina_loss > maxHealth*0.4)
+		else if(shown_stamina_loss > max_health*0.4)
 			hud_used.stamina.icon_state = "stamina_3"
-		else if(shown_stamina_loss > maxHealth*0.2)
+		else if(shown_stamina_loss > max_health*0.2)
 			hud_used.stamina.icon_state = "stamina_2"
 		else if(shown_stamina_loss > 0)
 			hud_used.stamina.icon_state = "stamina_1"
@@ -837,7 +837,7 @@
 	if (HAS_TRAIT(src, TRAIT_DEFIB_BLACKLISTED))
 		return DEFIB_FAIL_BLACKLISTED
 
-	if ((getBruteLoss() >= MAX_REVIVE_BRUTE_DAMAGE) || (getFireLoss() >= MAX_REVIVE_FIRE_DAMAGE))
+	if ((get_brute_loss() >= MAX_REVIVE_BRUTE_DAMAGE) || (get_fire_loss() >= MAX_REVIVE_FIRE_DAMAGE))
 		return DEFIB_FAIL_TISSUE_DAMAGE
 
 	// Only check for a heart if they actually need a heart. Who would've thunk

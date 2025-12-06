@@ -31,7 +31,7 @@
 	icon_dead = "oil_shambler"
 	speak_emote = list("crackles")
 
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	damage_coeff = list(BRUTE = 1, BURN = 0, TOX = 1, STAMINA = 0, OXY = 0)
 	unsuitable_atmos_damage = 0
@@ -115,7 +115,7 @@
 	icon_dead = "diseased_rat_dead"
 	speak_emote = list("chitters")
 
-	maxHealth = 70
+	max_health = 70
 	health = 70
 
 	melee_damage_lower = 7
@@ -180,7 +180,7 @@
 	icon_dead = "electric_mosquito_dead"
 	speak_emote = list("buzzes")
 
-	maxHealth = 70
+	max_health = 70
 	health = 70
 
 	melee_damage_lower = 7
@@ -238,7 +238,7 @@
 	icon_dead = "centaur_dead"
 	speak_emote = list("groans")
 
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0

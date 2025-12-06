@@ -13,7 +13,7 @@
 	mob_size = MOB_SIZE_SMALL
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	speed = 1.25
 	gold_core_spawnable = FRIENDLY_SPAWN
 	can_be_held = TRUE

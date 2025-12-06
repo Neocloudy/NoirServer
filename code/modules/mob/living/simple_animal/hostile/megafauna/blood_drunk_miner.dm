@@ -22,7 +22,7 @@ Difficulty: Medium
 	name = "blood-drunk miner"
 	desc = "A miner destined to wander forever, engaged in an endless hunt."
 	health = 900
-	maxHealth = 900
+	max_health = 900
 	icon_state = "miner"
 	icon_living = "miner"
 	icon = 'icons/mob/simple/broadMobs.dmi'
@@ -151,9 +151,9 @@ Difficulty: Medium
 		if(living_target.stat == DEAD)
 			if(!is_station_level(z) || client) //NPC monsters won't heal while on station
 				if(guidance)
-					adjustHealth(-living_target.maxHealth)
+					adjustHealth(-living_target.max_health)
 				else
-					adjustHealth(-(living_target.maxHealth * 0.5))
+					adjustHealth(-(living_target.max_health * 0.5))
 			devour(living_target)
 			return TRUE
 	changeNext_move(CLICK_CD_MELEE)

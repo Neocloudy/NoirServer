@@ -10,7 +10,7 @@
 	if(isorgan(beautiful_mutant))
 		var/obj/item/organ/organ = beautiful_mutant
 		// Rare affix organs get more health
-		organ.maxHealth *= .
+		organ.max_health *= .
 
 /datum/micro_organism/cell_line/organs/heart
 	desc = "dense heart tissue"

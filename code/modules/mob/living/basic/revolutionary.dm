@@ -8,7 +8,7 @@
 	basic_mob_flags = DEL_ON_DEATH
 	attack_verb_continuous = "robusts"
 	attack_verb_simple = "robust"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	melee_damage_lower = 15
 	melee_damage_upper = 20

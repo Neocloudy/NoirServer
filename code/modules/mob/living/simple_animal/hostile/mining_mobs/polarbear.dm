@@ -12,7 +12,7 @@
 	speak_emote = list("growls")
 	speed = 3
 	move_to_delay = 8
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	obj_damage = 40
 	melee_damage_lower = 25
@@ -47,7 +47,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/polarbear/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
 	. = ..()
-	if(health > maxHealth*0.5)
+	if(health > max_health*0.5)
 		rapid_melee = initial(rapid_melee)
 		return
 	if(!aggressive_message_said && target)

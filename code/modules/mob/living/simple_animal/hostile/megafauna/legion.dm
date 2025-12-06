@@ -24,7 +24,7 @@
 /mob/living/simple_animal/hostile/megafauna/legion
 	name = "Legion"
 	health = 700
-	maxHealth = 700
+	max_health = 700
 	icon_state = "mega_legion"
 	icon_living = "mega_legion"
 	health_doll_icon = "mega_legion"
@@ -86,7 +86,7 @@
 	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
 	pixel_x = -16
 	pixel_y = -8
-	maxHealth = 350
+	max_health = 350
 	size = LEGION_MEDIUM
 
 /mob/living/simple_animal/hostile/megafauna/legion/medium/left
@@ -103,7 +103,7 @@
 	icon_state = "mega_legion"
 	pixel_x = 0
 	pixel_y = 0
-	maxHealth = 200
+	max_health = 200
 	size = LEGION_SMALL
 
 /mob/living/simple_animal/hostile/megafauna/legion/small/Initialize(mapload)

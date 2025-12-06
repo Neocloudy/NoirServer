@@ -123,7 +123,7 @@
 /obj/item/clothing/head/hooded/hostile_environment/proc/consume(mob/living/user, mob/living/butchered)
 	if(butchered.mob_biotypes & (MOB_ROBOTIC | MOB_SPIRIT))
 		return
-	var/health_consumed = butchered.maxHealth * 0.1
+	var/health_consumed = butchered.max_health * 0.1
 	user.heal_ordered_damage(health_consumed, list(BRUTE, BURN, TOX))
 	to_chat(user, span_notice("You heal from the corpse of [butchered]."))
 	var/datum/client_colour/color_effect = user.add_client_colour(/datum/client_colour/bloodlust, HELMET_TRAIT)

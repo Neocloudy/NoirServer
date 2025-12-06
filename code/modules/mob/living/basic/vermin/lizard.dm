@@ -13,7 +13,7 @@
 	icon_gib = "lizard_gib"
 	speak_emote = list("hisses")
 	health = 10
-	maxHealth = 10
+	max_health = 10
 	faction = list(FACTION_LIZARD)
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"

@@ -10,7 +10,7 @@
 	icon_gib = "syndicate_gib"
 	mob_biotypes = MOB_ORGANIC|MOB_MINING
 	speed = 2
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	melee_damage_lower = 0
 	melee_damage_upper = 0
@@ -86,7 +86,7 @@
 	minimum_survivable_temperature = 0
 	maximum_survivable_temperature = INFINITY
 	speed = 1.5
-	maxHealth = 1
+	max_health = 1
 	health = 1
 	melee_damage_lower = 2
 	melee_damage_upper = 2

@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(magicarp_spell_colours, list(
 	name = "magicarp"
 	desc = "50% magic, 50% carp, 100% horrible."
 	icon_gib = "magicarp_gib"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	gold_core_spawnable = NO_SPAWN
 	greyscale_config = /datum/greyscale_config/carp_magic
@@ -116,7 +116,7 @@ GLOBAL_LIST_INIT(magicarp_spell_colours, list(
 /mob/living/basic/carp/magic/chaos
 	name = "chaos magicarp"
 	desc = "50% carp, 100% magic, 150% horrible."
-	maxHealth = 75
+	max_health = 75
 	health = 75
 
 /mob/living/basic/carp/magic/chaos/assign_spell()

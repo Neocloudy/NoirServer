@@ -198,7 +198,7 @@
 	icon_state = "heart-c-on"
 	base_icon_state = "heart-c"
 	organ_flags = ORGAN_ROBOTIC
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.75 //This also hits defib timer, so a bit higher than its less important counterparts
+	max_health = STANDARD_ORGAN_THRESHOLD * 0.75 //This also hits defib timer, so a bit higher than its less important counterparts
 	failing_desc = "seems to be broken."
 	beat_noise = "a steady fsssh of hydraulics"
 	/// Whether or not we have a stabilization available. This prevents our owner from entering softcrit for an amount of time.
@@ -251,7 +251,7 @@
 		var/mob/living/carbon/human/wounded_owner = owner
 		wounded_owner.blood_volume += 2 * seconds_per_tick
 		if(toxification_probability && prob(toxification_probability))
-			wounded_owner.adjustToxLoss(1 * seconds_per_tick, updating_health = FALSE)
+			wounded_owner.adjust_tox_loss(1 * seconds_per_tick, updating_health = FALSE)
 
 		var/datum/wound/bloodiest_wound
 
@@ -282,7 +282,7 @@
 		artificial blood. However, this can cause toxins to build up in the bloodstream to the imperfect replication process."
 	icon_state = "heart-c-u-on"
 	base_icon_state = "heart-c-u"
-	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.5 * STANDARD_ORGAN_THRESHOLD
 	bleed_prevention = TRUE
 	emp_vulnerability = 40
 
@@ -292,7 +292,7 @@
 		and mobility for a brief moment. In addition, the heart is able to safely self-replicate blood without risk of toxin buildup."
 	icon_state = "heart-c-u2-on"
 	base_icon_state = "heart-c-u2"
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	stabilization_available = TRUE
 	toxification_probability = 0
 	bleed_prevention = TRUE
@@ -304,7 +304,7 @@
 		Offers no protection against EMPs."
 	icon_state = "heart-c-s-on"
 	base_icon_state = "heart-c-s"
-	maxHealth = STANDARD_ORGAN_THRESHOLD*0.5
+	max_health = STANDARD_ORGAN_THRESHOLD*0.5
 	beat_noise = "a concerningly irregular hydraulic hum. You <b>shouldn't touch this</b> while it's running"
 	emp_vulnerability = 100
 
@@ -347,7 +347,7 @@
 	icon_state = "heart-evolved-on"
 	base_icon_state = "heart-evolved"
 
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 1.2
+	max_health = STANDARD_ORGAN_THRESHOLD * 1.2
 
 	/// Chance to heal per on_life
 	var/healing_probability = 10
@@ -358,7 +358,7 @@
 	. = ..()
 
 	if(prob(healing_probability * seconds_per_tick))
-		var/damage_to_heal = base_healing * ((maxHealth - damage) / initial(maxHealth)) * seconds_per_tick
+		var/damage_to_heal = base_healing * ((max_health - damage) / initial(max_health)) * seconds_per_tick
 		owner.heal_overall_damage(damage_to_heal, damage_to_heal, required_bodytype = BODYTYPE_ORGANIC)
 
 		if(owner.stat == HARD_CRIT && !owner.has_reagent(/datum/reagent/medicine/atropine, 5))
@@ -402,6 +402,6 @@
 
 /// We don't block magic if it would kill our heart
 /obj/item/organ/heart/evolved/sacred/proc/check_block()
-	if(maxHealth - damage <= damage_per_block)
+	if(max_health - damage <= damage_per_block)
 		return FALSE
 	return TRUE

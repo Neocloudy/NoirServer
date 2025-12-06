@@ -11,7 +11,7 @@
 	icon_living = "webslinger"
 	icon_dead = "webslinger_dead"
 	gender = FEMALE
-	maxHealth = 175
+	max_health = 175
 	health = 175
 	obj_damage = 45
 	melee_damage_lower = 25
@@ -73,7 +73,7 @@
 	icon_living = "voltaic"
 	icon_dead = "voltaic_dead"
 	gender = FEMALE
-	maxHealth = 175
+	max_health = 175
 	health = 175
 	melee_damage_lower = 8
 	melee_damage_upper = 8
@@ -109,7 +109,7 @@
 	icon_living = "pit"
 	icon_dead = "pit_dead"
 	gender = MALE
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	armour_penetration = 25
 	melee_damage_lower = 5
@@ -156,7 +156,7 @@
 	icon_living = "ogre"
 	icon_dead = "ogre_dead"
 	gender = FEMALE
-	maxHealth = 600 // hah fat
+	max_health = 600 // hah fat
 	health = 600
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 0, OXY = 1)
 	poison_per_bite = 1.5
@@ -218,7 +218,7 @@
 	icon_living = "carrier"
 	icon_dead = "carrier_dead"
 	gender = FEMALE
-	maxHealth = 225
+	max_health = 225
 	health = 225
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -264,7 +264,7 @@
 	icon_dead = "baron_dead"
 	gender = MALE
 	mob_biotypes = MOB_SPECIAL
-	maxHealth = 2000
+	max_health = 2000
 	health = 2000
 	obj_damage = 200
 	armour_penetration = 50
@@ -345,7 +345,7 @@
 	icon_state = "badnanaspider" // created by Coldstorm on the Skyrat Discord
 	icon_living = "badnanaspider"
 	icon_dead = "badnanaspider_d"
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	melee_damage_lower = 5
 	melee_damage_upper = 5

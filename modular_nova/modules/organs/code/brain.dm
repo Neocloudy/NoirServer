@@ -93,5 +93,5 @@
 /obj/item/organ/brain/cybernetic/cortical/surplus
 	name = "surplus augmented brain"
 	desc = "A brain which has been in some part mechanized. It looks a bit cheap."
-	maxHealth = BRAIN_DAMAGE_DEATH*0.5 //200 -> 100, by default
+	max_health = BRAIN_DAMAGE_DEATH*0.5 //200 -> 100, by default
 	emp_dmg_max = INFINITY

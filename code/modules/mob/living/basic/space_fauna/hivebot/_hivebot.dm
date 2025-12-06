@@ -10,7 +10,7 @@
 	mob_biotypes = MOB_ROBOTIC
 
 	health = 15
-	maxHealth = 15
+	max_health = 15
 	melee_damage_lower = 2
 	melee_damage_upper = 3
 
@@ -75,7 +75,7 @@
 	icon_dead = "strong"
 	desc = "A robot, this one is armed and looks tough!"
 	health = 80
-	maxHealth = 80
+	max_health = 80
 	ranged_attacker = TRUE
 	ai_controller = /datum/ai_controller/basic_controller/hivebot/ranged
 
@@ -86,7 +86,7 @@
 	icon_dead = "strong"
 	desc = "A robot built for base upkeep, intended for use inside hivebot colonies."
 	health = 60
-	maxHealth = 60
+	max_health = 60
 	gold_core_spawnable = HOSTILE_SPAWN
 	ranged_attacker = TRUE
 	ai_controller = /datum/ai_controller/basic_controller/hivebot/mechanic
@@ -123,7 +123,7 @@
 	COOLDOWN_START(src, repair_cooldown, 50 SECONDS)
 
 /mob/living/basic/hivebot/mechanic/proc/repair_hivebot(mob/living/basic/bot_target)
-	if(bot_target.health >= bot_target.maxHealth)
+	if(bot_target.health >= bot_target.max_health)
 		to_chat(src, span_warning("Diagnostics indicate that this unit is at peak integrity."))
 		return
 	if(!COOLDOWN_FINISHED(src, repair_cooldown))

@@ -3,7 +3,7 @@
 	desc = "Come buy some!"
 	unique_name = FALSE
 	icon = 'icons/mob/simple/simple_human.dmi'
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	melee_damage_lower = 10
 	melee_damage_upper = 10

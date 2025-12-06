@@ -416,7 +416,7 @@
 		return PROCESS_KILL
 
 	// Don't bother with fully healed people.
-	if(mob_occupant.get_organic_health() >= mob_occupant.getMaxHealth())
+	if(mob_occupant.get_organic_health() >= mob_occupant.get_max_health())
 		if(iscarbon(mob_occupant))
 			var/mob/living/carbon/C = mob_occupant
 			if(C.all_wounds)
@@ -569,11 +569,11 @@
 		occupant_data["bodyTemperature"] = round(mob_occupant.bodytemperature, 1)
 
 		occupant_data["health"] = mob_occupant.health
-		occupant_data["maxHealth"] = mob_occupant.maxHealth
-		occupant_data["bruteLoss"] = mob_occupant.getBruteLoss()
-		occupant_data["oxyLoss"] = mob_occupant.getOxyLoss()
-		occupant_data["toxLoss"] = mob_occupant.getToxLoss()
-		occupant_data["fireLoss"] = mob_occupant.getFireLoss()
+		occupant_data["max_health"] = mob_occupant.max_health
+		occupant_data["bruteLoss"] = mob_occupant.get_brute_loss()
+		occupant_data["oxyLoss"] = mob_occupant.get_oxy_loss()
+		occupant_data["toxLoss"] = mob_occupant.get_tox_loss()
+		occupant_data["fireLoss"] = mob_occupant.get_fire_loss()
 	.["occupant"] = occupant_data
 
 	var/datum/gas_mixture/air1 = internal_connector.gas_connector.airs[1]

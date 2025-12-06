@@ -13,7 +13,7 @@
 	icon_dead = "syndicate_dead"
 	icon_gib = "syndicate_gib"
 	speed = 0.8
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 15
 	melee_damage_upper = 15

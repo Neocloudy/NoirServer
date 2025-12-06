@@ -1,7 +1,7 @@
 ///Robot customers
 /mob/living/basic/robot_customer
 	name = "tourist bot"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	desc = "I wonder what they'll order..."
 	gender = NEUTER

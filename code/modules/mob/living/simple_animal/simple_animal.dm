@@ -4,7 +4,7 @@
 	icon = 'icons/mob/simple/animal.dmi'
 	abstract_type = /mob/living/simple_animal
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	gender = PLURAL //placeholder
 	living_flags = MOVES_ON_ITS_OWN
 	status_flags = CANPUSH
@@ -215,7 +215,7 @@
 /mob/living/simple_animal/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	. = ..()
 	if(staminaloss > 0)
-		adjustStaminaLoss(-stamina_recovery * seconds_per_tick, FALSE, TRUE)
+		adjust_stamina_loss(-stamina_recovery * seconds_per_tick, FALSE, TRUE)
 
 /mob/living/simple_animal/Destroy()
 	QDEL_NULL(access_card)
@@ -358,7 +358,7 @@
 
 /mob/living/simple_animal/get_status_tab_items()
 	. = ..()
-	. += "Health: [round((health / maxHealth) * 100)]%"
+	. += "Health: [round((health / max_health) * 100)]%"
 	. += "Combat Mode: [combat_mode ? "On" : "Off"]"
 
 /mob/living/simple_animal/proc/drop_loot(drop_loc)

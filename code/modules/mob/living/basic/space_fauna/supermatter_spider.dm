@@ -19,7 +19,7 @@
 	attack_sound = 'sound/effects/supermatter.ogg'
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 
-	maxHealth = 10
+	max_health = 10
 	health = 10
 	minimum_survivable_temperature = TCMB
 	maximum_survivable_temperature = T0C + 1250
@@ -78,7 +78,7 @@
 	desc = "A sliver of overcharged supermatter placed upon a robotically enhanced pedestal. This one seems especially dangerous."
 	icon_state = "smspideroc"
 	icon_living = "smspideroc"
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	single_use = FALSE
 

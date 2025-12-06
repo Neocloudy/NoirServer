@@ -50,7 +50,7 @@
 		to_chat(M, span_warning("[high_message]"))
 	M.AdjustKnockdown(-2 SECONDS * REM * seconds_per_tick)
 	M.AdjustImmobilized(-2 SECONDS * REM * seconds_per_tick)
-	if(M.adjustStaminaLoss(-10 * REM * seconds_per_tick, updating_stamina = FALSE))
+	if(M.adjust_stamina_loss(-10 * REM * seconds_per_tick, updating_stamina = FALSE))
 		. = UPDATE_MOB_HEALTH
 	M.AdjustStun(-1 SECONDS * REM * seconds_per_tick) //this is absolutely rediculous
 	M.overlay_fullscreen("pcp_rage", /atom/movable/screen/fullscreen/color_vision/rage_color)
@@ -77,10 +77,10 @@
 	L.drop_all_held_items()
 
 /datum/reagent/drug/pcp/overdose_process(mob/living/M, seconds_per_tick, times_fired)
-	var/need_mob_update = M.adjustToxLoss(2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += M.adjustOrganLoss(ORGAN_SLOT_HEART, (2 * REM * seconds_per_tick))
-	need_mob_update += M.adjustOrganLoss(ORGAN_SLOT_BRAIN, (2 * REM * seconds_per_tick))
-	need_mob_update += M.adjustStaminaLoss(15 * REM * seconds_per_tick, updating_stamina = FALSE) //reverses stamina loss
+	var/need_mob_update = M.adjust_tox_loss(2 * REM * seconds_per_tick, updating_health = FALSE)
+	need_mob_update += M.adjust_organ_loss(ORGAN_SLOT_HEART, (2 * REM * seconds_per_tick))
+	need_mob_update += M.adjust_organ_loss(ORGAN_SLOT_BRAIN, (2 * REM * seconds_per_tick))
+	need_mob_update += M.adjust_stamina_loss(15 * REM * seconds_per_tick, updating_stamina = FALSE) //reverses stamina loss
 	M.set_jitter_if_lower(5 SECONDS)
 	if(SPT_PROB(2.5, seconds_per_tick))
 		M.emote(pick("twitch","drool"))

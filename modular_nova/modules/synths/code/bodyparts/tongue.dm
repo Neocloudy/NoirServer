@@ -10,7 +10,7 @@
 	taste_sensitivity = 25 // not as good as an organic tongue
 	liked_foodtypes = NONE
 	disliked_foodtypes = NONE
-	maxHealth = 100 //RoboTongue!
+	max_health = 100 //RoboTongue!
 	zone = BODY_ZONE_HEAD
 	slot = ORGAN_SLOT_TONGUE
 	organ_flags = ORGAN_ROBOTIC | ORGAN_SYNTHETIC_FROM_SPECIES

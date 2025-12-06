@@ -6,7 +6,7 @@
 	icon_living = "tegu"
 	icon_dead = "tegu_dead"
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	melee_damage_lower = 16 //They do have a nasty bite
 	melee_damage_upper = 16
 	pass_flags = PASSTABLE

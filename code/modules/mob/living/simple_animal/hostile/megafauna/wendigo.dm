@@ -1,4 +1,4 @@
-#define WENDIGO_ENRAGED (health <= maxHealth*0.5)
+#define WENDIGO_ENRAGED (health <= max_health*0.5)
 
 /*
 
@@ -10,7 +10,7 @@ Difficulty: Hard
 	name = "wendigo"
 	desc = "A mythological man-eating legendary creature, the sockets of its eyes track you with an unsatiated hunger."
 	health = 2500
-	maxHealth = 2500
+	max_health = 2500
 	icon_state = "wendigo"
 	icon_living = "wendigo"
 	icon_dead = "wendigo_dead"

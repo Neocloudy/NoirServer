@@ -15,7 +15,7 @@
 	combat_mode = TRUE
 	attack_verb_continuous = "gores"
 	attack_verb_simple = "gore"
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	speed = 0
 	faction = list(FACTION_ILLUSION)
@@ -44,7 +44,7 @@
 	appearance = original.appearance
 	parent_mob_ref = WEAKREF(original)
 	setDir(original.dir)
-	maxHealth = hp
+	max_health = hp
 	updatehealth() // re-cap health to new value
 	melee_damage_lower = damage
 	melee_damage_upper = damage

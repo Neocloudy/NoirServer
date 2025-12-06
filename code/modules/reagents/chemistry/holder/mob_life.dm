@@ -26,7 +26,7 @@
 	var/provide_pain_message
 	var/amount
 	if(liver)
-		var/liver_health_percent = (liver.maxHealth - liver.damage) / liver.maxHealth
+		var/liver_health_percent = (liver.max_health - liver.damage) / liver.max_health
 		liver_tolerance = liver.toxTolerance * liver_health_percent
 		provide_pain_message = HAS_NO_TOXIN
 

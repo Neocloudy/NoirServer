@@ -15,7 +15,7 @@
 	held_w_class = WEIGHT_CLASS_TINY
 	pass_flags = PASSTABLE | PASSMOB
 	health = 30
-	maxHealth = 30
+	max_health = 30
 	speed = 6
 	verb_say = "gurgles"
 	verb_ask = "gurgles curiously"
@@ -100,7 +100,7 @@
 	icon_dead = "snail_maints_dead"
 	base_icon_state = "snail_maints"
 	health = 40
-	maxHealth = 40
+	max_health = 40
 	melee_damage_lower = 5
 	melee_damage_upper = 8
 	obj_damage = 8

@@ -14,7 +14,7 @@
 	icon_state = "gondola"
 	icon_living = "gondola"
 
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	faction = list(FACTION_GONDOLA)
 	response_help_continuous = "pets"

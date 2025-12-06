@@ -252,7 +252,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 	ADD_TRAIT(pet, TRAIT_AI_PAUSED, REF(src))
 	if((datum_flags & DF_ISPROCESSING))
 		return
-	if(pet.health < pet.maxHealth) //if we're in the pda, heal up
+	if(pet.health < pet.max_health) //if we're in the pda, heal up
 		START_PROCESSING(SSprocessing, src)
 
 /datum/computer_file/program/virtual_pet/proc/on_pet_exit(atom/movable/source, atom/movable/exited)
@@ -268,7 +268,7 @@ GLOBAL_LIST_EMPTY(virtual_pets_list)
 
 /datum/computer_file/program/virtual_pet/process()
 	if(pet.loc == computer)
-		if(pet.health >= pet.maxHealth)
+		if(pet.health >= pet.max_health)
 			return PROCESS_KILL
 		if(pet.stat == DEAD)
 			pet.revive(ADMIN_HEAL_ALL)

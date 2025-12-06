@@ -28,7 +28,7 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	health_doll_icon = "herald"
-	maxHealth = 1000
+	max_health = 1000
 	health = 1000
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -153,7 +153,7 @@
 	shoot_projectile(target_turf, angle_to_target, FALSE, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 0.2 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 0.4 SECONDS)
-	if(health < maxHealth * 0.5 && !is_mirror)
+	if(health < max_health * 0.5 && !is_mirror)
 		playsound(get_turf(src), 'sound/effects/magic/clockwork/invoke_general.ogg', 20, TRUE)
 		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 1 SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 1.2 SECONDS)
@@ -175,7 +175,7 @@
 		icon_state = "herald_enraged"
 	playsound(get_turf(src), 'sound/effects/magic/clockwork/invoke_general.ogg', 20, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(herald_circleshot), 0), 0.5 SECONDS)
-	if(health < maxHealth * 0.5 && !is_mirror)
+	if(health < max_health * 0.5 && !is_mirror)
 		playsound(get_turf(src), 'sound/effects/magic/clockwork/invoke_general.ogg', 20, TRUE)
 		addtimer(CALLBACK(src, PROC_REF(herald_circleshot), 22.5), 1.5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(unenrage)), 2 SECONDS)
@@ -202,7 +202,7 @@
 	name = "herald's mirror"
 	desc = "This fiendish work of magic copies the herald's attacks.  Seems logical to smash it."
 	health = 60
-	maxHealth = 60
+	max_health = 60
 	icon_state = "herald_mirror"
 	icon_aggro = "herald_mirror"
 	pixel_x = -16

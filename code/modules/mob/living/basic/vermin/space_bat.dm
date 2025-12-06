@@ -6,7 +6,7 @@
 	icon_dead = "bat_dead"
 	icon_gib = "bat_dead"
 
-	maxHealth = 15
+	max_health = 15
 	health = 15
 	melee_damage_lower = 5
 	melee_damage_upper = 6

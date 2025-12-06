@@ -12,10 +12,10 @@
 	attack_verb_continuous = list("attacks", "slaps", "whacks")
 	attack_verb_simple = list("attack", "slap", "whack")
 
-	///The brain's organ variables are significantly more different than the other organs, with half the decay rate for balance reasons, and twice the maxHealth
+	///The brain's organ variables are significantly more different than the other organs, with half the decay rate for balance reasons, and twice the max_health
 	decay_factor = STANDARD_ORGAN_DECAY * 0.5 //30 minutes of decaying to result in a fully damaged brain, since a fast decay rate would be unfun gameplay-wise
 
-	maxHealth = BRAIN_DAMAGE_DEATH
+	max_health = BRAIN_DAMAGE_DEATH
 	low_threshold = 45
 	high_threshold = 120
 
@@ -206,7 +206,7 @@
 	if(item.force != 0 && !(item.item_flags & NOBLUDGEON))
 		user.do_attack_animation(src)
 		playsound(loc, 'sound/effects/meatslap.ogg', 50)
-		set_organ_damage(maxHealth) //fails the brain as the brain was attacked, they're pretty fragile.
+		set_organ_damage(max_health) //fails the brain as the brain was attacked, they're pretty fragile.
 		visible_message(span_danger("[user] hits [src] with [item]!"))
 		to_chat(user, span_danger("You hit [src] with [item]!"))
 
@@ -343,7 +343,7 @@
 		owner.investigate_log("has been killed by brain damage.", INVESTIGATE_DEATHS)
 		owner.death()
 
-/obj/item/organ/brain/apply_organ_damage(damage_amount, maximum = maxHealth, required_organ_flag = NONE)
+/obj/item/organ/brain/apply_organ_damage(damage_amount, maximum = max_health, required_organ_flag = NONE)
 	. = ..()
 	var/delta_dam = . //for the sake of clarity
 	if(delta_dam <= 0 || damage < BRAIN_DAMAGE_MILD)

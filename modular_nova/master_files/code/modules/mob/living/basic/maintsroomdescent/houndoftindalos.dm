@@ -9,7 +9,7 @@
 	icon_gib = "syndicate_gib"
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 6
-	maxHealth = 5
+	max_health = 5
 	health = 5
 	obj_damage = 50
 	melee_damage_lower = 50

@@ -4,7 +4,7 @@
 	icon_state = "vileworm"
 	icon_living = "vileworm"
 	icon_dead = "vileworm_dead"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 
 	attack_action_path = /datum/action/cooldown/mob_cooldown/projectile_attack/dir_shots/bileworm/vileworm

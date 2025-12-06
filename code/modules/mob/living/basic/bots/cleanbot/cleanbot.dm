@@ -6,7 +6,7 @@
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "cleanbot0"
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	light_color = "#99ccff"
 
 	req_one_access = list(ACCESS_ROBOTICS, ACCESS_JANITOR)

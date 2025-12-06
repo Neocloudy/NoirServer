@@ -18,7 +18,7 @@
 	)
 	crusher_loot = /obj/item/crusher_trophy/deer_fur
 
-	maxHealth = 180
+	max_health = 180
 	health = 180
 	obj_damage = 15
 	melee_damage_lower = 15

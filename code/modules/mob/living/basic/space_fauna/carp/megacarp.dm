@@ -14,7 +14,7 @@
 	icon_dead = "megacarp_dead_greyscale"
 	icon_gib = "megacarp_gib"
 	health_doll_icon = "megacarp"
-	maxHealth = 20
+	max_health = 20
 	health = 20
 	pixel_x = -16
 	base_pixel_x = -16
@@ -31,5 +31,5 @@
 	name = "[pick(GLOB.megacarp_first_names)] [pick(GLOB.megacarp_last_names)]"
 	melee_damage_lower += rand(2, 10)
 	melee_damage_upper += rand(10,20)
-	maxHealth += rand(30,60)
-	health = maxHealth
+	max_health += rand(30,60)
+	health = max_health

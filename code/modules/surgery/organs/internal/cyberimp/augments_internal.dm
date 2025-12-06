@@ -206,8 +206,8 @@
 	owner.SetKnockdown(0)
 	owner.SetImmobilized(0)
 	owner.SetParalyzed(0)
-	owner.setStaminaLoss(0)
-	addtimer(CALLBACK(owner, TYPE_PROC_REF(/mob/living, setStaminaLoss), 0), stun_resistance_time)
+	owner.set_stamina_loss(0)
+	addtimer(CALLBACK(owner, TYPE_PROC_REF(/mob/living, set_stamina_loss), 0), stun_resistance_time)
 
 	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
 	sparks.set_up(5, 1, src)
@@ -332,8 +332,8 @@
 	if(!chippy_brain)
 		return
 	chippy_brain.apply_organ_damage(20 * severity)
-	chippy_brain.maxHealth -= 15 * severity // a bit of your brain fell off. again.
-	if(chippy_brain.damage >= chippy_brain.maxHealth)
+	chippy_brain.max_health -= 15 * severity // a bit of your brain fell off. again.
+	if(chippy_brain.damage >= chippy_brain.max_health)
 		chippy_brain.forceMove(owner.drop_location())
 		owner.visible_message(span_userdanger("[owner]'s brain falls off the back of [owner.p_their()] head!!!"), span_boldwarning("You feel like you're missing something."))
 		return chippy_brain

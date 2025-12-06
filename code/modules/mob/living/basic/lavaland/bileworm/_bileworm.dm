@@ -6,7 +6,7 @@
 	icon_living = "bileworm"
 	icon_dead = "bileworm_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BUG|MOB_MINING
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	verb_say = "spittles"
 	verb_ask = "spittles questioningly"

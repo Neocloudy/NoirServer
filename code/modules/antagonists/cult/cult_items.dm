@@ -143,7 +143,7 @@ Striking a noncultist, however, will tear their flesh."}
 			var/mob/living/carbon/human/miscreant = user
 			miscreant.apply_damage(rand(force/2, force), BRUTE, pick(GLOB.arm_zones))
 		else
-			user.adjustBruteLoss(rand(force/2,force))
+			user.adjust_brute_loss(rand(force/2,force))
 		return
 	..()
 
@@ -686,7 +686,7 @@ Striking a noncultist, however, will tear their flesh."}
 	. = ..()
 	if(!IS_CULTIST(user) && isliving(user))
 		var/mob/living/living_user = user
-		living_user.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5)
+		living_user.adjust_organ_loss(ORGAN_SLOT_BRAIN, 5)
 		. += span_danger("It hurts just to look at it. Better keep away.")
 	else
 		. += span_cult("It can be used to create a gateway to Nar'Sie's domain, which will summon weak, sentient constructs over time.")
@@ -958,7 +958,7 @@ Striking a noncultist, however, will tear their flesh."}
 		carbon_cultist.reagents.add_reagent(/datum/reagent/fuel/unholywater, 4)
 	if(isshade(our_target) || isconstruct(our_target))
 		var/mob/living/basic/construct/undead_abomination = our_target
-		if(undead_abomination.health + 5 < undead_abomination.maxHealth)
+		if(undead_abomination.health + 5 < undead_abomination.max_health)
 			undead_abomination.adjust_health(-5)
 	return PROJECTILE_DELETE_WITHOUT_HITTING
 
@@ -1061,15 +1061,15 @@ Striking a noncultist, however, will tear their flesh."}
 							H.reagents.add_reagent(/datum/reagent/fuel/unholywater, 7)
 					if(isshade(target) || isconstruct(target))
 						var/mob/living/basic/construct/healed_guy = target
-						if(healed_guy.health + 15 < healed_guy.maxHealth)
+						if(healed_guy.health + 15 < healed_guy.max_health)
 							healed_guy.adjust_health(-15)
 						else
-							healed_guy.health = healed_guy.maxHealth
+							healed_guy.health = healed_guy.max_health
 				else
 					var/mob/living/L = target
 					if(L.density)
 						L.Paralyze(20)
-						L.adjustBruteLoss(45)
+						L.adjust_brute_loss(45)
 						playsound(L, 'sound/effects/hallucinations/wail.ogg', 50, TRUE)
 						L.emote("scream")
 		user.Beam(temp_target, icon_state="blood_beam", time = 7, beam_type = /obj/effect/ebeam/blood)

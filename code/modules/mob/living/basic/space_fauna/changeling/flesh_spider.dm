@@ -20,7 +20,7 @@
 	basic_mob_flags = FLAMMABLE_MOB
 	status_flags = NONE
 	speed = -0.1
-	maxHealth = 90
+	max_health = 90
 	health = 90
 	melee_damage_lower = 15
 	melee_damage_upper = 20
@@ -63,7 +63,7 @@
 	AddComponent(\
 		/datum/component/regenerator,\
 		regeneration_delay = 4 SECONDS,\
-		brute_per_second = maxHealth / 6,\
+		brute_per_second = max_health / 6,\
 		outline_colour = COLOR_PINK,\
 	)
 

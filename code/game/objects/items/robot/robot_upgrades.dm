@@ -352,15 +352,15 @@
 			deactivate_sr()
 			return
 
-		if(cyborg.health < cyborg.maxHealth)
+		if(cyborg.health < cyborg.max_health)
 			if(cyborg.health < 0)
 				repair_amount = -2.5
 				energy_cost = 0.03 * STANDARD_CELL_CHARGE
 			else
 				repair_amount = -1
 				energy_cost = 0.01 * STANDARD_CELL_CHARGE
-			cyborg.adjustBruteLoss(repair_amount)
-			cyborg.adjustFireLoss(repair_amount)
+			cyborg.adjust_brute_loss(repair_amount)
+			cyborg.adjust_fire_loss(repair_amount)
 			cyborg.updatehealth()
 			cyborg.cell.use(energy_cost)
 		else
@@ -372,7 +372,7 @@
 			var/msgmode = "standby"
 			if(cyborg.health < 0)
 				msgmode = "critical"
-			else if(cyborg.health < cyborg.maxHealth)
+			else if(cyborg.health < cyborg.max_health)
 				msgmode = "normal"
 			to_chat(cyborg, span_notice("Self-repair is active in [span_boldnotice("[msgmode]")] mode."))
 	else

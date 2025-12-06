@@ -1,4 +1,4 @@
-#define COLOSSUS_ENRAGED (health <= maxHealth / 3)
+#define COLOSSUS_ENRAGED (health <= max_health / 3)
 
 /**
  * COLOSSUS
@@ -24,7 +24,7 @@
 	name = "colossus"
 	desc = "A monstrous creature protected by heavy shielding."
 	health = 2500
-	maxHealth = 2500
+	max_health = 2500
 	attack_verb_continuous = "judges"
 	attack_verb_simple = "judge"
 	attack_sound = 'sound/effects/magic/clockwork/ratvar_attack.ogg'
@@ -97,7 +97,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/colossus/OpenFire()
-	anger_modifier = clamp(((maxHealth - health) / 40), 0, 20)
+	anger_modifier = clamp(((max_health - health) / 40), 0, 20)
 
 	if(client)
 		return
@@ -113,7 +113,7 @@
 	else
 		move_to_delay = initial(move_to_delay)
 
-	if(health <= maxHealth / 10 && final_available)
+	if(health <= max_health / 10 && final_available)
 		final_available = FALSE
 		colossus_final.Trigger(target = target)
 	else if(prob(20 + anger_modifier)) //Major attack

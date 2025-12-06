@@ -121,7 +121,7 @@
 	var/mob/living/basic/living_parent = parent
 	if (living_parent.stat == DEAD)
 		return
-	if (living_parent.health == living_parent.maxHealth)
+	if (living_parent.health == living_parent.max_health)
 		return
 	living_parent.visible_message(span_notice("[living_parent]'s wounds begin to knit closed!"))
 	START_PROCESSING(SSobj, src)
@@ -145,7 +145,7 @@
 	if (living_parent.stat == DEAD)
 		stop_regenerating()
 		return
-	if (living_parent.health == living_parent.maxHealth)
+	if (living_parent.health == living_parent.max_health)
 		stop_regenerating()
 		return
 	living_parent.heal_overall_damage(health_per_second * seconds_per_tick)

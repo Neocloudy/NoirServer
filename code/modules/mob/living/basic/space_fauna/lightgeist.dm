@@ -17,7 +17,7 @@
 	response_harm_continuous = "disrupts"
 	response_harm_simple = "disrupt"
 	speak_emote = list("oscillates")
-	maxHealth = 2
+	max_health = 2
 	health = 2
 	melee_damage_lower = 5
 	melee_damage_upper = 5
@@ -101,7 +101,7 @@
 	if (!(heal_biotypes & target.mob_biotypes))
 		return FALSE
 	if (!iscarbon(target))
-		return target.getBruteLoss() > 0 || target.getFireLoss() > 0
+		return target.get_brute_loss() > 0 || target.get_fire_loss() > 0
 	var/mob/living/carbon/carbon_target = target
 	for (var/obj/item/bodypart/part in carbon_target.bodyparts)
 		if (!part.brute_dam && !part.burn_dam)

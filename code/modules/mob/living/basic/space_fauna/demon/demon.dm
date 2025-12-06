@@ -27,7 +27,7 @@
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	faction = list(FACTION_HELL)
 
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	obj_damage = 40
 	melee_damage_lower = 10

@@ -7,7 +7,7 @@
 	icon_state = "bananaspider"
 	icon_dead = "bananaspider_peel"
 	health = 1
-	maxHealth = 1
+	max_health = 1
 	speed = 2
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_biotypes = MOB_ORGANIC|MOB_BUG

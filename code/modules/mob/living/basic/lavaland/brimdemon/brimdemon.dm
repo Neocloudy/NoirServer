@@ -7,7 +7,7 @@
 	icon_living = "brimdemon"
 	icon_dead = "brimdemon_dead"
 	speed = 3
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	friendly_verb_continuous = "scratches at"
 	friendly_verb_simple = "scratch at"

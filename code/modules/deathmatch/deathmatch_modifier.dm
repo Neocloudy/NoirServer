@@ -68,7 +68,7 @@
 	var/multiplier = 2
 
 /datum/deathmatch_modifier/health/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
-	player.maxHealth *= multiplier
+	player.max_health *= multiplier
 	player.health *= multiplier
 
 /datum/deathmatch_modifier/health/half

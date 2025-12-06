@@ -21,7 +21,7 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST | MOB_AQUATIC
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	max_stamina = 120
 	pressure_resistance = 200
 	combat_mode = TRUE
@@ -219,7 +219,7 @@
 	real_name = "Lia"
 	desc = "A failed experiment of Nanotrasen to create weaponised carp technology. This less than intimidating carp now serves as the Head of Security's pet."
 	faction = list(FACTION_NEUTRAL)
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	icon_state = "magicarp"
 	icon_dead = "magicarp_dead"
@@ -275,7 +275,7 @@
 
 /mob/living/basic/carp/advanced
 	health = 40
-	maxHealth = 40
+	max_health = 40
 	obj_damage = 15
 
 #undef RARE_CAYENNE_CHANCE

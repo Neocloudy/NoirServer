@@ -11,7 +11,7 @@
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_LIVER
 
-	maxHealth = STANDARD_ORGAN_THRESHOLD
+	max_health = STANDARD_ORGAN_THRESHOLD
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY // smack in the middle of decay times
 
@@ -165,17 +165,17 @@
 	switch(failure_time)
 		//After 60 seconds we begin to feel the effects
 		if(1 * LIVER_FAILURE_STAGE_SECONDS to 2 * LIVER_FAILURE_STAGE_SECONDS - 1)
-			owner.adjustToxLoss(0.2 * seconds_per_tick,forced = TRUE)
+			owner.adjust_tox_loss(0.2 * seconds_per_tick,forced = TRUE)
 			owner.adjust_disgust(0.1 * seconds_per_tick)
 
 		if(2 * LIVER_FAILURE_STAGE_SECONDS to 3 * LIVER_FAILURE_STAGE_SECONDS - 1)
-			owner.adjustToxLoss(0.4 * seconds_per_tick,forced = TRUE)
+			owner.adjust_tox_loss(0.4 * seconds_per_tick,forced = TRUE)
 			owner.adjust_drowsiness(0.5 SECONDS * seconds_per_tick)
 			owner.adjust_disgust(0.3 * seconds_per_tick)
 
 		if(3 * LIVER_FAILURE_STAGE_SECONDS to 4 * LIVER_FAILURE_STAGE_SECONDS - 1)
-			owner.adjustToxLoss(0.6 * seconds_per_tick,forced = TRUE)
-			owner.adjustOrganLoss(pick(ORGAN_SLOT_HEART,ORGAN_SLOT_LUNGS,ORGAN_SLOT_STOMACH,ORGAN_SLOT_EYES,ORGAN_SLOT_EARS),0.2 * seconds_per_tick)
+			owner.adjust_tox_loss(0.6 * seconds_per_tick,forced = TRUE)
+			owner.adjust_organ_loss(pick(ORGAN_SLOT_HEART,ORGAN_SLOT_LUNGS,ORGAN_SLOT_STOMACH,ORGAN_SLOT_EYES,ORGAN_SLOT_EARS),0.2 * seconds_per_tick)
 			owner.adjust_drowsiness(1 SECONDS * seconds_per_tick)
 			owner.adjust_disgust(0.6 * seconds_per_tick)
 
@@ -183,8 +183,8 @@
 				owner.emote("drool")
 
 		if(4 * LIVER_FAILURE_STAGE_SECONDS to INFINITY)
-			owner.adjustToxLoss(0.8 * seconds_per_tick,forced = TRUE)
-			owner.adjustOrganLoss(pick(ORGAN_SLOT_HEART,ORGAN_SLOT_LUNGS,ORGAN_SLOT_STOMACH,ORGAN_SLOT_EYES,ORGAN_SLOT_EARS),0.5 * seconds_per_tick)
+			owner.adjust_tox_loss(0.8 * seconds_per_tick,forced = TRUE)
+			owner.adjust_organ_loss(pick(ORGAN_SLOT_HEART,ORGAN_SLOT_LUNGS,ORGAN_SLOT_STOMACH,ORGAN_SLOT_EYES,ORGAN_SLOT_EARS),0.5 * seconds_per_tick)
 			owner.adjust_drowsiness(1.6 SECONDS * seconds_per_tick)
 			owner.adjust_disgust(1.2 * seconds_per_tick)
 
@@ -237,7 +237,7 @@
 	failing_desc = "seems to be broken."
 	icon_state = "liver-c"
 	organ_flags = ORGAN_ROBOTIC
-	maxHealth = STANDARD_ORGAN_THRESHOLD*0.5
+	max_health = STANDARD_ORGAN_THRESHOLD*0.5
 	toxTolerance = 2
 	liver_resistance = 0.9 * LIVER_DEFAULT_TOX_RESISTANCE // -10%
 	var/emp_vulnerability = 80 //Chance of permanent effects if emp-ed.
@@ -247,7 +247,7 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	if(!COOLDOWN_FINISHED(src, severe_cooldown)) //So we cant just spam emp to kill people.
-		owner.adjustToxLoss(10)
+		owner.adjust_tox_loss(10)
 		COOLDOWN_START(src, severe_cooldown, 10 SECONDS)
 	if(prob(emp_vulnerability/severity)) //Chance of permanent effects
 		organ_flags |= ORGAN_EMP //Starts organ faliure - gonna need replacing soon.
@@ -256,7 +256,7 @@
 	name = "cybernetic liver"
 	desc = "An electronic device designed to mimic the functions of a human liver. Handles toxins slightly better than an organic liver."
 	icon_state = "liver-c-u"
-	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.5 * STANDARD_ORGAN_THRESHOLD
 	toxTolerance = 5 //can shrug off up to 5u of toxins
 	liver_resistance = 1.2 * LIVER_DEFAULT_TOX_RESISTANCE // +20%
 	emp_vulnerability = 40
@@ -266,7 +266,7 @@
 	desc = "An upgraded version of the cybernetic liver, designed to improve further upon organic livers. It is resistant to alcohol poisoning and is very robust at filtering toxins."
 	icon_state = "liver-c-u2"
 	alcohol_tolerance = ALCOHOL_RATE * 0.2
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	toxTolerance = 10 //can shrug off up to 10u of toxins
 	liver_resistance = 1.5 * LIVER_DEFAULT_TOX_RESISTANCE // +50%
 	emp_vulnerability = 20
@@ -278,7 +278,7 @@
 		Very fragile, absolutely terrible at filtering toxins and substantially weak to alcohol. \
 		Offers no protection against EMPs."
 	icon_state = "liver-c-s"
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.35
+	max_health = STANDARD_ORGAN_THRESHOLD * 0.35
 	alcohol_tolerance = ALCOHOL_RATE * 2 // can barely handle alcohol
 	toxTolerance = 1 //basically can't shrug off any toxins
 	liver_resistance = 0.75 * LIVER_DEFAULT_TOX_RESISTANCE // -25%
@@ -302,7 +302,7 @@
 	if(!(organ_owner.mob_biotypes & MOB_PLANT))
 		return
 	if(chem.type == /datum/reagent/toxin/plantbgone)
-		organ_owner.adjustToxLoss(3 * REM * seconds_per_tick)
+		organ_owner.adjust_tox_loss(3 * REM * seconds_per_tick)
 
 /obj/item/organ/liver/snail
 	name = "snail liver"
@@ -328,7 +328,7 @@
 		return
 	if(istype(chem, /datum/reagent/consumable/salt))
 		playsound(organ_owner, SFX_SEAR, 30, TRUE)
-		organ_owner.adjustFireLoss(2 * REM * seconds_per_tick)
+		organ_owner.adjust_fire_loss(2 * REM * seconds_per_tick)
 		organ_owner.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM * seconds_per_tick)
 		return COMSIG_MOB_STOP_REAGENT_TICK
 
@@ -339,7 +339,7 @@
 	icon_state = "evolved-liver"
 
 	alcohol_tolerance = ALCOHOL_RATE * 0.5
-	maxHealth = 1.2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.2 * STANDARD_ORGAN_THRESHOLD
 	toxTolerance = 6 //can shrug off up to 6u of toxins
 	liver_resistance = 1.5 * LIVER_DEFAULT_TOX_RESISTANCE
 
@@ -349,7 +349,7 @@
 
 	icon_state = "leaky-liver"
 
-	maxHealth = 1.1 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.1 * STANDARD_ORGAN_THRESHOLD
 	alcohol_tolerance = ALCOHOL_RATE * 0.8
 	toxTolerance = LIVER_DEFAULT_TOX_TOLERANCE + 1
 	liver_resistance = 1.1 * LIVER_DEFAULT_TOX_RESISTANCE

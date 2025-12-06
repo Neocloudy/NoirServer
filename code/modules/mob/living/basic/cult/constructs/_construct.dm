@@ -124,8 +124,8 @@
 
 /mob/living/basic/construct/examine(mob/user)
 	. = list()
-	if(health < maxHealth)
-		if(health >= maxHealth/2)
+	if(health < max_health)
+		if(health >= max_health/2)
 			. += span_warning("[p_They()] look[p_s()] slightly dented.")
 		else
 			. += span_warning(span_bold("[p_They()] look[p_s()] severely dented!"))

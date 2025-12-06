@@ -12,7 +12,7 @@
 	habitable_atmos = null
 	minimum_survivable_temperature = 0
 	health = 125
-	maxHealth = 125
+	max_health = 125
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	obj_damage = 10
@@ -92,8 +92,8 @@
 
 /mob/living/basic/mining_drone/examine(mob/user)
 	. = ..()
-	if(health < maxHealth)
-		if(health >= maxHealth * 0.5)
+	if(health < max_health)
+		if(health >= max_health * 0.5)
 			. += span_warning("[p_They()] look slightly dented.")
 		else
 			. += span_boldwarning("[p_They()] look severely dented!")
@@ -115,11 +115,11 @@
 	if(combat_mode)
 		user.balloon_alert(user, "can't repair in attack mode!")
 		return TRUE
-	if(maxHealth == health)
+	if(max_health == health)
 		user.balloon_alert(user, "at full integrity!")
 		return TRUE
 	if(welder.use_tool(src, user, 0, volume=40))
-		adjustBruteLoss(-15)
+		adjust_brute_loss(-15)
 		user.balloon_alert(user, "successfully repaired!")
 	return TRUE
 
@@ -154,7 +154,7 @@
 	data["bot_name"] = name
 	data["bot_mode"] = combat_mode
 	data["bot_health"] = health
-	data["bot_maxhealth"] = maxHealth
+	data["bot_maxhealth"] = max_health
 	data["bot_color"] = ""
 	var/color_value = neutral_overlay.color
 	for(var/index in possible_colors)

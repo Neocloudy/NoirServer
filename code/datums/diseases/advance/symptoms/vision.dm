@@ -73,7 +73,7 @@
 
 				else if(!infected_mob.is_blind_from(EYE_DAMAGE))
 					to_chat(infected_mob, span_userdanger("You go blind!"))
-					eyes.apply_organ_damage(eyes.maxHealth)
+					eyes.apply_organ_damage(eyes.max_health)
 
 			else
 				to_chat(infected_mob, span_userdanger("Your eyes burn horrifically!"))

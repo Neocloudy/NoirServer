@@ -1062,7 +1062,7 @@
 	qdel(robot.radio)
 	robot.radio = new /obj/item/radio/borg/syndicate(robot)
 	robot.scrambledcodes = TRUE
-	robot.maxHealth = 50 //DIE IN THREE HITS, LIKE A REAL SCOT
+	robot.max_health = 50 //DIE IN THREE HITS, LIKE A REAL SCOT
 	robot.break_cyborg_slot(3) //YOU ONLY HAVE TWO ITEMS ANYWAY
 	var/obj/item/pinpointer/nuke/diskyfinder = locate(/obj/item/pinpointer/nuke) in basic_modules
 	diskyfinder.attack_self(robot)

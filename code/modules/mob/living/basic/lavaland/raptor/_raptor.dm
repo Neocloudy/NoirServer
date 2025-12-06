@@ -27,7 +27,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	icon = 'icons/mob/simple/lavaland/raptor_big.dmi'
 	speed = 2
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	maxHealth = 270
+	max_health = 270
 	health = 270
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -208,8 +208,8 @@ GLOBAL_LIST_EMPTY(raptor_population)
 		ai_controller?.set_blackboard_key(trait, should_inherit)
 	melee_damage_lower += inherited_stats.attack_modifier
 	melee_damage_upper += melee_damage_lower + 5
-	maxHealth += inherited_stats.health_modifier
-	heal_overall_damage(maxHealth)
+	max_health += inherited_stats.health_modifier
+	heal_overall_damage(max_health)
 
 /mob/living/basic/raptor/proc/add_breeding_component()
 	var/static/list/partner_types = typecacheof(list(/mob/living/basic/raptor))
@@ -262,7 +262,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	icon_state = "raptor_green"
 	icon_living = "raptor_green"
 	icon_dead = "raptor_green_dead"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	raptor_color = RAPTOR_GREEN
 	dex_description = "A tough breed of raptor, made to withstand the harshest of punishment and to laugh in the face of pain, \
@@ -297,7 +297,7 @@ GLOBAL_LIST_EMPTY(raptor_population)
 	icon_state = "raptor_black"
 	icon_living = "raptor_black"
 	icon_dead = "raptor_black_dead"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	speed = 1.5
 	melee_damage_lower = 20

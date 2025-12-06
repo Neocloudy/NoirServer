@@ -52,7 +52,7 @@
 	M.AdjustUnconscious(-1.5 SECONDS * REM * seconds_per_tick)
 	M.AdjustImmobilized(-1.5 SECONDS * REM * seconds_per_tick)
 	M.AdjustParalyzed(-1.5 SECONDS* REM * seconds_per_tick)
-	if(M.adjustStaminaLoss(-2 * REM * seconds_per_tick, updating_stamina = FALSE))
+	if(M.adjust_stamina_loss(-2 * REM * seconds_per_tick, updating_stamina = FALSE))
 		. = UPDATE_MOB_HEALTH
 	if(SPT_PROB(2.5, seconds_per_tick))
 		M.emote("shiver")
@@ -62,8 +62,8 @@
 
 /datum/reagent/drug/cocaine/overdose_process(mob/living/M, seconds_per_tick, times_fired)
 	. = ..()
-	var/need_mob_update = M.adjustToxLoss(1 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += M.adjustOrganLoss(ORGAN_SLOT_HEART, (rand(10, 20) / 10) * REM * seconds_per_tick)
+	var/need_mob_update = M.adjust_tox_loss(1 * REM * seconds_per_tick, updating_health = FALSE)
+	need_mob_update += M.adjust_organ_loss(ORGAN_SLOT_HEART, (rand(10, 20) / 10) * REM * seconds_per_tick)
 	M.set_jitter_if_lower(5 SECONDS)
 	if(SPT_PROB(2.5, seconds_per_tick))
 		M.emote(pick("twitch","drool"))

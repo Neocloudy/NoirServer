@@ -38,7 +38,7 @@
 /mob/living/carbon/alien/adult/royal/queen
 	name = "alien queen"
 	caste = "q"
-	maxHealth = 500
+	max_health = 500
 	health = 500
 	icon_state = "alienq"
 	melee_damage_lower = 50

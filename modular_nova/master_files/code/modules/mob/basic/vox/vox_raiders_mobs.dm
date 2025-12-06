@@ -11,7 +11,7 @@
 	icon_dead = "voxdead"
 	speed = 2.5
 	gold_core_spawnable = NO_SPAWN
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	melee_damage_lower = 10
 	melee_damage_upper = 15

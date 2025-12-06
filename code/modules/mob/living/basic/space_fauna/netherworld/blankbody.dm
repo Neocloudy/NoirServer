@@ -5,7 +5,7 @@
 	icon_living = "blank-body"
 	icon_dead = "blank-dead"
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	obj_damage = 50
 	melee_damage_lower = 2
 	melee_damage_upper = 6

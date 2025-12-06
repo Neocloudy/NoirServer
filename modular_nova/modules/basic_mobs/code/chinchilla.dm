@@ -9,7 +9,7 @@
 	icon_living = "chinchilla_white"
 	icon_dead = "chinchilla_white_dead"
 
-	maxHealth = 10
+	max_health = 10
 	health = 10
 	mob_size = MOB_SIZE_TINY
 

@@ -4,7 +4,7 @@
 	icon_living = "aliens"
 	icon_dead = "aliens_dead"
 	health = 150
-	maxHealth = 150
+	max_health = 150
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 

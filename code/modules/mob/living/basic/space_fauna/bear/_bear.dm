@@ -15,7 +15,7 @@
 	response_disarm_simple = "gently push aside"
 
 	max_stamina = 120
-	maxHealth = 60
+	max_health = 60
 	health = 60
 	speed = 0
 
@@ -86,7 +86,7 @@
 	real_name = "Misha"
 	desc = "Tamed and trained by the Head of Security. Only beasts are above deceit."
 	gold_core_spawnable = NO_SPAWN
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	faction = list(FACTION_NEUTRAL)
 	status_flags = CANPUSH | CANSTUN
@@ -113,7 +113,7 @@
 	wound_bonus = 0
 	armour_penetration = 20
 	health = 120
-	maxHealth = 120
+	max_health = 120
 	gold_core_spawnable = HOSTILE_SPAWN
 	armored = TRUE
 

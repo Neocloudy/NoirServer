@@ -195,7 +195,7 @@
 		return 1
 	if (holder_lungs.organ_flags & ORGAN_FAILING)
 		return 0
-	return (1 - (holder_lungs.damage / holder_lungs.maxHealth))
+	return (1 - (holder_lungs.damage / holder_lungs.max_health))
 
 /// Signal proc for when we are exposed to smoke. Increases inflammation.
 /datum/quirk/item_quirk/asthma/proc/holder_exposed_to_smoke(datum/signal_source, seconds_per_tick)

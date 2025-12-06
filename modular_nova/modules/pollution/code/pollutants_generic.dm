@@ -79,8 +79,8 @@
 		amount *= 0.35 //The victim is inhaling roughly a third when laying down
 	if(amount <= 10)
 		return
-	victim.adjustOxyLoss(rand(5,10))
-	victim.adjustToxLoss(1)
+	victim.adjust_oxy_loss(rand(5,10))
+	victim.adjust_tox_loss(1)
 	if(prob(amount))
 		victim.losebreath += 3
 

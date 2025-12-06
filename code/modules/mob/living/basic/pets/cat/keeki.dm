@@ -5,7 +5,7 @@
 	icon_living = "cak"
 	icon_dead = "cak_dead"
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	gender = FEMALE
 	butcher_results = list(
 		/obj/item/organ/brain = 1,

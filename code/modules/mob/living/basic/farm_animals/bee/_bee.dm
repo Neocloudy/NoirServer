@@ -26,7 +26,7 @@
 	response_harm_simple = "squash"
 
 	speed = 1
-	maxHealth = 10
+	max_health = 10
 	health = 10
 	melee_damage_lower = 1
 	melee_damage_upper = 1

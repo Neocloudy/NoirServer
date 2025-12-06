@@ -70,7 +70,7 @@
 	taunt_chance = 30
 	move_to_delay = 20
 	speed = 2
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	harm_intent_damage = 3
 	obj_damage = 40
@@ -105,7 +105,7 @@
 	emote_taunt = list("screeches")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 80
+	max_health = 80
 	health = 80
 	harm_intent_damage = 8
 	obj_damage = 30
@@ -144,7 +144,7 @@
 	emote_taunt = list("gnashes")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 90
+	max_health = 90
 	health = 90
 	obj_damage = 10
 	melee_damage_lower = 18
@@ -182,7 +182,7 @@
 	emote_taunt = list("buzzes")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 60
+	max_health = 60
 	health = 60
 	melee_damage_type = TOX
 	melee_damage_lower = 25
@@ -221,7 +221,7 @@
 	emote_taunt = list("roars")
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	harm_intent_damage = 8
 	obj_damage = 50
@@ -253,7 +253,7 @@
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
 	speed = 0
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	melee_damage_type = TOX
 	harm_intent_damage = 5
@@ -287,7 +287,7 @@
 	emote_taunt = list("aggressively squeaks")
 	taunt_chance = 30
 	speed = 0
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	harm_intent_damage = 5
 	obj_damage = 25
@@ -324,7 +324,7 @@
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
 	speed = 2
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	harm_intent_damage = 3
 	obj_damage = 15

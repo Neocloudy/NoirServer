@@ -4,7 +4,7 @@
 	icon_state = "axolotl"
 	icon_living = "axolotl"
 	icon_dead = "axolotl_dead"
-	maxHealth = 10
+	max_health = 10
 	health = 10
 	attack_verb_continuous = "nibbles" //their teeth are just for gripping food, not used for self defense nor even chewing
 	attack_verb_simple = "nibble"

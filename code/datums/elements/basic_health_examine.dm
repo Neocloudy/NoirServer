@@ -27,10 +27,10 @@
 /datum/element/basic_health_examine/proc/on_examine(mob/living/basic/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
 
-	if(source.health == source.maxHealth)
+	if(source.health == source.max_health)
 		return
 
-	if(source.health < source.maxHealth * heavy_threshold)
+	if(source.health < source.max_health * heavy_threshold)
 		examine_list += span_danger(heavy_damage_message)
 		return
 

@@ -10,7 +10,7 @@
 	movement_type = FLOATING
 	status_flags = CANSTUN | CANPUSH
 	attack_sound = SFX_SHATTER
-	maxHealth = 80
+	max_health = 80
 	health = 80
 	melee_damage_lower = 12
 	melee_damage_upper = 16
@@ -51,14 +51,14 @@
 		return
 
 	// If we have health, we take some damage
-	if(health > (maxHealth * 0.02))
+	if(health > (max_health * 0.02))
 		visible_message(
 				span_warning("[src] seems to fade in and out slightly."),
 				span_userdanger("[user]'s gaze pierces your every being!"),
 		)
 
 		recent_examiner_refs += user_ref
-		apply_damage(maxHealth * 0.02) // We take 2% of our health as damage upon being examined
+		apply_damage(max_health * 0.02) // We take 2% of our health as damage upon being examined
 		playsound(src, 'sound/effects/ghost2.ogg', 40, TRUE)
 		addtimer(CALLBACK(src, PROC_REF(clear_recent_examiner), user_ref), recent_examine_damage_cooldown, TIMER_DELETE_ME)
 		animate(src, alpha = 120, time = 0.5 SECONDS, easing = ELASTIC_EASING, loop = 2, flags = ANIMATION_PARALLEL)

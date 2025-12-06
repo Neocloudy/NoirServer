@@ -21,7 +21,7 @@
 	icon_living = "drone_maint_grey"
 	icon_dead = "drone_maint_dead"
 	health = 45
-	maxHealth = 45
+	max_health = 45
 	unsuitable_atmos_damage = 0
 	unsuitable_cold_damage = 0
 	unsuitable_heat_damage = 0
@@ -155,7 +155,7 @@
 	listener.RegisterSignal(src, COMSIG_LIVING_REVIVE, TYPE_PROC_REF(/datum/alarm_listener, allow_alarm_changes))
 
 /mob/living/basic/drone/med_hud_set_health()
-	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/maxHealth)]")
+	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/max_health)]")
 
 /mob/living/basic/drone/med_hud_set_status()
 	if(stat == DEAD)
@@ -234,8 +234,8 @@
 		. += span_warning("Its display is glowing red!")
 
 	//Damaged
-	if(health != maxHealth)
-		if(health > maxHealth * 0.33) //Between maxHealth and about a third of maxHealth, between 30 and 10 for normal drones
+	if(health != max_health)
+		if(health > max_health * 0.33) //Between max_health and about a third of max_health, between 30 and 10 for normal drones
 			. += span_warning("Its screws are slightly loose.")
 		else //otherwise, below about 33%
 			. += span_boldwarning("Its screws are very loose!")
@@ -257,7 +257,7 @@
 	Stun(70)
 	to_chat(src, span_danger("<b>ER@%R: MME^RY CO#RU9T!</b> R&$b@0tin)..."))
 	if(severity == 1)
-		adjustBruteLoss(heavy_emp_damage)
+		adjust_brute_loss(heavy_emp_damage)
 		to_chat(src, span_userdanger("HeAV% DA%^MMA+G TO I/O CIR!%UUT!"))
 
 /mob/living/basic/drone/proc/alarm_triggered(datum/source, alarm_type, area/source_area)

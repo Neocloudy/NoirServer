@@ -20,7 +20,7 @@
 	/// Random flags that describe this organ
 	var/organ_flags = ORGAN_ORGANIC | ORGAN_EDIBLE | ORGAN_VIRGIN
 	/// Maximum damage the organ can take, ever.
-	var/maxHealth = STANDARD_ORGAN_THRESHOLD
+	var/max_health = STANDARD_ORGAN_THRESHOLD
 	/**
 	 * Total damage this organ has sustained.
 	 * Should only ever be modified by apply_organ_damage!
@@ -161,12 +161,12 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 	if(owner)
 		if(owner.bodytemperature > T0C)
 			var/air_temperature_factor = min((owner.bodytemperature - T0C) / 20, 1)
-			apply_organ_damage(decay_factor * maxHealth * seconds_per_tick * air_temperature_factor)
+			apply_organ_damage(decay_factor * max_health * seconds_per_tick * air_temperature_factor)
 	else
 		var/datum/gas_mixture/exposed_air = return_air()
 		if(exposed_air && exposed_air.temperature > T0C)
 			var/air_temperature_factor = min((exposed_air.temperature - T0C) / 20, 1)
-			apply_organ_damage(decay_factor * maxHealth * seconds_per_tick * air_temperature_factor)
+			apply_organ_damage(decay_factor * max_health * seconds_per_tick * air_temperature_factor)
 
 /obj/item/organ/proc/on_life(seconds_per_tick, times_fired) //repair organ damage if the organ is not failing
 	if(organ_flags & ORGAN_FAILING)
@@ -177,7 +177,7 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 		failure_time--
 
 	if(organ_flags & ORGAN_EMP) //Synthetic organ has been emped, is now failing.
-		apply_organ_damage(decay_factor * maxHealth * seconds_per_tick)
+		apply_organ_damage(decay_factor * max_health * seconds_per_tick)
 		return
 
 	if(!damage) // No sense healing if you're not even hurt bro
@@ -190,7 +190,7 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 	var/healing_amount = healing_factor
 	///Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health
 	healing_amount += (owner.satiety > 0) ? (4 * healing_factor * owner.satiety / MAX_SATIETY) : 0
-	apply_organ_damage(-healing_amount * maxHealth * seconds_per_tick, damage) // pass curent damage incase we are over cap
+	apply_organ_damage(-healing_amount * max_health * seconds_per_tick, damage) // pass curent damage incase we are over cap
 
 /obj/item/organ/examine(mob/user)
 	. = ..()
@@ -240,10 +240,10 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 	return //so we don't grant the organ's action to mobs who pick up the organ.
 
 ///Adjusts an organ's damage by the amount "damage_amount", up to a maximum amount, which is by default max damage. Returns the net change in organ damage.
-/obj/item/organ/proc/apply_organ_damage(damage_amount, maximum = maxHealth, required_organ_flag = NONE) //use for damaging effects
+/obj/item/organ/proc/apply_organ_damage(damage_amount, maximum = max_health, required_organ_flag = NONE) //use for damaging effects
 	if(!damage_amount) //Micro-optimization.
 		return FALSE
-	maximum = clamp(maximum, 0, maxHealth) // the logical max is, our max
+	maximum = clamp(maximum, 0, max_health) // the logical max is, our max
 	if(maximum < damage)
 		return FALSE
 	if(required_organ_flag && !(organ_flags & required_organ_flag))
@@ -280,13 +280,13 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 		if(damage > high_threshold && prev_damage <= high_threshold)
 			on_high_damage_received()
 			message = high_threshold_passed
-		if(damage >= maxHealth)
+		if(damage >= max_health)
 			organ_flags |= ORGAN_FAILING
 			on_begin_failure()
 			message = now_failing
 		return message
 
-	if(prev_damage == maxHealth)
+	if(prev_damage == max_health)
 		organ_flags &= ~ORGAN_FAILING
 		on_failure_recovery()
 		message = now_fixed
@@ -444,7 +444,7 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 
 	var/tech_text = ""
 	if(owner.has_reagent(/datum/reagent/inverse/technetium))
-		tech_text = "[round((damage / maxHealth) * 100, 1)]% damaged"
+		tech_text = "[round((damage / max_health) * 100, 1)]% damaged"
 
 	if(organ_flags & ORGAN_FAILING)
 		return conditional_tooltip("[colored ? "<font color='#cc3333'>" : ""][tech_text || "Non-Functional"][colored ? "</font>" : ""]", "Repair or replace surgically.", add_tooltips)

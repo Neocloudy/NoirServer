@@ -140,21 +140,21 @@
 /// If we feel the gentle caress of a blob, we feel better
 /datum/component/blob_minion/proc/on_blob_touched(mob/living/minion)
 	SIGNAL_HANDLER
-	if(minion.stat == DEAD || minion.health >= minion.maxHealth)
+	if(minion.stat == DEAD || minion.health >= minion.max_health)
 		return COMPONENT_CANCEL_BLOB_ACT // Don't hurt us in order to heal us
 	for(var/i in 1 to 2)
 		var/obj/effect/temp_visual/heal/heal_effect = new /obj/effect/temp_visual/heal(get_turf(parent)) // hello yes you are being healed
 		heal_effect.color = isnull(overmind) ? COLOR_BLACK : overmind.blobstrain.complementary_color
-	minion.heal_overall_damage(minion.maxHealth * BLOBMOB_HEALING_MULTIPLIER)
+	minion.heal_overall_damage(minion.max_health * BLOBMOB_HEALING_MULTIPLIER)
 	return COMPONENT_CANCEL_BLOB_ACT
 
 /// If we feel the fearsome bite of open flame, we feel worse
 /datum/component/blob_minion/proc/on_burned(mob/living/minion, exposed_temperature, exposed_volume)
 	SIGNAL_HANDLER
 	if(isnull(exposed_temperature))
-		minion.adjustFireLoss(5)
+		minion.adjust_fire_loss(5)
 		return
-	minion.adjustFireLoss(clamp(0.01 * exposed_temperature, 1, 5))
+	minion.adjust_fire_loss(clamp(0.01 * exposed_temperature, 1, 5))
 
 /// Someone is attempting to move through us, allow it if it is a blob tile
 /datum/component/blob_minion/proc/on_attempted_pass(mob/living/minion, atom/movable/incoming)
@@ -211,7 +211,7 @@
 	strain_properties_changed(changed_overmind = null, new_strain = new mutant_strain)
 	minion.name = "[LOWER_TEXT(our_strain.name)] [minion.name]"
 	//normally the overmind would handle this, but we have none.
-	minion.maxHealth *= our_strain.max_mob_health_multiplier
+	minion.max_health *= our_strain.max_mob_health_multiplier
 	minion.health *= our_strain.max_mob_health_multiplier
 
 	return MUTATED_NO_FURTHER_MUTATIONS

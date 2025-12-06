@@ -89,7 +89,7 @@
 
 // Mob defines
 
-#define BLOBMOB_HEALING_MULTIPLIER 0.0125 // Multiplies by -maxHealth and heals the blob by this amount every blob_act
+#define BLOBMOB_HEALING_MULTIPLIER 0.0125 // Multiplies by -max_health and heals the blob by this amount every blob_act
 #define BLOBMOB_SPORE_HEALTH 30 // Base spore health
 #define BLOBMOB_SPORE_SPAWN_COOLDOWN (8 SECONDS)
 #define BLOBMOB_SPORE_DMG_LOWER 4

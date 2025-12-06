@@ -468,11 +468,11 @@
 	return player
 
 /proc/health_percentage(mob/living/mob)
-	var/divided_health = mob.health / mob.maxHealth
+	var/divided_health = mob.health / mob.max_health
 	if(iscyborg(mob) || islarva(mob))
-		divided_health = (mob.health + mob.maxHealth) / (mob.maxHealth * 2)
+		divided_health = (mob.health + mob.max_health) / (mob.max_health * 2)
 	else if(iscarbon(mob) || isAI(mob) || isbrain(mob))
-		divided_health = abs(HEALTH_THRESHOLD_DEAD - mob.health) / abs(HEALTH_THRESHOLD_DEAD - mob.maxHealth)
+		divided_health = abs(HEALTH_THRESHOLD_DEAD - mob.health) / abs(HEALTH_THRESHOLD_DEAD - mob.max_health)
 	return divided_health * 100
 
 /**

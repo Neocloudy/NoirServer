@@ -12,7 +12,7 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	speed = 5
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	obj_damage = 30
 	melee_damage_lower = 20
@@ -41,7 +41,7 @@
 	icon_living = "ambush"
 	icon_dead = "ambush_dead"
 	gender = FEMALE
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	obj_damage = 45
 
@@ -71,7 +71,7 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	gender = FEMALE
-	maxHealth = 160
+	max_health = 160
 	health = 160
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -97,7 +97,7 @@
 	icon_state = "hunter"
 	icon_living = "hunter"
 	icon_dead = "hunter_dead"
-	maxHealth = 80
+	max_health = 80
 	health = 80
 	melee_damage_lower = 15
 	melee_damage_upper = 20
@@ -127,7 +127,7 @@
 	icon_state = "scout"
 	icon_living = "scout"
 	icon_dead = "scout_dead"
-	maxHealth = 65
+	max_health = 65
 	health = 65
 	obj_damage = 10
 	melee_damage_lower = 5
@@ -160,7 +160,7 @@
 	icon_dead = "nurse_dead"
 	gender = FEMALE
 	butcher_results = list(/obj/item/food/meat/slab/spider = 2, /obj/item/food/spiderleg = 8, /obj/item/food/spidereggs = 4)
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -207,7 +207,7 @@
 	icon_dead = "tangle_dead"
 	gender = FEMALE
 	butcher_results = list(/obj/item/food/meat/slab/spider = 2, /obj/item/food/spiderleg = 8, /obj/item/food/spidereggs = 4)
-	maxHealth = 55
+	max_health = 55
 	health = 55
 	melee_damage_lower = 1
 	melee_damage_upper = 1
@@ -261,7 +261,7 @@
 	icon_state = "tank"
 	icon_living = "tank"
 	icon_dead = "tank_dead"
-	maxHealth = 500
+	max_health = 500
 	health = 500
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 1, OXY = 1)
 	melee_damage_lower = 5
@@ -311,7 +311,7 @@
 	icon_state = "breacher"
 	icon_living = "breacher"
 	icon_dead = "breacher_dead"
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -354,7 +354,7 @@
 	icon_state = "tarantula"
 	icon_living = "tarantula"
 	icon_dead = "tarantula_dead"
-	maxHealth = 400 // woah nelly
+	max_health = 400 // woah nelly
 	health = 400
 	melee_damage_lower = 35
 	melee_damage_upper = 40
@@ -403,7 +403,7 @@
 	icon_state = "viper"
 	icon_living = "viper"
 	icon_dead = "viper_dead"
-	maxHealth = 55
+	max_health = 55
 	health = 55
 	melee_damage_lower = 5
 	melee_damage_upper = 5
@@ -437,7 +437,7 @@
 	icon_state = "midwife"
 	icon_living = "midwife"
 	icon_dead = "midwife_dead"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -518,7 +518,7 @@
 /mob/living/basic/spider/giant/hunter/scrawny
 	name = "scrawny spider"
 	health = 60
-	maxHealth = 60
+	max_health = 60
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	desc = "Furry and black, it makes you shudder to look at it. This one has sparkling purple eyes, and looks abnormally thin and frail."
@@ -534,7 +534,7 @@
 /mob/living/basic/spider/giant/tarantula/scrawny
 	name = "scrawny tarantula"
 	health = 150
-	maxHealth = 150
+	max_health = 150
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	desc = "Furry and black, it makes you shudder to look at it. This one has abyssal red eyes, and looks abnormally thin and frail."
@@ -551,7 +551,7 @@
 /mob/living/basic/spider/giant/nurse/scrawny
 	name = "scrawny nurse spider"
 	health = 30
-	maxHealth = 30
+	max_health = 30
 	desc = "Furry and black, it makes you shudder to look at it. This one has brilliant green eyes, and looks abnormally thin and frail."
 	menu_description = "Weaker version of the nurse spider, specializing in healing their brethren and placing webbings very swiftly, but has very low amount of health and deals low damage."
 	ai_controller = /datum/ai_controller/basic_controller/giant_spider/weak
@@ -569,7 +569,7 @@
 	icon_living = "water"
 	icon_dead = "water_dead"
 	web_speed = 0.4
-	maxHealth = 80
+	max_health = 80
 	health = 80
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 1, OXY = 1)
 	unsuitable_cold_damage = 1
@@ -596,7 +596,7 @@
 	desc = "A fierce companion of the Head of Security, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine."
 	faction = list(FACTION_SPIDER)
 	gold_core_spawnable = NO_SPAWN
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	melee_damage_lower = 15
 	melee_damage_upper = 20

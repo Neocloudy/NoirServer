@@ -99,8 +99,8 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 			var/mob/living/basic/animal_selected = selected
 			animal_selected.basic_mob_flags &= ~DEL_ON_DEATH
 
-		selected.maxHealth = max(selected.maxHealth, 200)
-		selected.health = selected.maxHealth
+		selected.max_health = max(selected.max_health, 200)
+		selected.health = selected.max_health
 		spawned_mobs += selected
 
 		to_chat(selected, span_userdanger("Hello world!"))

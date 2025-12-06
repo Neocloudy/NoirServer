@@ -21,7 +21,7 @@
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 	mob_size = MOB_SIZE_SMALL
 	speed = 0
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	combat_mode = TRUE
 	obj_damage = 0

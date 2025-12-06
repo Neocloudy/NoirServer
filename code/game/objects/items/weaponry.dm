@@ -1060,7 +1060,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return
 	if(is_type_in_typecache(target, strong_against) && isliving(target))
 		var/mob/living/living_target = target
-		living_target.adjustBruteLoss(extra_strength_damage)
+		living_target.adjust_brute_loss(extra_strength_damage)
 
 /obj/item/proc/can_trigger_gun(mob/living/user, akimbo_usage)
 	if(!user.can_use_guns(src))

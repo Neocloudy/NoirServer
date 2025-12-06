@@ -161,7 +161,7 @@
 		to_heal.balloon_alert(caster, "interrupted!")
 		return FALSE
 
-	var/organ_hp_to_heal = to_heal.maxHealth * organ_percent_healing
+	var/organ_hp_to_heal = to_heal.max_health * organ_percent_healing
 	to_heal.set_organ_damage(max(0 , to_heal.damage - organ_hp_to_heal))
 	to_heal.balloon_alert(caster, "organ healed")
 	playsound(to_heal, 'sound/effects/magic/staff_healing.ogg', 30)

@@ -11,7 +11,7 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 	icon_living = "clockwork_marauder"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
-	maxHealth = 140
+	max_health = 140
 	health = 140
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 1.25
@@ -102,7 +102,7 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 	if(!tool.use_tool(src, user, 2.5 SECONDS))
 		return TRUE
 
-	health = min(health + WELDER_REPAIR_AMOUNT, maxHealth)
+	health = min(health + WELDER_REPAIR_AMOUNT, max_health)
 	to_chat(user, span_notice("You repair some of [src]'s damage."))
 	if(shield_health < MARAUDER_SHIELD_MAX)
 		shield_health++

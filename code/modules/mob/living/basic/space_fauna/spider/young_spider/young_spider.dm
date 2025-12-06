@@ -13,7 +13,7 @@
 	icon_dead = "young_guard_dead"
 	butcher_results = list(/obj/item/food/meat/slab/spider = 1)
 	speed = 1
-	maxHealth = 60
+	max_health = 60
 	health = 60
 	obj_damage = 10
 	melee_damage_lower = 8

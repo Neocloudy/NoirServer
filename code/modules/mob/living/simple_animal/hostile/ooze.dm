@@ -18,7 +18,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	health = 200
-	maxHealth = 200
+	max_health = 200
 	attack_verb_continuous = "slimes"
 	attack_verb_simple = "slime"
 	attack_sound = 'sound/effects/blob/blobattack.ogg'
@@ -76,7 +76,7 @@
 	adjust_ooze_nutrition(nutrition_change)
 
 	if(ooze_nutrition <= 0)
-		adjustBruteLoss(0.25 * seconds_per_tick)
+		adjust_brute_loss(0.25 * seconds_per_tick)
 
 /// Returns an applicable list of actions to grant to the mob. Will return a list or null.
 /mob/living/simple_animal/hostile/ooze/proc/get_innate_actions()
@@ -268,8 +268,8 @@
 ///Gain health for the consumption and dump some brute loss on the target.
 /datum/action/consume/process()
 	var/mob/living/simple_animal/hostile/ooze/gelatinous/ooze = owner
-	vored_mob.adjustBruteLoss(5)
-	ooze.heal_ordered_damage((ooze.maxHealth * 0.03), list(BRUTE, BURN, OXY)) ///Heal 6% of these specific damage types each process
+	vored_mob.adjust_brute_loss(5)
+	ooze.heal_ordered_damage((ooze.max_health * 0.03), list(BRUTE, BURN, OXY)) ///Heal 6% of these specific damage types each process
 	if(istype(ooze))
 		ooze.adjust_ooze_nutrition(3)
 
@@ -305,7 +305,7 @@
 	icon_dead = "grapes_dead"
 	speed = 1
 	health = 200
-	maxHealth = 200
+	max_health = 200
 	damage_coeff = list(BRUTE = 1, BURN = 0.8, TOX = 0.5, STAMINA = 0, OXY = 1)
 	melee_damage_lower = 12
 	melee_damage_upper = 12

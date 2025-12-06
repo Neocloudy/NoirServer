@@ -9,7 +9,7 @@
 	density = FALSE
 	anchored = FALSE
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	damage_coeff = list(BRUTE = 0.5, BURN = 0.7, TOX = 0, STAMINA = 0, OXY = 0)
 	pass_flags = PASSMOB | PASSFLAPS
 	combat_mode = TRUE

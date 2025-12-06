@@ -4,7 +4,7 @@
 	desc = "A wicked, clawed shell constructed to assassinate enemies and sow chaos behind enemy lines."
 	icon_state = "wraith"
 	icon_living = "wraith"
-	maxHealth = 65
+	max_health = 65
 	health = 65
 	melee_damage_lower = 20
 	melee_damage_upper = 20

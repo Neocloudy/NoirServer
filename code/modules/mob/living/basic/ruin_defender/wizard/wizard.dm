@@ -8,7 +8,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
 	speed = 0
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 5
 	melee_damage_upper = 5

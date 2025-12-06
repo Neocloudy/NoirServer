@@ -257,7 +257,7 @@
 		return
 	else
 		show_message(span_userdanger("The blob attacks!"))
-		adjustBruteLoss(10)
+		adjust_brute_loss(10)
 
 ///Adds to the parent by also adding functionality to propagate shocks through pulling and doing some fluff effects.
 /mob/living/carbon/electrocute_act(shock_damage, source, siemens_coeff = 1, flags = NONE, jitter_time = 20 SECONDS, stutter_time = 4 SECONDS, stun_duration = 4 SECONDS)
@@ -543,7 +543,7 @@
 
 				else if(!is_blind() && prob(eyes.damage - eyes.high_threshold))
 					to_chat(src, span_warning("You can't see anything!"))
-					eyes.apply_organ_damage(eyes.maxHealth)
+					eyes.apply_organ_damage(eyes.max_health)
 
 			else
 				to_chat(src, span_warning("Your eyes are really starting to hurt. This can't be good for you!"))
@@ -581,7 +581,7 @@
 			to_chat(src, span_userdanger("You can't hear anything!"))
 			// Makes you deaf, enough that you need a proper source of healing, it won't self heal
 			// you need earmuffs, inacusiate, or replacement
-			ears.set_organ_damage(ears.maxHealth)
+			ears.set_organ_damage(ears.max_health)
 		to_chat(src, span_warning("Your ears start to ring[ears.damage >= 15 ? " badly!":"!"]"))
 
 /mob/living/carbon/damage_clothes(damage_amount, damage_type = BRUTE, damage_flag = 0, def_zone)
@@ -608,7 +608,7 @@
 		. = FALSE
 
 
-/mob/living/carbon/adjustOxyLoss(amount, updating_health = TRUE, forced, required_biotype, required_respiration_type)
+/mob/living/carbon/adjust_oxy_loss(amount, updating_health = TRUE, forced, required_biotype, required_respiration_type)
 	if(!forced && HAS_TRAIT(src, TRAIT_NOBREATH))
 		amount = min(amount, 0) //Prevents oxy damage but not healing
 
@@ -620,7 +620,7 @@
 	if(!limb)
 		return
 
-/mob/living/carbon/setOxyLoss(amount, updating_health = TRUE, forced, required_biotype, required_respiration_type)
+/mob/living/carbon/set_oxy_loss(amount, updating_health = TRUE, forced, required_biotype, required_respiration_type)
 	. = ..()
 	check_passout()
 
@@ -628,7 +628,7 @@
 * Check to see if we should be passed out from oxyloss
 */
 /mob/living/carbon/proc/check_passout()
-	var/mob_oxyloss = getOxyLoss()
+	var/mob_oxyloss = get_oxy_loss()
 	if(mob_oxyloss >= OXYLOSS_PASSOUT_THRESHOLD)
 		if(!HAS_TRAIT_FROM(src, TRAIT_KNOCKEDOUT, OXYLOSS_TRAIT))
 			ADD_TRAIT(src, TRAIT_KNOCKEDOUT, OXYLOSS_TRAIT)

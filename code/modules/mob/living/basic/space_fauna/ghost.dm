@@ -11,7 +11,7 @@
 	combat_mode = TRUE
 	basic_mob_flags = DEL_ON_DEATH
 	status_flags = CANPUSH
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -111,7 +111,7 @@
 /mob/living/basic/ghost/swarm
 	name = "vengeful spirit"
 	desc = "Back from the grave, and not happy about it."
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	attack_verb_continuous = "smashes"
 	attack_verb_simple = "smash"

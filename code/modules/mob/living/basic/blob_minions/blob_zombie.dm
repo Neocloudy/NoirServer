@@ -7,7 +7,7 @@
 	health_doll_icon = "blobpod"
 	mob_biotypes = MOB_ORGANIC | MOB_HUMANOID
 	health = 70
-	maxHealth = 70
+	max_health = 70
 	verb_say = "gurgles"
 	verb_ask = "demands"
 	verb_exclaim = "roars"
@@ -69,8 +69,8 @@
 /// Store a body so that we can drop it on death
 /mob/living/basic/blob_minion/zombie/proc/consume_corpse(mob/living/carbon/human/new_corpse)
 	if(new_corpse.wear_suit)
-		maxHealth += new_corpse.get_armor_rating(MELEE)
-		health = maxHealth
+		max_health += new_corpse.get_armor_rating(MELEE)
+		health = max_health
 	new_corpse.set_facial_hairstyle("Shaved", update = FALSE)
 	new_corpse.set_hairstyle("Bald", update = TRUE)
 	new_corpse.forceMove(src)

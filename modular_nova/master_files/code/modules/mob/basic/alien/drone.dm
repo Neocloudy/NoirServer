@@ -25,7 +25,7 @@
 			icon_living = "aliendrone"
 			icon_dead = "aliendrone_dead"
 			health = 150
-			maxHealth = 150
+			max_health = 150
 			melee_damage_lower = 15
 			melee_damage_upper = 15
 			unique_name = TRUE
@@ -37,7 +37,7 @@
 			icon_living = "alienwarrior"
 			icon_dead = "alienwarrior_dead"
 			health = 175
-			maxHealth = 175
+			max_health = 175
 			unique_name = TRUE
 			mob_size = MOB_SIZE_LARGE
 			pixel_x = -16
@@ -48,7 +48,7 @@
 			icon_living = "alienrunner"
 			icon_dead = "alienrunner_dead"
 			health = 125
-			maxHealth = 125
+			max_health = 125
 			melee_damage_lower = 10
 			melee_damage_upper = 15
 			unique_name = TRUE
@@ -60,7 +60,7 @@
 			icon_living = "aliendefender"
 			icon_dead = "aliendefender_dead"
 			health = 225
-			maxHealth = 225
+			max_health = 225
 			melee_damage_lower = 10
 			melee_damage_upper = 15
 			unique_name = TRUE
@@ -73,7 +73,7 @@
 			icon_living = "alienravager"
 			icon_dead = "alienravager_dead"
 			health = 200
-			maxHealth = 200
+			max_health = 200
 			unique_name = TRUE
 			mob_size = MOB_SIZE_LARGE
 			pixel_x = -16

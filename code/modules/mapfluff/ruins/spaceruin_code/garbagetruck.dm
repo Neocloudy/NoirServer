@@ -51,7 +51,7 @@
 		span_userdanger("Something penetrates your skull, horribly mutilating your eyes! Holy fuck!"),
 		span_hear("You hear a sickening sound of metal piercing flesh!")
 	)
-	eyeballies.apply_organ_damage(eyeballies.maxHealth)
+	eyeballies.apply_organ_damage(eyeballies.max_health)
 	target.emote("scream")
 	playsound(target, 'sound/effects/wounds/crackandbleed.ogg', 100)
 	log_combat(user, target, "cracked the skull of (eye snatching)", src)

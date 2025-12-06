@@ -4,7 +4,7 @@
 	icon = 'icons/mob/simple/animal.dmi'
 	abstract_type = /mob/living/basic
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	max_stamina = BASIC_MOB_STAMINA_MATCH_HEALTH
 	gender = PLURAL
 	living_flags = MOVES_ON_ITS_OWN
@@ -153,7 +153,7 @@
 /// Ensures that this mob can be slowed from taking stamina damage
 /mob/living/basic/proc/make_stamina_slowable()
 	if (max_stamina == BASIC_MOB_STAMINA_MATCH_HEALTH)
-		max_stamina = maxHealth
+		max_stamina = max_health
 	if (damage_coeff[STAMINA] <= 0 || max_stamina <= 0 || max_stamina_slowdown <= 0)
 		return
 	AddElement(/datum/element/basic_stamina_slowdown, minium_stamina_threshold = max_stamina / 3, maximum_stamina = max_stamina, maximum_slowdown = max_stamina_slowdown)
@@ -166,7 +166,7 @@
 /mob/living/basic/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	. = ..()
 	if(staminaloss > 0)
-		adjustStaminaLoss(-stamina_recovery * seconds_per_tick, forced = TRUE)
+		adjust_stamina_loss(-stamina_recovery * seconds_per_tick, forced = TRUE)
 
 /mob/living/basic/get_default_say_verb()
 	return length(speak_emote) ? pick(speak_emote) : ..()
@@ -294,7 +294,7 @@
 
 /mob/living/basic/get_status_tab_items()
 	. = ..()
-	. += "Health: [round((health / maxHealth) * 100)]%"
+	. += "Health: [round((health / max_health) * 100)]%"
 	. += "Combat Mode: [combat_mode ? "On" : "Off"]"
 
 /mob/living/basic/compare_sentience_type(compare_type)

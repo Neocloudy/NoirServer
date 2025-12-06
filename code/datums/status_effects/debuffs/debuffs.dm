@@ -124,8 +124,8 @@
 	return ..()
 
 /datum/status_effect/incapacitating/unconscious/tick(seconds_between_ticks)
-	if(owner.getStaminaLoss())
-		owner.adjustStaminaLoss(-0.3) //reduce stamina loss by 0.3 per tick, 6 per 2 seconds
+	if(owner.get_stamina_loss())
+		owner.adjust_stamina_loss(-0.3) //reduce stamina loss by 0.3 per tick, 6 per 2 seconds
 
 
 //SLEEPING
@@ -166,8 +166,8 @@
 	tick_interval = initial(tick_interval)
 
 /datum/status_effect/incapacitating/sleeping/tick(seconds_between_ticks)
-	if(owner.maxHealth)
-		var/health_ratio = owner.health / owner.maxHealth
+	if(owner.max_health)
+		var/health_ratio = owner.health / owner.max_health
 		var/sleep_quality = HEALING_SLEEP_DEFAULT
 
 		// having high spirits helps us recover
@@ -222,7 +222,7 @@
 
 					// organ regeneration is very low so we crank up the healing rate to give a good bonus
 					var/healing_bonus = target_organ.healing_factor * sleep_quality * HEALING_SLEEP_ORGAN_MULTIPLIER
-					target_organ.apply_organ_damage(-healing_bonus * target_organ.maxHealth)
+					target_organ.apply_organ_damage(-healing_bonus * target_organ.max_health)
 
 				var/datum/status_effect/exercised/exercised = carbon_owner.has_status_effect(/datum/status_effect/exercised)
 				if(exercised && carbon_owner.mind)
@@ -233,10 +233,10 @@
 						to_chat(carbon_owner, span_notice("You feel your fitness improving!"))
 
 			if(health_ratio > 0.8) // only heals minor physical damage
-				need_mob_update += owner.adjustBruteLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
-				need_mob_update += owner.adjustFireLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
-				need_mob_update += owner.adjustToxLoss(-0.2 * sleep_quality * seconds_between_ticks, updating_health = FALSE, forced = TRUE, required_biotype = MOB_ORGANIC)
-		need_mob_update += owner.adjustStaminaLoss(min(-0.4 * sleep_quality * seconds_between_ticks, -0.4 * HEALING_SLEEP_DEFAULT * seconds_between_ticks), updating_stamina = FALSE)
+				need_mob_update += owner.adjust_brute_loss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
+				need_mob_update += owner.adjust_fire_loss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
+				need_mob_update += owner.adjust_tox_loss(-0.2 * sleep_quality * seconds_between_ticks, updating_health = FALSE, forced = TRUE, required_biotype = MOB_ORGANIC)
+		need_mob_update += owner.adjust_stamina_loss(min(-0.4 * sleep_quality * seconds_between_ticks, -0.4 * HEALING_SLEEP_DEFAULT * seconds_between_ticks), updating_stamina = FALSE)
 		if(need_mob_update)
 			owner.updatehealth()
 	// Drunkenness gets reduced by 0.3% per tick (6% per 2 seconds)
@@ -334,9 +334,9 @@
 		qdel(src)
 		return
 	var/need_mob_update
-	need_mob_update = owner.adjustBruteLoss(0.04 * seconds_between_ticks, updating_health = FALSE)
-	need_mob_update += owner.adjustFireLoss(0.04 * seconds_between_ticks, updating_health = FALSE)
-	need_mob_update += owner.adjustToxLoss(0.08 * seconds_between_ticks, updating_health = FALSE, forced = TRUE)
+	need_mob_update = owner.adjust_brute_loss(0.04 * seconds_between_ticks, updating_health = FALSE)
+	need_mob_update += owner.adjust_fire_loss(0.04 * seconds_between_ticks, updating_health = FALSE)
+	need_mob_update += owner.adjust_tox_loss(0.08 * seconds_between_ticks, updating_health = FALSE, forced = TRUE)
 	if(need_mob_update)
 		owner.updatehealth()
 
@@ -413,7 +413,7 @@
 	new /obj/effect/temp_visual/bleed(get_turf(owner))
 
 /datum/status_effect/stacking/saw_bleed/threshold_cross_effect()
-	owner.adjustBruteLoss(bleed_damage)
+	owner.adjust_brute_loss(bleed_damage)
 	new /obj/effect/temp_visual/bleed/explode(get_turf(owner))
 	for(var/splatter_dir in GLOB.alldirs)
 		owner.create_splatter(splatter_dir)
@@ -525,7 +525,7 @@
 		wasting_effect.alpha = 255
 		animate(wasting_effect, alpha = 0, time = 32)
 		playsound(owner, 'sound/effects/curse/curse5.ogg', 20, TRUE, -1)
-		owner.adjustFireLoss(0.75)
+		owner.adjust_fire_loss(0.75)
 
 	if(curse_flags & CURSE_GRASPING)
 		if(effect_next_activation > world.time)

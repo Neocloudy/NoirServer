@@ -104,7 +104,7 @@ Medical HUD! Basic mode needs suit sensors on.
 /proc/RoundHealth(mob/living/M)
 	if(M.stat == DEAD || (HAS_TRAIT(M, TRAIT_FAKEDEATH)))
 		return "health-100" //what's our health? it doesn't matter, we're dead, or faking
-	var/maxi_health = M.maxHealth
+	var/maxi_health = M.max_health
 	if(iscarbon(M) && M.health < 0)
 		maxi_health = 100 //so crit shows up right for aliens and other high-health carbon mobs; noncarbons don't have crit.
 	var/resulthealth = (M.health / maxi_health) * 100
@@ -360,7 +360,7 @@ Diagnostic HUDs!
 	if(stat == DEAD)
 		set_hud_image_state(DIAG_HUD, "huddiagdead")
 	else
-		set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/maxHealth)]")
+		set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/max_health)]")
 
 /mob/living/silicon/proc/diag_hud_set_status()
 	switch(stat)
@@ -447,7 +447,7 @@ Diagnostic HUDs!
 	Bots!
 ~~~~~~~~~~*/
 /mob/living/simple_animal/bot/proc/diag_hud_set_bothealth()
-	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/maxHealth)]")
+	set_hud_image_state(DIAG_HUD, "huddiag[RoundDiagBar(health/max_health)]")
 
 /mob/living/simple_animal/bot/proc/diag_hud_set_botstat() //On (With wireless on or off), Off, EMP'ed
 	if(bot_mode_flags & BOT_MODE_ON)

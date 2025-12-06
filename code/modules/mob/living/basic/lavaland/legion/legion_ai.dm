@@ -42,7 +42,7 @@
 	var/atom/created_by = living_mob.ai_controller.blackboard[BB_LEGION_BROOD_CREATOR]
 	if (!QDELETED(created_by) && istype(the_target, created_by.type))
 		return TRUE
-	return the_target.stat == DEAD || the_target.health >= the_target.maxHealth
+	return the_target.stat == DEAD || the_target.health >= the_target.max_health
 
 /// Don't run away from friendlies
 /datum/ai_planning_subtree/flee_target/legion

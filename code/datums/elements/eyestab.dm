@@ -126,7 +126,7 @@
 	// At over 30 damage, there is a chance (based on eye damage) of going blind
 	if (prob(eyes.damage - EYESTAB_BLINDING_THRESHOLD + 1))
 		if (!target.is_blind_from(EYE_DAMAGE))
-			eyes.set_organ_damage(eyes.maxHealth)
+			eyes.set_organ_damage(eyes.max_health)
 		// Also cause some temp blindness, so that they're still blind even if they get healed
 		target.adjust_temp_blindness_up_to(20 SECONDS, 1 MINUTES)
 

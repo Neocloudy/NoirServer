@@ -20,7 +20,7 @@
 	name = "Seargent Crowlie"
 	desc = "He stands looking out at the water of this fake domed beach, he stands completely still- that is until he hears you to which he imeediatly takes up a combative stance and starts opening fire."
 	health = 2000
-	maxHealth = 2000
+	max_health = 2000
 	loot = list(/obj/item/keycard/blue)
 
 /obj/machinery/door/poddoor/shutters/window/indestructible/maints_armory
@@ -43,7 +43,7 @@
 /mob/living/basic/trooper/syndicate/ranged/smg/pilot/super_american
 	name = "SUPER AMERICAN"
 	health = 400
-	maxHealth = 400
+	max_health = 400
 	environment_smash = 0
 	desc = "America, FUCK YEA, comin agian to save the mother fuckin day yeah! AMERICA FUCK YEAH! freedom is the only way yeah! Terrorists your game is through, because now you have to answer to- AMERICA, FUCK YEA!"
 

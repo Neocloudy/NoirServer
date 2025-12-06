@@ -155,8 +155,8 @@
 	grown.faction = faction.Copy()
 	grown.directive = directive
 	grown.set_name()
-	grown.setBruteLoss(getBruteLoss())
-	grown.setFireLoss(getFireLoss())
+	grown.set_brute_loss(get_brute_loss())
+	grown.set_fire_loss(get_fire_loss())
 	qdel(src)
 
 /**
@@ -177,7 +177,7 @@
 	density = FALSE
 	pass_flags = PASSTABLE|PASSGRILLE|PASSMOB
 	gold_core_spawnable = FRIENDLY_SPAWN
-	maxHealth = 10
+	max_health = 10
 	health = 10
 	melee_damage_lower = 1
 	melee_damage_upper = 1

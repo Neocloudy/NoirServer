@@ -107,7 +107,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/traitor_
 	icon_gib = "clover_gib"
 	icon_living = "clover"
 	gender = MALE
-	maxHealth = 300 //you said carps were stronger on nova-sector
+	max_health = 300 //you said carps were stronger on nova-sector
 	health = 300
 	speak_emote = list("gruffs") //he's old
 	desc = "A bright green carp tamed by one of the operatives on rotation at bay no. 09. \n\

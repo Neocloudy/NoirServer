@@ -40,14 +40,14 @@
 
 /datum/action/cooldown/spell/tap/cast(mob/living/cast_on)
 	. = ..()
-	cast_on.maxHealth -= tap_health_taken
-	cast_on.health = min(cast_on.health, cast_on.maxHealth)
+	cast_on.max_health -= tap_health_taken
+	cast_on.health = min(cast_on.health, cast_on.max_health)
 
 	for(var/datum/action/cooldown/spell/spell in cast_on.actions)
 		spell.reset_spell_cooldown()
 
 	// If the tap took all of our life, we die and lose our soul!
-	if(cast_on.maxHealth <= 0)
+	if(cast_on.max_health <= 0)
 		to_chat(cast_on, span_userdanger("Your weakened soul is completely consumed by the tap!"))
 		ADD_TRAIT(cast_on, TRAIT_NO_SOUL, MAGIC_TRAIT)
 
@@ -56,7 +56,7 @@
 		cast_on.death()
 
 	// If the next tap will kill us, give us a heads-up
-	else if(cast_on.maxHealth - tap_health_taken <= 0)
+	else if(cast_on.max_health - tap_health_taken <= 0)
 		to_chat(cast_on, span_bolddanger("Your body feels incredibly drained, and the burning is hard to ignore!"))
 
 	// Otherwise just give them some feedback

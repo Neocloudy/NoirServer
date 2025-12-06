@@ -12,7 +12,7 @@
 	M.AdjustUnconscious(-4 SECONDS * REM * seconds_per_tick)
 	M.AdjustParalyzed(-4 SECONDS * REM * seconds_per_tick)
 	M.AdjustImmobilized(-4 SECONDS * REM * seconds_per_tick)
-	M.adjustStaminaLoss(-2 * REM * seconds_per_tick, 0)
+	M.adjust_stamina_loss(-2 * REM * seconds_per_tick, 0)
 	M.set_jitter_if_lower(5 SECONDS)
 	if(SPT_PROB(2.5, seconds_per_tick))
 		M.emote(pick("twitch", "shiver"))

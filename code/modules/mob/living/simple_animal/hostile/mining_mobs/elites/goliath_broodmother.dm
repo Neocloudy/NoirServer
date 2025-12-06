@@ -29,7 +29,7 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	maxHealth = 1000
+	max_health = 1000
 	health = 1000
 	melee_damage_lower = 30
 	melee_damage_upper = 30
@@ -108,11 +108,11 @@
 	. = ..()
 	if(!.) //Checks if they are dead as a rock.
 		return
-	if(health >= maxHealth * 0.5 || !COOLDOWN_FINISHED(src, random_tentacle))
+	if(health >= max_health * 0.5 || !COOLDOWN_FINISHED(src, random_tentacle))
 		return
 	COOLDOWN_START(src, random_tentacle, 3 SECONDS)
 	var/tentacle_amount = 5
-	if(health < maxHealth * 0.25)
+	if(health < max_health * 0.25)
 		tentacle_amount = 10
 	var/list/possible_turfs = RANGE_TURFS(5, get_turf(src))
 	for(var/i in 1 to tentacle_amount)
@@ -189,7 +189,7 @@
 	icon_aggro = "goliath_baby"
 	icon_dead = "goliath_baby_dead"
 	icon_gib = "syndicate_gib"
-	maxHealth = 30
+	max_health = 30
 	health = 30
 	melee_damage_lower = 5
 	melee_damage_upper = 5

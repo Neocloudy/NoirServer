@@ -77,7 +77,7 @@
 		eat_verb = pick("bite","chew","nibble","gnaw","gobble","chomp")
 
 	if (heal_amt > 0)
-		var/healed = heal_amt && eater.health < eater.maxHealth
+		var/healed = heal_amt && eater.health < eater.max_health
 		eater.heal_overall_damage(heal_amt)
 		eater.visible_message(span_notice("[eater] [eat_verb]s [target]."), span_notice("You [eat_verb] [target][healed ? ", restoring some health" : ""]."))
 

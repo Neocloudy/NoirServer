@@ -6,7 +6,7 @@
 	icon_dead = "mouse_gray_dead"
 	held_state = "mouse_gray"
 
-	maxHealth = 5
+	max_health = 5
 	health = 5
 	density = FALSE
 	pass_flags = PASSTABLE|PASSGRILLE|PASSMOB
@@ -111,7 +111,7 @@
 /// Kills the rat and changes its icon state to be splatted (bloody).
 /mob/living/basic/mouse/proc/splat()
 	icon_dead = "mouse_[body_color]_splat"
-	adjust_health(maxHealth)
+	adjust_health(max_health)
 
 // On revival, re-add the mouse to the ratcap, or block it if we're at it
 /mob/living/basic/mouse/revive(full_heal_flags = NONE, excess_healing = 0, force_grab_ghost = FALSE)
@@ -215,12 +215,12 @@
 
 	var/cap = CONFIG_GET(number/ratcap)
 	// Normal cheese will either heal us
-	if(prob(90) || health < maxHealth)
+	if(prob(90) || health < max_health)
 		visible_message(
 			span_notice("[src] nibbles [cheese]."),
-			span_notice("You nibble [cheese][health < maxHealth ? ", restoring your health" : ""].")
+			span_notice("You nibble [cheese][health < max_health ? ", restoring your health" : ""].")
 		)
-		adjust_health(-maxHealth)
+		adjust_health(-max_health)
 
 	// Or, if we're at full health, there's a 10% chance that normal cheese will spawn a new mouse
 	// ...if the rat cap allows us, that is
@@ -262,7 +262,7 @@
 		// Unfortunately we can't check the return value of electrocute_act before displaying a message,
 		// as it's possible the damage from electrocution results in our hunter being deleted.
 		// But what are the odds of the shock failing? Hahaha...
-		electrocute_act(maxHealth * 2, cable, flags = SHOCK_SUPPRESS_MESSAGE)
+		electrocute_act(max_health * 2, cable, flags = SHOCK_SUPPRESS_MESSAGE)
 
 	else
 		visible_message(
@@ -321,7 +321,7 @@
 	melee_damage_lower = 3
 	melee_damage_upper = 5
 	obj_damage = 5
-	maxHealth = 15
+	max_health = 15
 	health = 15
 
 	ai_controller = /datum/ai_controller/basic_controller/mouse/rat

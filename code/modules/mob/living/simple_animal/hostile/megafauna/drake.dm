@@ -1,5 +1,5 @@
 ///used to see if the drake is enraged or not
-#define DRAKE_ENRAGED (health < maxHealth*0.5)
+#define DRAKE_ENRAGED (health < max_health*0.5)
 
 #define SWOOP_DAMAGEABLE 1
 #define SWOOP_INVULNERABLE 2
@@ -33,7 +33,7 @@
 	name = "ash drake"
 	desc = "Guardians of the necropolis."
 	health = 2500
-	maxHealth = 2500
+	max_health = 2500
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"
 	attack_sound = 'sound/effects/magic/demon_attack1.ogg'
@@ -154,7 +154,7 @@
 /mob/living/simple_animal/hostile/megafauna/dragon/proc/arena_escape_enrage() // you ran somehow / teleported away from my arena attack now i'm mad fucker
 	SLEEP_CHECK_DEATH(0, src)
 	visible_message(span_boldwarning("[src] starts to glow vibrantly as its wounds close up!"))
-	adjustBruteLoss(-250) // yeah you're gonna pay for that, don't run nerd
+	adjust_brute_loss(-250) // yeah you're gonna pay for that, don't run nerd
 	add_atom_colour(rgb(255, 255, 0), TEMPORARY_COLOUR_PRIORITY)
 	move_to_delay = move_to_delay / 2
 	set_light_range(10)
@@ -171,7 +171,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/dragon/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
-	anger_modifier = clamp(((maxHealth - health)/60),0,20)
+	anger_modifier = clamp(((max_health - health)/60),0,20)
 	lava_swoop.enraged = DRAKE_ENRAGED
 	if(!forced && (swooping & SWOOP_INVULNERABLE))
 		return FALSE
@@ -221,7 +221,7 @@
 	for(var/mob/living/L in T.contents - owner)
 		if(istype(L, /mob/living/simple_animal/hostile/megafauna/dragon))
 			continue
-		L.adjustFireLoss(10)
+		L.adjust_fire_loss(10)
 		to_chat(L, span_userdanger("You fall directly into the pool of lava!"))
 
 	// deals damage to mechs
@@ -296,15 +296,15 @@
 		if(istype(L, /mob/living/simple_animal/hostile/megafauna/dragon))
 			continue
 		if(islist(flame_hit) && !flame_hit[L])
-			L.adjustFireLoss(40)
+			L.adjust_fire_loss(40)
 			to_chat(L, span_userdanger("You're hit by the drake's fire breath!"))
 			flame_hit[L] = TRUE
 		else
-			L.adjustFireLoss(10) //if we've already hit them, do way less damage
+			L.adjust_fire_loss(10) //if we've already hit them, do way less damage
 
 /mob/living/simple_animal/hostile/megafauna/dragon/lesser
 	name = "lesser ash drake"
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	faction = list(FACTION_NEUTRAL)
 	obj_damage = 80

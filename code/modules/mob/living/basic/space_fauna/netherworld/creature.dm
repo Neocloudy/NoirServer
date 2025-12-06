@@ -5,7 +5,7 @@
 	icon_living = "otherthing"
 	icon_dead = "otherthing-dead"
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	obj_damage = 50
 	melee_damage_lower = 20
 	melee_damage_upper = 30
@@ -111,6 +111,6 @@
 /mob/living/basic/creature/hatchling
 	name = "hatchling"
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	health_scaling = FALSE
 	initial_size = 0.85

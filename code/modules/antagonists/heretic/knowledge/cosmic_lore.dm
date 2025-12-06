@@ -161,7 +161,7 @@
 	var/mob/living/second_target_resolved = second_target?.resolve()
 	var/mob/living/third_target_resolved = third_target?.resolve()
 	var/need_mob_update = FALSE
-	need_mob_update += target.adjustFireLoss(5, updating_health = FALSE)
+	need_mob_update += target.adjust_fire_loss(5, updating_health = FALSE)
 	if(need_mob_update)
 		target.updatehealth()
 	if(target == second_target_resolved || target == third_target_resolved)
@@ -173,14 +173,14 @@
 		new /obj/effect/temp_visual/cosmic_explosion(get_turf(second_target_resolved))
 		playsound(get_turf(second_target_resolved), 'sound/effects/magic/cosmic_energy.ogg', 25, FALSE)
 		need_mob_update = FALSE
-		need_mob_update += second_target_resolved.adjustFireLoss(14, updating_health = FALSE)
+		need_mob_update += second_target_resolved.adjust_fire_loss(14, updating_health = FALSE)
 		if(need_mob_update)
 			second_target_resolved.updatehealth()
 		if(third_target_resolved)
 			new /obj/effect/temp_visual/cosmic_domain(get_turf(third_target_resolved))
 			playsound(get_turf(third_target_resolved), 'sound/effects/magic/cosmic_energy.ogg', 50, FALSE)
 			need_mob_update = FALSE
-			need_mob_update += third_target_resolved.adjustFireLoss(28, updating_health = FALSE)
+			need_mob_update += third_target_resolved.adjust_fire_loss(28, updating_health = FALSE)
 			if(need_mob_update)
 				third_target_resolved.updatehealth()
 			if(combo_counter == 3)
@@ -264,7 +264,7 @@
 		ascended_human.update_sight()
 
 	var/mob/living/basic/heretic_summon/star_gazer/star_gazer_mob = new /mob/living/basic/heretic_summon/star_gazer(loc, user)
-	star_gazer_mob.maxHealth = INFINITY
+	star_gazer_mob.max_health = INFINITY
 	star_gazer_mob.health = INFINITY
 	user.AddComponent(/datum/component/death_linked, star_gazer_mob)
 	star_gazer_mob.AddComponent(/datum/component/obeys_commands, star_gazer_commands, radial_menu_offset = list(30,0), radial_menu_lifetime = 15 SECONDS, radial_relative_to_user = TRUE)

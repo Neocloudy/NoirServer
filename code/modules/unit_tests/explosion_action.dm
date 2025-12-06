@@ -21,7 +21,7 @@
 /datum/unit_test/explosion_action/proc/execute_mob_tests()
 	// You may delete this entire section of the test when the entire `simple_animal` framework needs to be scrapped.
 	var/mob/living/simple_animal/test_simple_animal = allocate(/mob/living/simple_animal)
-	test_simple_animal.maxHealth = MAX_LIVING_HEALTH
+	test_simple_animal.max_health = MAX_LIVING_HEALTH
 	test_simple_animal.health = MAX_LIVING_HEALTH
 
 	EX_ACT(test_simple_animal, EXPLODE_NONE) // should do nothing.
@@ -41,7 +41,7 @@
 
 	// Now let's be safe and check basic mobs (they're the future, man)
 	var/mob/living/basic/test_basic_animal = allocate(/mob/living/basic)
-	test_basic_animal.maxHealth = MAX_LIVING_HEALTH
+	test_basic_animal.max_health = MAX_LIVING_HEALTH
 	test_basic_animal.health = MAX_LIVING_HEALTH
 
 	EX_ACT(test_basic_animal, EXPLODE_NONE) // should do nothing.
@@ -60,7 +60,7 @@
 
 	// Aliens have their own implementation too.
 	var/mob/living/carbon/alien/test_alien = allocate(/mob/living/carbon/alien)
-	test_alien.maxHealth = MAX_LIVING_HEALTH
+	test_alien.max_health = MAX_LIVING_HEALTH
 	test_alien.health = MAX_LIVING_HEALTH
 
 	EX_ACT(test_alien, EXPLODE_NONE) // should do nothing.
@@ -190,7 +190,7 @@
 /// Sets up a fully armored corgi for testing purposes. Split out into its own proc as to not clutter up the main test.
 /datum/unit_test/explosion_action/proc/set_up_test_dog()
 	var/mob/living/basic/pet/dog/corgi/returnable_dog = allocate(/mob/living/basic/pet/dog/corgi)
-	returnable_dog.maxHealth = MAX_LIVING_HEALTH
+	returnable_dog.max_health = MAX_LIVING_HEALTH
 	returnable_dog.health = MAX_LIVING_HEALTH
 
 	var/obj/item/clothing/head/helmet/invincible_hat = allocate(/obj/item/clothing/head/helmet)
@@ -205,6 +205,6 @@
 
 /// Proc to lessen the amount of copypasta we do for the alien tests, simply sets the rolling vars we have.
 /datum/unit_test/explosion_action/proc/read_alien_damages(mob/living/carbon/alien/subject)
-	alien_brute_loss = subject.getBruteLoss()
-	alien_burn_loss = subject.getFireLoss()
+	alien_brute_loss = subject.get_brute_loss()
+	alien_burn_loss = subject.get_fire_loss()
 	alien_ear_damage = subject.get_organ_loss(ORGAN_SLOT_EARS)

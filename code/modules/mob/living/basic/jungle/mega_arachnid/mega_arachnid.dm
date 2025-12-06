@@ -11,7 +11,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	melee_attack_cooldown = CLICK_CD_MELEE
-	maxHealth = 300
+	max_health = 300
 	health = 300
 
 	pixel_x = -16

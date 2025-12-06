@@ -1,5 +1,5 @@
 /mob/living/carbon/human
-	maxHealth = HUMAN_MAXHEALTH
+	max_health = HUMAN_MAXHEALTH
 	health = HUMAN_MAXHEALTH
 	/// Color of the undershirt
 	var/undershirt_color = "#FFFFFF"

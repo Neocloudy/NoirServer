@@ -77,7 +77,7 @@
 	if(!living_pawn.faction.Find(REF(target)))
 		controller.queue_behavior(/datum/ai_behavior/befriend_target, BB_DRONE_DEFEND)
 		return
-	if(target.health < (target.maxHealth * 0.75) && controller.blackboard[BB_MINEBOT_REPAIR_DRONE])
+	if(target.health < (target.max_health * 0.75) && controller.blackboard[BB_MINEBOT_REPAIR_DRONE])
 		controller.queue_behavior(/datum/ai_behavior/repair_drone, BB_DRONE_DEFEND)
 		return SUBTREE_RETURN_FINISH_PLANNING
 

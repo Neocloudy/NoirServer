@@ -12,7 +12,7 @@
 	sentience_type = SENTIENCE_HUMANOID
 	faction = list(ROLE_ABDUCTOR)
 
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	unsuitable_atmos_damage = 7.5
 	basic_mob_flags = DEL_ON_DEATH
@@ -61,7 +61,7 @@
 	icon_living = "abductor_agent"
 
 	health = 160
-	maxHealth = 160
+	max_health = 160
 	loot = list(/obj/effect/gibspawner/generic, /obj/effect/spawner/random/astrum/agent_loot)
 
 	melee_damage_lower = 15
@@ -77,7 +77,7 @@
 	icon_state = "abductor_scientist_gun"
 	icon_living = "abductor_scientist_gun"
 
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	loot = list(/obj/effect/gibspawner/generic, /obj/effect/spawner/random/astrum/sci_loot)
 
@@ -94,7 +94,7 @@
 	icon_state = "abductor_agent_combat_gun"
 	icon_living = "abductor_agent_combat_gun"
 
-	maxHealth = 140
+	max_health = 140
 	health = 140
 	loot = list(/obj/effect/gibspawner/generic, /obj/effect/spawner/random/astrum/agent_loot)
 
@@ -114,7 +114,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 
 	health = 1750
-	maxHealth = 1750
+	max_health = 1750
 	health_doll_icon = "pandora"
 	death_message = "falls to their knees before exploding into a ball of gore."
 

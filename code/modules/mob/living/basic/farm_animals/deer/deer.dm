@@ -18,7 +18,7 @@
 	attack_verb_simple = "buck"
 	attack_sound = 'sound/items/weapons/punch1.ogg'
 	health = 75
-	maxHealth = 75
+	max_health = 75
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/deer
 	/// Things that will scare us into being stationary. Vehicles are scary to deers because they might have headlights.

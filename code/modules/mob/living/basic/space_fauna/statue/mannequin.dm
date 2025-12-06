@@ -6,7 +6,7 @@
 	icon_living = "mannequin_wood_male"
 	icon_dead = "mannequin_wood_male"
 	health = 300
-	maxHealth = 300
+	max_health = 300
 	melee_damage_lower = 15
 	melee_damage_upper = 30
 	status_flags = CANPUSH
@@ -71,7 +71,7 @@
 	name = "mannequin?"
 	desc = "Their eyes follow you."
 	health = 1500 //yeah uhh avoid these
-	maxHealth = 1500
+	max_health = 1500
 	ai_controller = /datum/ai_controller/basic_controller/suspicious_mannequin
 
 /datum/ai_controller/basic_controller/suspicious_mannequin

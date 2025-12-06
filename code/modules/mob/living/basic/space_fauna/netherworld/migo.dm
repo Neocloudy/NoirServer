@@ -5,7 +5,7 @@
 	icon_living = "mi-go"
 	icon_dead = "mi-go-dead"
 	health = 80
-	maxHealth = 80
+	max_health = 80
 	obj_damage = 50
 	melee_damage_lower = 25
 	melee_damage_upper = 50

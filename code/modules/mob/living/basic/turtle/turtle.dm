@@ -17,7 +17,7 @@
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	speed = 5
 	verb_say = "snaps"
 	verb_ask = "snaps curiously"

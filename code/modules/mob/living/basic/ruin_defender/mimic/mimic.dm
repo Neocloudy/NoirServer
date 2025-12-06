@@ -13,7 +13,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 	response_disarm_continuous = "pushes"
 	response_disarm_simple = "push"
 	speed = 6
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	gender = NEUTER
 	mob_biotypes = NONE
@@ -228,7 +228,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 
 /mob/living/basic/mimic/crate/xenobio
 	health = 210
-	maxHealth = 210
+	max_health = 210
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	speak_emote = list("clatters")
@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 
 /mob/living/basic/mimic/copy
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	mob_biotypes = MOB_SPECIAL
 	ai_controller = /datum/ai_controller/basic_controller/mimic_copy
 	/// our creator
@@ -287,7 +287,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 	if(!.) //dead or deleted
 		return
 	if(idledamage && !ckey && !ai_controller?.blackboard[BB_BASIC_MOB_CURRENT_TARGET]) //Objects eventually revert to normal if no one is around to terrorize
-		adjustBruteLoss(0.5 * seconds_per_tick)
+		adjust_brute_loss(0.5 * seconds_per_tick)
 	for(var/mob/living/victim in contents) //a fix for animated statues from the flesh to stone spell
 		death()
 		return
@@ -348,7 +348,7 @@ GLOBAL_LIST_INIT(animatable_blacklist, typecacheof(list(
 		health = 15 * I.w_class
 		melee_damage_lower = 2 + I.force
 		melee_damage_upper = 2 + I.force
-	maxHealth = health
+	max_health = health
 	if(user)
 		change_owner(user)
 	if(destroy_original)

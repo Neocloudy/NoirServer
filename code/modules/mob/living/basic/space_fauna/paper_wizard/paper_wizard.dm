@@ -14,7 +14,7 @@
 	basic_mob_flags = DEL_ON_DEATH
 
 	status_flags = CANPUSH
-	maxHealth = 1000
+	max_health = 1000
 	health = 1000
 	melee_damage_lower = 10
 	melee_damage_upper = 20
@@ -100,7 +100,7 @@
 /mob/living/basic/paper_wizard/copy
 	desc = "'Tis a ruse!"
 	health = 1
-	maxHealth = 1
+	max_health = 1
 	alpha = 200
 	faction = list(FACTION_STICKMAN)
 	melee_damage_lower = 1
@@ -123,7 +123,7 @@
 	SIGNAL_HANDLER
 
 	if(!(attack_flags & (ATTACKER_STAMINA_ATTACK|ATTACKER_SHOVING)))
-		attacker.adjustBruteLoss(20)
+		attacker.adjust_brute_loss(20)
 		to_chat(attacker, span_warning("The clone casts a spell to damage you before he dies!"))
 
 

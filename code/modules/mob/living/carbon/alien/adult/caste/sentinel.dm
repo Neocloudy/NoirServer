@@ -1,7 +1,7 @@
 /mob/living/carbon/alien/adult/sentinel
 	name = "alien sentinel"
 	caste = "s"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	icon_state = "aliens"
 	alien_speed = 0.2

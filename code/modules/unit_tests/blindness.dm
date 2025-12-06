@@ -110,7 +110,7 @@
 
 	// Test blindness due to eye damage
 	// Cause critical eye damage
-	var/critical_damage = eyes.maxHealth
+	var/critical_damage = eyes.max_health
 	eyes.set_organ_damage(critical_damage) // ~50 damage
 	TEST_ASSERT(dummy.is_blind(), "After sustaining critical eye damage ([critical_damage]), the dummy was not blind.")
 	// Heal eye damage
@@ -120,7 +120,7 @@
 	// Test nearsightedness due to eye damage
 	var/datum/status_effect/grouped/nearsighted/nearsightedness
 	// Cause minor eye damage
-	var/minor_damage = eyes.maxHealth * 0.5
+	var/minor_damage = eyes.max_health * 0.5
 	eyes.apply_organ_damage(minor_damage) //~25 ddamage
 	TEST_ASSERT(dummy.is_nearsighted(), "After sustaining minor eye damage ([minor_damage]), the dummy was not nearsighted.")
 	// Check that the severity is correct
@@ -132,7 +132,7 @@
 	TEST_ASSERT(!dummy.is_nearsighted(), "After curing eye damage, the dummy was still nearsighted.")
 
 	// Cause major eye damage
-	var/major_damage = eyes.maxHealth * 0.7
+	var/major_damage = eyes.max_health * 0.7
 	eyes.apply_organ_damage(major_damage) //~35 damage
 	TEST_ASSERT(dummy.is_nearsighted(), "After sustaining major eye damage ([major_damage]), the dummy was not nearsighted.")
 	// Check that the severity is correct

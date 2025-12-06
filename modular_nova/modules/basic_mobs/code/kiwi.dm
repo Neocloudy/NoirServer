@@ -5,7 +5,7 @@
 	icon_state = "kiwi"
 	icon_living = "kiwi"
 	icon_dead = "kiwi_dead"
-	maxHealth = 15
+	max_health = 15
 	health = 15
 	density = FALSE
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT

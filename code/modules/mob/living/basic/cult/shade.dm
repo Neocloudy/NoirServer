@@ -7,7 +7,7 @@
 	icon_state = "shade_cult"
 	icon_living = "shade_cult"
 	mob_biotypes = MOB_SPIRIT | MOB_UNDEAD
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	status_flags = CANPUSH
 	speak_emote = list("hisses")

@@ -10,7 +10,7 @@
 	icon_dead = "goose_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	faction = list(FACTION_NEUTRAL)
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	melee_damage_lower = 5
 	melee_damage_upper = 5

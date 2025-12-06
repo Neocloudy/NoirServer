@@ -8,7 +8,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 2
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	obj_damage = 40
 	melee_damage_lower = 15
@@ -59,7 +59,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 5
-	maxHealth = 20
+	max_health = 20
 	health = 20
 	melee_damage_lower = 5
 	melee_damage_upper = 5
@@ -88,7 +88,7 @@
 /mob/living/basic/mining/demon_afterimage/crusher
 	speed = 2
 	health = 60
-	maxHealth = 60
+	max_health = 60
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	existence_period = 7 SECONDS

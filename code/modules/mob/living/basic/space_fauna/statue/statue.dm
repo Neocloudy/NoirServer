@@ -18,7 +18,7 @@
 	response_disarm_simple = "push"
 
 	speed = -1
-	maxHealth = 50000
+	max_health = 50000
 	health = 50000
 	obj_damage = 100
 	melee_damage_lower = 68
@@ -149,7 +149,7 @@
 	icon_living = "snowman"
 	icon_state = "snowman"
 	health = 5000
-	maxHealth = 5000
+	max_health = 5000
 	melee_damage_lower = 65
 	melee_damage_upper = 65
 	faction = list(FACTION_STATUE,FACTION_MINING)

@@ -96,7 +96,7 @@ ADMIN_VERB(spawn_obj_as_mob, R_SPAWN, "Spawn Object-Mob", "Spawn an object as if
 		if (!isnum(mainsettings["maxhealth"]["value"]))
 			mainsettings["maxhealth"]["value"] = text2num(mainsettings["maxhealth"]["value"])
 		if (mainsettings["maxhealth"]["value"] > 0)
-			basemob.maxHealth = basemob.maxHealth = mainsettings["maxhealth"]["value"]
+			basemob.max_health = basemob.max_health = mainsettings["maxhealth"]["value"]
 
 	if (mainsettings["name"]["value"])
 		basemob.name = basemob.real_name = html_decode(mainsettings["name"]["value"])

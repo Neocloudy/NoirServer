@@ -24,7 +24,7 @@
 	attack_verb_continuous = "kicks"
 	attack_verb_simple = "kick"
 	health = 3
-	maxHealth = 3
+	max_health = 3
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
 	gold_core_spawnable = FRIENDLY_SPAWN

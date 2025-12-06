@@ -16,7 +16,7 @@
 	speed = 12
 	initial_language_holder = /datum/language_holder/lizard/hear_common
 
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	obj_damage = 40
 	armour_penetration = 20
@@ -87,7 +87,7 @@
 	if(!do_after(src, 5 SECONDS, target))
 		return
 	target.gib(DROP_ALL_REMAINS)
-	adjustBruteLoss(-1 * heal_on_cannibalize)
+	adjust_brute_loss(-1 * heal_on_cannibalize)
 
 ///Ash whelp, the "lava" variant of ice whelps.
 /mob/living/basic/mining/ice_whelp/ash

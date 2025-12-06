@@ -13,7 +13,7 @@
 	incorporeal_move = INCORPOREAL_MOVE_JAUNT
 	invisibility = INVISIBILITY_REVENANT
 	health = INFINITY //Revenants don't use health, they use essence instead
-	maxHealth = INFINITY
+	max_health = INFINITY
 	plane = GHOST_PLANE
 	sight = SEE_SELF
 	throwforce = 0

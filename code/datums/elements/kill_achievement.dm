@@ -40,7 +40,7 @@
 
 	// Check whether we killed the megafauna with primarily crusher damage or not
 	var/datum/status_effect/crusher_damage/crusher_dmg = source.has_status_effect(/datum/status_effect/crusher_damage)
-	var/crusher_kill = (!isnull(crusher_kill_threshold) && crusher_dmg && (crusher_dmg.total_damage >= floor(source.maxHealth * 0.6)))
+	var/crusher_kill = (!isnull(crusher_kill_threshold) && crusher_dmg && (crusher_dmg.total_damage >= floor(source.max_health * 0.6)))
 	var/turf/our_loc = get_turf(source)
 	if (!our_loc)
 		return

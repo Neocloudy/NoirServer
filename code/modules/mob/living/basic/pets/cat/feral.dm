@@ -2,7 +2,7 @@
 	name = "feral cat"
 	desc = "Kitty!! Wait, no no DON'T BITE-"
 	health = 30
-	maxHealth = 30
+	max_health = 30
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	wound_bonus = -10

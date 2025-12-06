@@ -43,7 +43,7 @@
 	var/list/damage_heal_order = list(BRUTE, BURN, TOX, OXY)
 
 /datum/golem_food_buff/iron/apply_effects(mob/living/carbon/consumer, atom/movable/consumed, multiplier = 1)
-	if (consumer.health == consumer.maxHealth)
+	if (consumer.health == consumer.max_health)
 		return
 	consumer.heal_ordered_damage(healed_amount * multiplier, damage_heal_order)
 	new /obj/effect/temp_visual/heal(get_turf(consumer), COLOR_HEALING_CYAN)

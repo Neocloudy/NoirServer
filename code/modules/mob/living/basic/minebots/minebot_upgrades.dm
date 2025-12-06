@@ -26,10 +26,10 @@
 	name = "minebot armor upgrade"
 
 /obj/item/mine_bot_upgrade/health/upgrade_bot(mob/living/basic/mining_drone/minebot, mob/user)
-	if(minebot.maxHealth != initial(minebot.maxHealth))
+	if(minebot.max_health != initial(minebot.max_health))
 		to_chat(user, span_warning("[minebot] already has reinforced armor!"))
 		return
-	minebot.maxHealth += 45
+	minebot.max_health += 45
 	minebot.updatehealth()
 	to_chat(user, span_notice("You reinforce the armor of [minebot]."))
 	qdel(src)
@@ -55,7 +55,7 @@
 	if(!istype(basic_mob, /mob/living/basic/mining_drone))
 		return
 	var/mob/living/basic/mining_drone/minebot = basic_mob
-	minebot.maxHealth = initial(minebot.maxHealth) + base_health_add
+	minebot.max_health = initial(minebot.max_health) + base_health_add
 	minebot.melee_damage_lower = initial(minebot.melee_damage_lower) + base_damage_add
 	minebot.melee_damage_upper = initial(minebot.melee_damage_upper) + base_damage_add
 	minebot.stored_gun?.recharge_time += base_cooldown_add

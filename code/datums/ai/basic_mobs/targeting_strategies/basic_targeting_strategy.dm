@@ -48,7 +48,7 @@
 			return FALSE
 		if(living_target.stat > our_controller.blackboard[minimum_stat_key])
 			return FALSE
-		if(target_wounded_key && our_controller.blackboard[target_wounded_key] && living_target.health == living_target.maxHealth)
+		if(target_wounded_key && our_controller.blackboard[target_wounded_key] && living_target.health == living_target.max_health)
 			return FALSE
 
 		return TRUE

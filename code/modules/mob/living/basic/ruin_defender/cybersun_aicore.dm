@@ -15,7 +15,7 @@
 	mob_size = MOB_SIZE_HUGE
 	basic_mob_flags = DEL_ON_DEATH
 	health = 250
-	maxHealth = 250
+	max_health = 250
 	faction = list(ROLE_SYNDICATE)
 	ai_controller = /datum/ai_controller/basic_controller/cybersun_ai_core
 	unsuitable_atmos_damage = 0

@@ -251,7 +251,7 @@
 /// Soulscythe mob, just a way for players to control the scythe.
 /mob/living/basic/soulscythe
 	name = "mysterious spirit"
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	gender = NEUTER
 	mob_biotypes = MOB_SPIRIT

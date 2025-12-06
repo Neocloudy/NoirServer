@@ -20,7 +20,7 @@
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	melee_damage_lower = 20 //same damage as a carp would make - reference to Paradise Station's Syndifox
 	melee_damage_upper = 20
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	response_help_continuous = "pets"
 	response_help_simple = "pet"

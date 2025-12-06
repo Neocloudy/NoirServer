@@ -17,7 +17,7 @@
 	minimum_survivable_temperature = 0
 	maximum_survivable_temperature = 450
 	mob_biotypes = MOB_ORGANIC | MOB_PLANT
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	pixel_z = -14
 	base_pixel_z = -14
@@ -206,7 +206,7 @@
 	return ..()
 
 /mob/living/basic/seedling/meanie
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	faction = list(FACTION_JUNGLE, FACTION_PLANTS)
 	ai_controller = /datum/ai_controller/basic_controller/seedling/meanie
@@ -336,7 +336,7 @@
 		var/mob/living/living_target = target_atom
 		living_target.adjust_fire_stacks(0.2)
 		living_target.ignite_mob()
-		living_target.adjustFireLoss(30)
+		living_target.adjust_fire_loss(30)
 
 	playsound(target_turf, 'sound/effects/magic/lightningbolt.ogg', 50, TRUE)
 	if(!is_seedling)

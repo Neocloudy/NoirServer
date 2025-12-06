@@ -223,12 +223,12 @@
 		return
 	var/patient_name = patient.name
 	var/patient_status = "Alive."
-	var/max_health = patient.maxHealth
+	var/max_health = patient.max_health
 	var/total_health = patient.health
-	var/brute_loss = patient.getBruteLoss()
-	var/fire_loss = patient.getFireLoss()
-	var/tox_loss = patient.getToxLoss()
-	var/oxy_loss = patient.getOxyLoss()
+	var/brute_loss = patient.get_brute_loss()
+	var/fire_loss = patient.get_fire_loss()
+	var/tox_loss = patient.get_tox_loss()
+	var/oxy_loss = patient.get_oxy_loss()
 	var/chaos_modifier = 0
 
 	var/sickness = "Patient does not show signs of disease."

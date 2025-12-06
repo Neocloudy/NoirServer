@@ -325,7 +325,7 @@
 		if (was_failing || !(organ_flags & ORGAN_FAILING))
 			continue
 
-		cut_open_damage = maxHealth * 0.5
+		cut_open_damage = max_health * 0.5
 		if (HAS_TRAIT(owner, TRAIT_ANALGESIA))
 			continue
 
@@ -446,7 +446,7 @@
 		if (emptied > 0)
 			playsound(get_turf(src), 'sound/effects/splat.ogg', 50)
 		user.visible_message(span_warning("[user] cuts [src] open[emptied ? "!" : ", but it's empty."]"), span_notice("You cut [src] open[emptied ? "." : ", but there's nothing inside."]"))
-		cut_open_damage += apply_organ_damage(maxHealth * 0.5)
+		cut_open_damage += apply_organ_damage(max_health * 0.5)
 		return ITEM_INTERACT_SUCCESS
 
 	if (tool.tool_behaviour != TOOL_CAUTERY)
@@ -500,7 +500,7 @@
 	failing_desc = "seems to be broken."
 	icon_state = "stomach-c"
 	organ_flags = ORGAN_ROBOTIC
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.5
+	max_health = STANDARD_ORGAN_THRESHOLD * 0.5
 	metabolism_efficiency = 0.035 // not as good at digestion
 	var/emp_vulnerability = 80 //Chance of permanent effects if emp-ed.
 
@@ -518,7 +518,7 @@
 	name = "cybernetic stomach"
 	desc = "An electronic device designed to mimic the functions of a human stomach. Handles disgusting food a bit better."
 	icon_state = "stomach-c-u"
-	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.5 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 2
 	emp_vulnerability = 40
 	metabolism_efficiency = 0.07
@@ -534,7 +534,7 @@
 	name = "upgraded cybernetic stomach"
 	desc = "An upgraded version of the cybernetic stomach, designed to improve further upon organic stomachs. Handles disgusting food very well."
 	icon_state = "stomach-c-u2"
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 3
 	emp_vulnerability = 20
 	metabolism_efficiency = 0.1
@@ -552,7 +552,7 @@
 		Very fragile, with painfully slow metabolism.\
 		Offers no protection against EMPs."
 	icon_state = "stomach-c-s"
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.35
+	max_health = STANDARD_ORGAN_THRESHOLD * 0.35
 	emp_vulnerability = 100
 	metabolism_efficiency = 0.025
 
@@ -579,7 +579,7 @@
 	desc = "It can draw nutrients from your food even harder!"
 	icon_state = "stomach-evolved"
 
-	maxHealth = 1.2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.2 * STANDARD_ORGAN_THRESHOLD
 	disgust_metabolism = 2.5
 	metabolism_efficiency = 0.08
 

@@ -5,7 +5,7 @@
 	icon_state = "legion_monkey"
 	pass_flags = PASSTABLE
 	speed = 5
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	melee_damage_lower = 10
 	melee_damage_upper = 10

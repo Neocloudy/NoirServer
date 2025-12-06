@@ -69,8 +69,8 @@
 	melee_damage_lower = rand(input_attack, min(MAX_LOWER_ATTACK, input_attack + MAX_ATTACK_DIFFERENCE))
 	melee_damage_upper = melee_damage_lower + MAX_ATTACK_DIFFERENCE
 	speed = rand(MINIMUM_POSSIBLE_SPEED, input_speed)
-	maxHealth = rand(input_health, MAX_POSSIBLE_HEALTH)
-	health = maxHealth
+	max_health = rand(input_health, MAX_POSSIBLE_HEALTH)
+	health = max_health
 
 /mob/living/basic/mining/gutlunch/proc/add_breeding_component()
 	var/static/list/partner_paths = typecacheof(list(/mob/living/basic/mining/gutlunch))
@@ -112,7 +112,7 @@
 	melee_damage_lower = 8
 	melee_damage_upper = 13
 	speed = 5
-	maxHealth = 70
+	max_health = 70
 	health = 70
 	ai_controller = /datum/ai_controller/basic_controller/gutlunch/gutlunch_warrior
 	possible_colors = list("#6d77ff","#8578e4","#97b6f6")
@@ -130,7 +130,7 @@
 
 /mob/living/basic/mining/gutlunch/warrior/Initialize(mapload)
 	. = ..()
-	roll_stats(melee_damage_lower, speed, maxHealth)
+	roll_stats(melee_damage_lower, speed, max_health)
 	AddComponent(/datum/component/obeys_commands, pet_commands)
 	AddElement(/datum/element/wall_tearer, allow_reinforced = FALSE)
 

@@ -6,7 +6,7 @@
 	icon_state = "rust_walker_s"
 	base_icon_state = "rust_walker"
 	icon_living = "rust_walker_s"
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 15
 	melee_damage_upper = 20
@@ -44,7 +44,7 @@
 		return
 	var/turf/our_turf = get_turf(src)
 	if(HAS_TRAIT(our_turf, TRAIT_RUSTY))
-		adjustBruteLoss(-3 * seconds_per_tick)
+		adjust_brute_loss(-3 * seconds_per_tick)
 
 	return ..()
 
@@ -73,9 +73,9 @@
 	var/mob/living/our_mob = controller.pawn
 	var/turf/our_turf = get_turf(our_mob)
 	if (HAS_TRAIT(our_turf, TRAIT_RUSTY))
-		walk_chance = (our_mob.health < our_mob.maxHealth) ? 10 : 50
+		walk_chance = (our_mob.health < our_mob.max_health) ? 10 : 50
 	else
-		walk_chance = (our_mob.health < our_mob.maxHealth) ? 50 : 10
+		walk_chance = (our_mob.health < our_mob.max_health) ? 50 : 10
 	return ..()
 
 /// Use if we're not stood on rust right now

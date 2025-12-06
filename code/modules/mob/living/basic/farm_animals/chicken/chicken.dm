@@ -28,7 +28,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	friendly_verb_simple = "headbutt"
 	speak_emote = list("clucks", "croons")
 	health = 15
-	maxHealth = 15
+	max_health = 15
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_SMALL
 	gold_core_spawnable = FRIENDLY_SPAWN

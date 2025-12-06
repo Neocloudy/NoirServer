@@ -8,7 +8,7 @@
 	mob_size = MOB_SIZE_TINY
 	held_w_class = WEIGHT_CLASS_TINY
 	health = 1
-	maxHealth = 1
+	max_health = 1
 	speed = 1.25
 	can_be_held = TRUE
 	gold_core_spawnable = FRIENDLY_SPAWN
@@ -81,7 +81,7 @@
 	icon_state = "cockroach_sewer"
 	desc = "This bug has a really bad attitude."
 	health = 2
-	maxHealth = 2 // Wow!
+	max_health = 2 // Wow!
 	melee_damage_lower = 2
 	melee_damage_upper = 4
 	obj_damage = 5
@@ -96,7 +96,7 @@
 	icon_state = "bloodroach"
 	icon_dead = "bloodroach_no_animation"
 	health = 3
-	maxHealth = 3 // Wow!!
+	max_health = 3 // Wow!!
 
 /mob/living/basic/cockroach/bloodroach/Initialize(mapload)
 	. = ..()
@@ -160,7 +160,7 @@
 	name = "imperial hauberoach"
 	desc = "This cockroach seems to have found employment as a professional royal guard."
 	health = 2
-	maxHealth = 2
+	max_health = 2
 	melee_damage_lower = 3
 	melee_damage_upper = 12
 	icon_state = "hauberoach_sewer"
@@ -211,7 +211,7 @@
 	desc = "This roach grew up on the wrong side of the streets and has fallen in with the wrong crowd."
 	icon_state = "glockroach_sewer"
 	health = 2
-	maxHealth = 2
+	max_health = 2
 	minion_path = null
 	gold_core_spawnable = NO_SPAWN
 
@@ -240,7 +240,7 @@
 	desc = "You got it, boss."
 	icon_state = "mobroach_sewer"
 	health = 2
-	maxHealth = 2
+	max_health = 2
 	minion_path = null
 	gold_core_spawnable = NO_SPAWN
 

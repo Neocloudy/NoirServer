@@ -10,7 +10,7 @@
 	icon = 'modular_nova/master_files/icons/mob/newmobs.dmi'
 	icon_state = "cheesezomb"
 	icon_living = "cheesezomb"
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	basic_mob_flags = DEL_ON_DEATH
 	no_corpse = TRUE

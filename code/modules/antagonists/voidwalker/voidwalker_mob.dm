@@ -9,7 +9,7 @@
 	icon_state = "voidwalker"
 
 	mob_biotypes = MOB_SPECIAL
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	damage_coeff = list(BRUTE = 1, BURN = 0.66, TOX = 1, STAMINA = 1, OXY = 0)
 
@@ -259,7 +259,7 @@
 		CRASH("[victim] was instantly dumped after being voidwalker kidnapped due to a missing landmark!")
 	else
 		victim.heal_and_revive(90)
-		victim.adjustOxyLoss(-100, FALSE)
+		victim.adjust_oxy_loss(-100, FALSE)
 
 		conversions_remaining++
 

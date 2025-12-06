@@ -13,7 +13,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BUG|MOB_MINING
 	friendly_verb_continuous = "harmlessly rolls into"
 	friendly_verb_simple = "harmlessly roll into"
-	maxHealth = 45
+	max_health = 45
 	health = 45
 	melee_damage_lower = 0
 	melee_damage_upper = 0
@@ -157,7 +157,7 @@
 	pixel_x = 0
 	base_pixel_x = 0
 	speed = 3
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	gold_core_spawnable = NO_SPAWN
 	can_tame = FALSE

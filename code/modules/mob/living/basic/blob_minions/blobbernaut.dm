@@ -10,7 +10,7 @@
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"
 	health = BLOBMOB_BLOBBERNAUT_HEALTH
-	maxHealth = BLOBMOB_BLOBBERNAUT_HEALTH
+	max_health = BLOBMOB_BLOBBERNAUT_HEALTH
 	damage_coeff = list(BRUTE = 0.5, BURN = 1, TOX = 1, STAMINA = 0, OXY = 1)
 	melee_damage_lower = BLOBMOB_BLOBBERNAUT_DMG_SOLO_LOWER
 	melee_damage_upper = BLOBMOB_BLOBBERNAUT_DMG_SOLO_UPPER
@@ -132,12 +132,12 @@
 	else
 		var/particle_colour = atom_colours?[FIXED_COLOUR_PRIORITY] || COLOR_BLACK
 		if (locate(/obj/structure/blob/special/core) in blobs_in_area)
-			heal_overall_damage(maxHealth * BLOBMOB_BLOBBERNAUT_HEALING_CORE * seconds_per_tick)
+			heal_overall_damage(max_health * BLOBMOB_BLOBBERNAUT_HEALING_CORE * seconds_per_tick)
 			var/obj/effect/temp_visual/heal/heal_effect = new /obj/effect/temp_visual/heal(get_turf(src))
 			heal_effect.color = particle_colour
 
 		if (locate(/obj/structure/blob/special/node) in blobs_in_area)
-			heal_overall_damage(maxHealth * BLOBMOB_BLOBBERNAUT_HEALING_NODE * seconds_per_tick)
+			heal_overall_damage(max_health * BLOBMOB_BLOBBERNAUT_HEALING_NODE * seconds_per_tick)
 			var/obj/effect/temp_visual/heal/heal_effect = new /obj/effect/temp_visual/heal(get_turf(src))
 			heal_effect.color = particle_colour
 
@@ -145,7 +145,7 @@
 		return FALSE
 
 	// take 2.5% of max health as damage when not near the blob or if the naut has no factory, 5% if both
-	apply_damage(maxHealth * BLOBMOB_BLOBBERNAUT_HEALTH_DECAY * damage_sources * seconds_per_tick, damagetype = TOX) // We reduce brute damage
+	apply_damage(max_health * BLOBMOB_BLOBBERNAUT_HEALTH_DECAY * damage_sources * seconds_per_tick, damagetype = TOX) // We reduce brute damage
 
 	//hopefully this sound won't get too annoying.
 	if(prob(20))
@@ -173,7 +173,7 @@
 /mob/living/basic/blob_minion/blobbernaut/minion/proc/assign_key(ckey, datum/blobstrain/blobstrain)
 	key = ckey
 	flick("blobbernaut_produce", src)
-	health = maxHealth / 2 // Start out injured to encourage not beelining away from the blob
+	health = max_health / 2 // Start out injured to encourage not beelining away from the blob
 	SEND_SOUND(src, sound('sound/effects/blob/blobattack.ogg'))
 	SEND_SOUND(src, sound('sound/effects/blob/attackblob.ogg'))
 	to_chat(src, span_infoplain("You are powerful, hard to kill, and slowly regenerate near nodes and cores, [span_cult_large("but will slowly die if not near the blob")] or if the factory that made you is killed."))

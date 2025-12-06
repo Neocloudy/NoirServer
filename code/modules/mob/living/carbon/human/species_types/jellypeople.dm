@@ -65,7 +65,7 @@
 
 	if(slime.blood_volume <= 0)
 		slime.blood_volume += JELLY_REGEN_RATE_EMPTY * slime.physiology.blood_regen_mod * seconds_per_tick
-		slime.adjustBruteLoss(2.5 * seconds_per_tick)
+		slime.adjust_brute_loss(2.5 * seconds_per_tick)
 		to_chat(slime, span_danger("You feel empty!"))
 
 	if(slime.blood_volume < BLOOD_VOLUME_NORMAL)

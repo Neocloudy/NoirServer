@@ -4,7 +4,7 @@
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "grievous"
 	health = 150
-	maxHealth = 150
+	max_health = 150
 
 	baton_type = /obj/item/melee/energy/sword/saber
 	base_speed = 4 //he's a fast fucker
@@ -20,7 +20,7 @@
 	name = "Genewul Bweepskee"
 	desc = "An adorable looking secbot with four toy swords taped to its arms"
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	baton_type = /obj/item/toy/sword
 	weapon_force = 0
 

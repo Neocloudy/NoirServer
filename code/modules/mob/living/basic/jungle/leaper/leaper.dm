@@ -9,7 +9,7 @@
 
 	melee_damage_lower = 15
 	melee_damage_upper = 20
-	maxHealth = 350
+	max_health = 350
 	health = 350
 	speed = 10
 

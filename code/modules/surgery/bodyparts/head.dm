@@ -155,7 +155,7 @@
 	var/obj/item/organ/brain/brain = locate(/obj/item/organ/brain) in src
 	if(brain && violent_removal && prob(90)) //ghetto surgery can damage the brain.
 		to_chat(user, span_warning("[brain] was damaged in the process!"))
-		brain.set_organ_damage(brain.maxHealth)
+		brain.set_organ_damage(brain.max_health)
 
 	update_limb()
 	return ..()

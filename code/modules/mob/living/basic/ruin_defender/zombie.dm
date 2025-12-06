@@ -5,7 +5,7 @@
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	sentience_type = SENTIENCE_HUMANOID
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	melee_damage_lower = 21
 	melee_damage_upper = 21

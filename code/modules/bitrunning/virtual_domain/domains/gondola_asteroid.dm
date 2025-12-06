@@ -18,7 +18,7 @@
 		/obj/item/stack/sheet/animalhide/gondola = 1,
 		/obj/item/food/meat/slab/gondola/virtual_domain = 1,
 	)
-	maxHealth = 50
+	max_health = 50
 	move_force = MOVE_FORCE_VERY_STRONG
 	move_resist = MOVE_FORCE_STRONG
 

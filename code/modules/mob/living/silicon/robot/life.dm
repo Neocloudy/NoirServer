@@ -39,15 +39,15 @@
 		return
 	if(hud_used.healths)
 		if(stat != DEAD)
-			if(health >= maxHealth)
+			if(health >= max_health)
 				hud_used.healths.icon_state = "health0"
-			else if(health > maxHealth*0.6)
+			else if(health > max_health*0.6)
 				hud_used.healths.icon_state = "health2"
-			else if(health > maxHealth*0.2)
+			else if(health > max_health*0.2)
 				hud_used.healths.icon_state = "health3"
-			else if(health > -maxHealth*0.2)
+			else if(health > -max_health*0.2)
 				hud_used.healths.icon_state = "health4"
-			else if(health > -maxHealth*0.6)
+			else if(health > -max_health*0.6)
 				hud_used.healths.icon_state = "health5"
 			else
 				hud_used.healths.icon_state = "health6"

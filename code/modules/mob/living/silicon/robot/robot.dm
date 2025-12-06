@@ -627,7 +627,7 @@
 		return
 
 	/// the current percent health of the robot (-1 to 1)
-	var/percent_hp = health/maxHealth
+	var/percent_hp = health/max_health
 	if(health <= previous_health) //if change in health is negative (we're losing hp)
 		if(percent_hp <= 0.5)
 			break_cyborg_slot(3)
@@ -700,7 +700,7 @@
 	if(HAS_TRAIT(src, TRAIT_GODMODE))
 		return
 	if(stat != DEAD)
-		if(health <= -maxHealth) //die only once
+		if(health <= -max_health) //die only once
 			death()
 			toggle_headlamp(1)
 			return

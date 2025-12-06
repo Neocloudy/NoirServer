@@ -1,4 +1,4 @@
-#define FROST_MINER_SHOULD_ENRAGE (health <= maxHealth*0.25 && !enraged)
+#define FROST_MINER_SHOULD_ENRAGE (health <= max_health*0.25 && !enraged)
 GLOBAL_LIST_EMPTY(frost_miner_prisms)
 
 /*
@@ -11,7 +11,7 @@ Difficulty: Extremely Hard
 	name = "demonic-frost miner"
 	desc = "An extremely well-geared miner, driven crazy or possessed by the demonic forces here, either way a terrifying enemy."
 	health = 1500
-	maxHealth = 1500
+	max_health = 1500
 	icon_state = "demonic_miner"
 	icon_living = "demonic_miner"
 	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'
@@ -137,7 +137,7 @@ Difficulty: Extremely Hard
 		return
 	update_cooldowns(list(COOLDOWN_UPDATE_SET_MELEE = 8 SECONDS, COOLDOWN_UPDATE_SET_RANGED = 8 SECONDS))
 	frost_orbs.StartCooldown(8 SECONDS)
-	adjustHealth(-maxHealth)
+	adjustHealth(-max_health)
 	enraged = TRUE
 	enraging = TRUE
 	animate(src, pixel_z = 96, time = 100, easing = ELASTIC_EASING, flags = ANIMATION_RELATIVE)
@@ -155,10 +155,10 @@ Difficulty: Extremely Hard
 	playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
 	ADD_TRAIT(src, TRAIT_MOVE_FLYING, FROSTMINER_ENRAGE_TRAIT)
 	enraging = FALSE
-	adjustHealth(-maxHealth)
+	adjustHealth(-max_health)
 
 /mob/living/simple_animal/hostile/megafauna/demonic_frost_miner/ex_act(severity, target)
-	adjustBruteLoss(-30 * severity)
+	adjust_brute_loss(-30 * severity)
 	visible_message(span_danger("[src] absorbs the explosion!"), span_userdanger("You absorb the explosion!"))
 	return TRUE
 

@@ -6,7 +6,7 @@
 	icon_state = "p1"
 	icon_dead = "dead"
 	gender = NEUTER
-	maxHealth = 1800 //nicely divisible by three
+	max_health = 1800 //nicely divisible by three
 	health = 1800
 	armour_penetration = 40
 	melee_damage_lower = 30
@@ -84,11 +84,11 @@
 /mob/living/basic/boss/thing/adjust_health(amount, updating_health = TRUE, forced = FALSE)
 	if(phase_invulnerability_timer || phase == 3 || stat || amount <= 0)
 		return ..()
-	var/potential_excess = bruteloss + amount - (maxHealth/3)*phase
+	var/potential_excess = bruteloss + amount - (max_health/3)*phase
 	if(potential_excess > 0)
 		amount -= potential_excess
 	. = ..()
-	if(bruteloss >= (maxHealth/3)*phase)
+	if(bruteloss >= (max_health/3)*phase)
 		phase_health_depleted()
 
 /mob/living/basic/boss/thing/proc/phase_health_depleted()
@@ -164,7 +164,7 @@
 	remove_traits(list(TRAIT_GODMODE, TRAIT_IMMOBILIZED), MEGAFAUNA_TRAIT)
 	balloon_alert_to_viewers("recovers!")
 	visible_message(span_danger("[src] recovers from the damage! Too slow!"))
-	adjust_health(-(maxHealth/3) * 0.5) //half of a phase (which is a third of maxhealth)
+	adjust_health(-(max_health/3) * 0.5) //half of a phase (which is a third of maxhealth)
 	var/filter = get_filter(PHASEREGEN_FILTER)
 	if(!isnull(filter))
 		animate(filter)

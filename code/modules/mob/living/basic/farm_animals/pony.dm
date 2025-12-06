@@ -20,7 +20,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	gold_core_spawnable = FRIENDLY_SPAWN
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/pony
@@ -137,7 +137,7 @@
 // A stronger horse is required for our strongest cowboys.
 /mob/living/basic/pony/syndicate
 	health = 300
-	maxHealth = 300
+	max_health = 300
 	desc = "A special breed of horse engineered by the syndicate to be capable of surviving in the deep reaches of space. A modern outlaw's best friend."
 	faction = list(ROLE_SYNDICATE)
 	ponycolors = list("#5d566f", COLOR_RED)
@@ -169,7 +169,7 @@
 
 /mob/living/basic/pony/dangerous
 	health = 300
-	maxHealth = 300
+	max_health = 300
 	desc = "A special breed of horse engineered by the syndicate to be capable of surviving in the deep reaches of space. A modern outlaw's best friend."
 	faction = list(ROLE_SYNDICATE)
 	ponycolors = list("#666666", COLOR_ORANGE)

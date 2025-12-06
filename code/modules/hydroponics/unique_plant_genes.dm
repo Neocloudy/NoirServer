@@ -422,8 +422,8 @@
 
 	var/obj/item/seeds/our_seed = our_plant.get_plant_seed()
 	var/mob/living/spawned_mob = new killer_plant(our_plant.drop_location())
-	spawned_mob.maxHealth += round(our_seed.endurance * mob_health_multiplier)
-	spawned_mob.health = spawned_mob.maxHealth
+	spawned_mob.max_health += round(our_seed.endurance * mob_health_multiplier)
+	spawned_mob.health = spawned_mob.max_health
 	if(ishostile(spawned_mob))
 		var/mob/living/simple_animal/hostile/spawned_simplemob = spawned_mob
 		spawned_simplemob.melee_damage_lower += round(our_seed.potency * mob_melee_multiplier)

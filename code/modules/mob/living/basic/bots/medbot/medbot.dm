@@ -7,7 +7,7 @@
 	icon_state = "medbot_generic_idle"
 	base_icon_state = "medbot"
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	speed = 2
 	light_power = 0.8
 	light_color = "#99ccff"
@@ -429,7 +429,7 @@
 	name = "Oppenheimer"
 	desc = "A medibot stolen from a Nanotrasen station and upgraded by the Syndicate. Despite their best efforts at reprogramming, it still appears visibly upset near nuclear explosives."
 	health = 40
-	maxHealth = 40
+	max_health = 40
 	skin = "bezerk"
 	req_one_access = list(ACCESS_SYNDICATE)
 	bot_mode_flags = parent_type::bot_mode_flags & ~BOT_MODE_REMOTE_ENABLED

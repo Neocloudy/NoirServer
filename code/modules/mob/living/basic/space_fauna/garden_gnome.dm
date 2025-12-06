@@ -7,7 +7,7 @@
 	pass_flags = PASSMOB
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	speed = 1
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	basic_mob_flags = DEL_ON_DEATH
 

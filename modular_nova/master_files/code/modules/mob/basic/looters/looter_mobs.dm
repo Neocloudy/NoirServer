@@ -9,7 +9,7 @@
 	sentience_type = SENTIENCE_HUMANOID
 	gender = NEUTER
 	basic_mob_flags = DEL_ON_DEATH
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	melee_damage_lower = 18
 	melee_damage_upper = 18
@@ -58,7 +58,7 @@
 	icon = 'modular_nova/master_files/icons/mob/newmobs.dmi'
 	icon_state = "fatscav"
 	icon_living = "fatscav"
-	maxHealth = 140
+	max_health = 140
 	health = 140
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -79,7 +79,7 @@
 	desc = "One of the many random looters or bandits of the frontiers. This one is carrying a PKC."
 	icon_state = "scavcrush"
 	icon_living = "scavcrush"
-	maxHealth = 110
+	max_health = 110
 	health = 110
 	melee_damage_lower = 18
 	melee_damage_upper = 18
@@ -102,7 +102,7 @@
 	icon = 'modular_nova/master_files/icons/mob/newmobs.dmi'
 	icon_state = "scavshotgun"
 	icon_living = "scavshotgun"
-	maxHealth = 110
+	max_health = 110
 	health = 110
 	projectilesound = 'sound/items/weapons/gun/shotgun/shot.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot

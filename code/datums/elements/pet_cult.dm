@@ -60,7 +60,7 @@
 	qdel(source.GetComponent(/datum/component/obeys_commands)) //if we obey commands previously, forget about them
 	source.melee_damage_lower = max(PET_CULT_ATTACK_UPPER - 5, source::melee_damage_lower)
 	source.melee_damage_upper = max(PET_CULT_ATTACK_UPPER, source::melee_damage_upper)
-	source.maxHealth = max(PET_CULT_HEALTH, source::maxHealth)
+	source.max_health = max(PET_CULT_HEALTH, source::max_health)
 	source.fully_heal()
 
 	source.faction = list(FACTION_CULT) //we only serve the cult

@@ -25,7 +25,7 @@
 	icon_dead = "legionnaire_dead"
 	icon_gib = "syndicate_gib"
 	health_doll_icon = "legionnaire"
-	maxHealth = 1000
+	max_health = 1000
 	health = 1000
 	melee_damage_lower = 35
 	melee_damage_upper = 35
@@ -156,13 +156,13 @@
 		to_chat(trample_target, span_userdanger("[src] tramples you and kicks you away!"))
 		trample_target.safe_throw_at(throwtarget, 10, 1, src)
 		trample_target.Paralyze(20)
-		trample_target.adjustBruteLoss(melee_damage_upper)
+		trample_target.adjust_brute_loss(melee_damage_upper)
 	addtimer(CALLBACK(src, PROC_REF(legionnaire_charge_2), move_dir, (times_ran + 1)), 0.7)
 
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire/proc/head_detach(target)
 	ranged_cooldown = world.time + 1 SECONDS
 	if(myhead != null)
-		myhead.adjustBruteLoss(600)
+		myhead.adjust_brute_loss(600)
 		return
 	if(has_head)
 		has_head = FALSE
@@ -175,10 +175,10 @@
 		newhead.faction = faction.Copy()
 		myhead = newhead
 		myhead.body = src
-		if(health < maxHealth * 0.25)
+		if(health < max_health * 0.25)
 			myhead.melee_damage_lower = 40
 			myhead.melee_damage_upper = 40
-		else if(health < maxHealth * 0.5)
+		else if(health < max_health * 0.5)
 			myhead.melee_damage_lower = 30
 			myhead.melee_damage_upper = 30
 
@@ -244,7 +244,7 @@
 	icon_aggro = "legionnaire_head"
 	icon_dead = "legionnaire_dead"
 	icon_gib = "syndicate_gib"
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 20

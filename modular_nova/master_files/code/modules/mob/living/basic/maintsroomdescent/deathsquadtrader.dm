@@ -3,7 +3,7 @@
 	desc = "holy SHIT is that a DEATHSQUAD OFFICER?"
 	unique_name = FALSE
 	icon = 'icons/mob/simple/simple_human.dmi'
-	maxHealth = 2000
+	max_health = 2000
 	health = 2000
 	melee_damage_lower = 60
 	melee_damage_upper = 60

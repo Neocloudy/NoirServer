@@ -5,7 +5,7 @@
 	desc = "An abomination cobbled together from varied remains. Its appearance changes slightly every time you blink."
 	icon_state = "stalker"
 	icon_living = "stalker"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	melee_damage_lower = 15
 	melee_damage_upper = 20

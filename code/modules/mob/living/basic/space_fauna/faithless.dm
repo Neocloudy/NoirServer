@@ -9,7 +9,7 @@
 	response_help_continuous = "passes through"
 	response_help_simple = "pass through"
 	speed = 0.5
-	maxHealth = 80
+	max_health = 80
 	health = 80
 
 	obj_damage = 50

@@ -12,7 +12,7 @@
 	pass_flags = PASSTABLE | PASSMOB
 	density = FALSE
 	health = 40
-	maxHealth = 40
+	max_health = 40
 	melee_damage_lower = 6
 	melee_damage_upper = 9
 	response_help_continuous = "pets"

@@ -3,7 +3,7 @@
 	desc = "Will this grow into something useful?"
 	icon = 'icons/mob/simple/lavaland/raptor_baby.dmi'
 	speed = 5
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	melee_damage_lower = 3
 	melee_damage_upper = 5

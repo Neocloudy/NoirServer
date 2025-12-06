@@ -1,7 +1,7 @@
 /mob/living/carbon/alien/adult/hunter
 	name = "alien hunter"
 	caste = "h"
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	icon_state = "alienh"
 	alien_speed = -0.3

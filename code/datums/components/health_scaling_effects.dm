@@ -60,7 +60,7 @@
 /// Called when mob health changes, recalculates the ratio between maximum and minimum
 /datum/component/health_scaling_effects/proc/on_health_changed(mob/living/source)
 	SIGNAL_HANDLER
-	var/current_health_percentage = source.health / source.maxHealth
+	var/current_health_percentage = source.health / source.max_health
 	var/max_min_ratio = clamp(INVERSE_LERP(min_health_threshold, max_health_threshold, current_health_percentage), 0, 1)
 
 	INVOKE_ASYNC(src, PROC_REF(update_stats), source, max_min_ratio)

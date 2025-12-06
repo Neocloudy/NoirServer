@@ -157,7 +157,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 	return TRUE
 
 /obj/machinery/health_station/proc/heal_damage(mob/living/carbon/user)
-	var/overall_damage = (user.getToxLoss() + user.getOxyLoss() + user.getFireLoss() + user.getBruteLoss())
+	var/overall_damage = (user.get_tox_loss() + user.get_oxy_loss() + user.get_fire_loss() + user.get_brute_loss())
 	if(charge_amount < 15)
 		balloon_alert(user, "no biomass!")
 		return FALSE
@@ -165,8 +165,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/health_station, 32)
 	if(overall_damage)
 		if(do_after(user, 2.5 SECONDS, src))
 			user.heal_overall_damage(overall_damage/2, overall_damage/2) //gee i wish overall damage included all types of damage instead of just brute and burn
-			user.adjustToxLoss(-overall_damage/2, updating_health = FALSE)
-			user.adjustOxyLoss(-overall_damage/2, updating_health = FALSE)
+			user.adjust_tox_loss(-overall_damage/2, updating_health = FALSE)
+			user.adjust_oxy_loss(-overall_damage/2, updating_health = FALSE)
 			balloon_alert(user, "damage treated")
 			charge_amount -= 15
 			playsound(src, 'sound/items/handling/surgery/retractor1.ogg', 40, TRUE)

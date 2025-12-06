@@ -13,7 +13,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_MINING
 	basic_mob_flags = DEL_ON_DEATH
 	speed = 3
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	obj_damage = 60
 	melee_damage_lower = 15
@@ -139,7 +139,7 @@
 	icon_state = "dwarf_legion"
 	icon_living = "dwarf_legion"
 	icon_dead = "dwarf_legion"
-	maxHealth = 60
+	max_health = 60
 	health = 60
 	speed = 2
 	crusher_drop_chance = 20
@@ -157,7 +157,7 @@
 	health_doll_icon = "legion"
 	speed = 5
 	health = 450
-	maxHealth = 450
+	max_health = 450
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	obj_damage = 30

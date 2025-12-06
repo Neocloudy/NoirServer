@@ -7,7 +7,7 @@
 	desc = "A manifestation of ash, trailing a perpetual cloud of short-lived cinders."
 	icon_state = "ash_walker"
 	icon_living = "ash_walker"
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	melee_damage_lower = 15
 	melee_damage_upper = 20
@@ -23,4 +23,4 @@
 
 /mob/living/basic/heretic_summon/ash_spirit/Life(seconds_per_tick, times_fired)
 	. = ..()
-	adjustBruteLoss(-3) // 3 health passively healing
+	adjust_brute_loss(-3) // 3 health passively healing

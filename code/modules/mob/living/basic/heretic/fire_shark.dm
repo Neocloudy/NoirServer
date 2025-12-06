@@ -8,7 +8,7 @@
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST | MOB_AQUATIC
 	speed = -0.5
 	health = 16
-	maxHealth = 16
+	max_health = 16
 	melee_damage_lower = 8
 	melee_damage_upper = 8
 	attack_sound = 'sound/items/weapons/bite.ogg'

@@ -230,8 +230,8 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
 	mychild.revive(HEAL_ALL)
 	if(boosted)
-		mychild.maxHealth *= 1 / ELITE_POST_BATTLE_HEALTH_MULTIPLIER //we multiply it back to its original value
-		mychild.health = mychild.maxHealth
+		mychild.max_health *= 1 / ELITE_POST_BATTLE_HEALTH_MULTIPLIER //we multiply it back to its original value
+		mychild.health = mychild.max_health
 		notify_ghosts(
 			"\A [mychild] has been challenged in \the [get_area(src)]!",
 			source = mychild,
@@ -274,7 +274,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 	for(var/mob/living/simple_animal/hostile/asteroid/elite/elitehere in loc)
 		if(elitehere == mychild && activity == TUMOR_PASSIVE)
-			mychild.adjustHealth(-mychild.maxHealth * 0.025*seconds_per_tick)
+			mychild.adjustHealth(-mychild.max_health * 0.025*seconds_per_tick)
 			var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/heal(get_turf(mychild))
 			H.color = COLOR_RED
 
@@ -349,8 +349,8 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	mychild.revive(HEAL_ALL)
 	if(boosted)
 		times_won++
-		mychild.maxHealth *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
-		mychild.health = mychild.maxHealth
+		mychild.max_health *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
+		mychild.health = mychild.max_health
 	if(times_won == 1)
 		mychild.playsound_local(get_turf(mychild), 'sound/effects/magic.ogg', 40, 0)
 		to_chat(mychild, span_boldwarning("As the life in the activator's eyes fade, the forcefield around you dies out and you feel your power subside.\n\
@@ -390,8 +390,8 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	elite.playsound_local(get_turf(elite), 'sound/effects/magic.ogg', 40, 0)
 	to_chat(elite, span_userdanger("You have been revived by [user]. While you can't speak to them, you owe [user] a great debt.  Assist [user.p_them()] in achieving [user.p_their()] goals, regardless of risk."))
 	to_chat(elite, span_boldbig("Note that you now share the loyalties of [user].  You are expected not to intentionally sabotage their faction unless commanded to!"))
-	elite.maxHealth *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
-	elite.health = elite.maxHealth
+	elite.max_health *= ELITE_POST_BATTLE_HEALTH_MULTIPLIER
+	elite.health = elite.max_health
 	elite.desc = "[elite.desc] However, this one appears to be less wild in nature, and calmer around people."
 	elite.sentience_type = SENTIENCE_ORGANIC
 	REMOVE_TRAIT(elite, TRAIT_UNCONVERTABLE, INNATE_TRAIT)

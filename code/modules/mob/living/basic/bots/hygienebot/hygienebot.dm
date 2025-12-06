@@ -12,7 +12,7 @@
 	density = FALSE
 	anchored = FALSE
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	path_image_color = "#80dae7"
 	req_one_access = list(ACCESS_ROBOTICS, ACCESS_JANITOR)
 	radio_key = /obj/item/encryptionkey/headset_service

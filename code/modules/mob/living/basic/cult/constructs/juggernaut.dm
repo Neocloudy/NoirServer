@@ -4,7 +4,7 @@
 	desc = "A massive, armored construct built to spearhead attacks and soak up enemy fire."
 	icon_state = "juggernaut"
 	icon_living = "juggernaut"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	response_harm_continuous = "harmlessly punches"
 	response_harm_simple = "harmlessly punch"

@@ -17,7 +17,7 @@
 
 	//Health and life related vars
 	/// Maximum health that should be possible.
-	var/maxHealth = MAX_LIVING_HEALTH
+	var/max_health = MAX_LIVING_HEALTH
 	/// The mob's current health.
 	var/health = MAX_LIVING_HEALTH
 
@@ -113,7 +113,7 @@
 	var/mob_size = MOB_SIZE_HUMAN
 	/// List of biotypes the mob belongs to. Used by diseases and reagents mainly.
 	var/mob_biotypes = MOB_ORGANIC
-	/// The type of respiration the mob is capable of doing. Used by adjustOxyLoss.
+	/// The type of respiration the mob is capable of doing. Used by adjust_oxy_loss.
 	var/mob_respiration_type = RESPIRATION_OXYGEN
 	///more or less efficiency to metabolize helpful/harmful reagents and regulate body temperature..
 	var/metabolism_efficiency = 1

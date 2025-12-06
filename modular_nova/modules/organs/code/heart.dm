@@ -4,7 +4,7 @@
 	icon = 'modular_nova/master_files/icons/obj/surgery.dmi'
 	icon_state = "heart-snail-on"
 	base_icon_state = "heart-snail"
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD // There's two of them. Also, due to the special interaction below, it's best we make sure these aren't easily lost.
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD // There's two of them. Also, due to the special interaction below, it's best we make sure these aren't easily lost.
 	now_fixed = span_info("Your hearts begin to beat again.") //For the sake of verisimilitude.
 
 	COOLDOWN_DECLARE(shell_effect_cd)

@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 /datum/fish_trait/heavy/apply_to_mob(mob/living/basic/mob)
 	. = ..()
 	mob.add_movespeed_modifier(/datum/movespeed_modifier/heavy_fish)
-	mob.maxHealth *= 1.5
+	mob.max_health *= 1.5
 	mob.health *= 1.5
 	mob.melee_damage_lower *= 1.3
 	mob.melee_damage_upper *= 1.3

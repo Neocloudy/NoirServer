@@ -16,8 +16,8 @@
 	owner.faction.Cut()
 	owner.faction += list(ROLE_GLITCH)
 
-	var/current_max = owner.maxHealth + ROUND_UP(server.threat * 0.2)
-	owner.maxHealth = clamp(current_max, 200, 500)
+	var/current_max = owner.max_health + ROUND_UP(server.threat * 0.2)
+	owner.max_health = clamp(current_max, 200, 500)
 	owner.fully_heal()
 
 	var/atom/thing = owner

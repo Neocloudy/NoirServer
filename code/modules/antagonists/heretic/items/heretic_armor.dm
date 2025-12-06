@@ -637,7 +637,7 @@
 	return COMPONENT_IGNORE_CHANGE
 
 /obj/item/clothing/suit/hooded/cultrobes/eldritch/moon/proc/handle_damage(mob/living/user, damage)
-	user.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage * damage_modifier)
+	user.adjust_organ_loss(ORGAN_SLOT_BRAIN, damage * damage_modifier)
 	check_braindeath(user)
 
 /// Gives the health HUD to the wearer
@@ -726,7 +726,7 @@
 	if(!istype(wearer) || wearer.wear_suit != src || wearer.stat == DEAD)
 		return ..()
 	if(!IS_HERETIC_OR_MONSTER(wearer))
-		wearer.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+		wearer.adjust_organ_loss(ORGAN_SLOT_BRAIN, 20)
 	var/brain_damage = wearer.get_organ_loss(ORGAN_SLOT_BRAIN)
 	var/emote_rng = 0
 	var/list/emote_list = list()
@@ -758,11 +758,11 @@
 /// Checks if you are brain dead, starts the dying process once you've reached it
 /obj/item/clothing/suit/hooded/cultrobes/eldritch/moon/proc/check_braindeath(mob/living/carbon/human/wearer)
 	var/obj/item/organ/brain/our_brain = wearer.get_organ_slot(ORGAN_SLOT_BRAIN)
-	if(braindead || our_brain.damage < our_brain.maxHealth)
+	if(braindead || our_brain.damage < our_brain.max_health)
 		return
 
 	braindead = TRUE
-	wearer.setOrganLoss(ORGAN_SLOT_BRAIN, INFINITY)
+	wearer.set_organ_loss(ORGAN_SLOT_BRAIN, INFINITY)
 	playsound(wearer, 'sound/effects/pope_entry.ogg', 50)
 	to_chat(wearer, span_bold(span_hypnophrase("A terrible fate has befallen you.")))
 	addtimer(CALLBACK(src, PROC_REF(kill_wearer), wearer), 5 SECONDS)

@@ -17,7 +17,7 @@
 	light_on = FALSE
 	light_range = 3
 	light_system = OVERLAY_LIGHT
-	maxHealth = 500
+	max_health = 500
 	mob_size = MOB_SIZE_TINY
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
 	mouse_opacity = MOUSE_OPACITY_ICON
@@ -259,7 +259,7 @@
 /mob/living/silicon/pai/updatehealth()
 	if(HAS_TRAIT(src, TRAIT_GODMODE))
 		return
-	set_health(maxHealth - getBruteLoss() - getFireLoss())
+	set_health(max_health - get_brute_loss() - get_fire_loss())
 	update_stat()
 	SEND_SIGNAL(src, COMSIG_LIVING_HEALTH_UPDATE)
 

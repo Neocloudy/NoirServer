@@ -705,7 +705,7 @@
 		if(!target_organ.damage)
 			continue
 
-		target_organ.apply_organ_damage(-repair_rate * target_organ.maxHealth * seconds_per_tick, required_organ_flag = ORGAN_ORGANIC)
+		target_organ.apply_organ_damage(-repair_rate * target_organ.max_health * seconds_per_tick, required_organ_flag = ORGAN_ORGANIC)
 
 /obj/machinery/smartfridge/organ/Exited(atom/movable/gone, direction)
 	. = ..()

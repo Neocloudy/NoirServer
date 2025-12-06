@@ -38,7 +38,7 @@
 /mob/living/basic/trooper/abductor/nova/melee/armored
 	name = "Abductor Agent"
 	desc = "Wielding the finest equipment from ✌︎︎♌︎︎♎︎︎◆︎︎♍︎︎⧫︎︎❄︎♏︎♍︎♒︎."
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	loot = list(/obj/effect/mob_spawn/corpse/human/abductor/nova/combat)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/abductor/nova/combat
@@ -47,7 +47,7 @@
 	name = "Abductor Trooper"
 	desc = "New objective from Abductor Command: 😐︎♓︎♍︎🙵 ⍓︎□︎◆︎❒︎ ♋︎⬧︎⬧︎📬︎"
 	icon_state = "abductor_agent"
-	maxHealth = 160
+	max_health = 160
 	health = 160
 	speed = 0.6
 	melee_damage_lower = 20
@@ -79,7 +79,7 @@
 /mob/living/basic/trooper/abductor/nova/ranged/armored
 	name = "Abductor Agent"
 	desc = "Wielding the finest equipment from ✌︎︎♌︎︎♎︎︎◆︎︎♍︎︎⧫︎︎❄︎♏︎♍︎♒︎."
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	projectilesound = 'modular_nova/modules/modular_weapons/sounds/laser_firing/laser.ogg'
 	burst_shots = 2
@@ -91,7 +91,7 @@
 	name = "Abductor Trooper"
 	desc = "New objective from Abductor Command: 😐︎♓︎♍︎🙵 ⍓︎□︎◆︎❒︎ ♋︎⬧︎⬧︎📬︎"
 	icon_state = "abductor_agent_combat_gun"
-	maxHealth = 160
+	max_health = 160
 	health = 160
 	speed = 0.8
 	burst_shots = 1
@@ -106,7 +106,7 @@
 /mob/living/basic/trooper/abductor/nova/ranged/heavy/boss
 	name = "Dr. Tilkmax"
 	desc = "Almost certainly not their actual name, but it's a lot more fun if you pretend it is."
-	maxHealth = 135
+	max_health = 135
 	health = 135
 	damage_coeff = list(BRUTE = 0.7, BURN = 1, TOX = 1.2, STAMINA = 0, OXY = 0) // how are you even dealing tox
 	speed = 8 // prefers to stay where he is
@@ -119,7 +119,7 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/abductor/nova/boss
 
 /mob/living/basic/trooper/abductor/nova/ranged/heavy/badass // sick as fuck trooper from when i overtuned it
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	speed = 0.9
 	burst_shots = 4

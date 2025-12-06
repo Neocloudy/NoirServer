@@ -13,7 +13,7 @@
 	response_harm_continuous = "robusts"
 	response_harm_simple = "robust"
 	combat_mode = TRUE
-	maxHealth = 75
+	max_health = 75
 	health = 75
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -75,7 +75,7 @@
 	desc = "A puddle of lube brought to life by the Honkmother."
 	icon_state = "lube"
 	icon_living = "lube"
-	maxHealth = 50
+	max_health = 50
 	health = 50
 	response_help_continuous = "dips a finger into"
 	response_help_simple = "dip a finger into"
@@ -137,7 +137,7 @@
 	response_disarm_simple = "sink your hands into the spongy flesh of"
 	response_harm_continuous = "cleanses the world of"
 	response_harm_simple = "cleanse the world of"
-	maxHealth = 140
+	max_health = 140
 	health = 140
 	speed = -0.5
 	melee_damage_upper = 15
@@ -181,7 +181,7 @@
 	response_disarm_simple = "push the unwieldy frame of"
 	response_harm_continuous = "tries to shut up"
 	response_harm_simple = "try to shut up"
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	pixel_x = -16
 	base_pixel_x = -16
@@ -217,7 +217,7 @@
 	response_disarm_simple = "foolishly push"
 	response_harm_continuous = "angers"
 	response_harm_simple = "anger"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	pixel_x = -16
 	base_pixel_x = -16
@@ -252,7 +252,7 @@
 	response_disarm_simple = "try to assert dominance over"
 	response_harm_continuous = "makes a weak beta attack at"
 	response_harm_simple = "make a weak beta attack at"
-	maxHealth = 500
+	max_health = 500
 	health = 500
 	armour_penetration = 20
 	attack_verb_continuous = "steals the girlfriend of"
@@ -279,7 +279,7 @@
 	response_help_simple = "skeptically poke"
 	response_disarm_continuous = "pushes the unwieldy frame of"
 	response_disarm_simple = "push the unwieldy frame of"
-	maxHealth = 200
+	max_health = 200
 	health = 200
 	melee_damage_upper = 15
 	attack_verb_continuous = "ferociously mauls"
@@ -315,7 +315,7 @@
 	icon_living = "destroyer"
 	response_disarm_continuous = "bounces off of"
 	response_harm_continuous = "bounces off of"
-	maxHealth = 400
+	max_health = 400
 	health = 400
 	speed = 1.5
 	melee_damage_lower = 20
@@ -351,7 +351,7 @@
 	response_disarm_simple = "squish into"
 	response_harm_continuous = "squishes into"
 	response_harm_simple = "squish into"
-	maxHealth = 130
+	max_health = 130
 	health = 130
 	pixel_x = -16
 	base_pixel_x = -16
@@ -466,14 +466,14 @@
 		foods_eaten++
 		if(!(foods_eaten % 5) && foods_eaten <= 100)
 			balloon_alert(src, "weight gained!")
-			maxHealth += 10
+			max_health += 10
 			health += 10
 		if(istype(eaten_atom, /obj/item/food/grown/banana))
 			var/obj/item/food/grown/banana/banana_morsel = eaten_atom
-			adjustBruteLoss(-(banana_morsel.seed.potency / 100 ) * maxHealth * 0.2)
+			adjust_brute_loss(-(banana_morsel.seed.potency / 100 ) * max_health * 0.2)
 			prank_pouch += banana_morsel.generate_trash(src)
 		else
-			adjustBruteLoss(-maxHealth * 0.1)
+			adjust_brute_loss(-max_health * 0.1)
 		qdel(eaten_atom)
 
 	playsound(loc,'sound/items/eatfood.ogg', rand(30,50), TRUE)
@@ -553,7 +553,7 @@
 	response_disarm_simple = "peel"
 	response_harm_continuous = "peels"
 	response_harm_simple = "peel"
-	maxHealth = 120
+	max_health = 120
 	health = 120
 	speed = -1
 	habitable_atmos = list("min_oxy" = 1, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)

@@ -5,7 +5,7 @@
 	desc = "A weaker construct meant to scour ruins for objects of Nar'Sie's affection. Those barbed claws are no joke."
 	icon_state = "proteon"
 	icon_living = "proteon"
-	maxHealth = 35
+	max_health = 35
 	health = 35
 	melee_damage_lower = 8
 	melee_damage_upper = 10

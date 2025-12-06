@@ -263,7 +263,7 @@
 	breathe_gas_volume(breath, /datum/gas/oxygen, /datum/gas/carbon_dioxide)
 	// Heal mob if not in crit.
 	if(breather.health >= breather.crit_threshold && breather.oxyloss)
-		breather.adjustOxyLoss(-5)
+		breather.adjust_oxy_loss(-5)
 
 /// Maximum Oxygen effects. "Too much O2!"
 /obj/item/organ/lungs/proc/too_much_oxygen(mob/living/carbon/breather, datum/gas_mixture/breath, o2_pp, old_o2_pp)
@@ -310,7 +310,7 @@
 	breathe_gas_volume(breath, /datum/gas/nitrogen, /datum/gas/carbon_dioxide)
 	// Heal mob if not in crit.
 	if(breather.health >= breather.crit_threshold && breather.oxyloss)
-		breather.adjustOxyLoss(-5)
+		breather.adjust_oxy_loss(-5)
 
 /// Maximum CO2 effects. "Too much CO2!"
 /obj/item/organ/lungs/proc/too_much_co2(mob/living/carbon/breather, datum/gas_mixture/breath, co2_pp, old_co2_pp)
@@ -364,7 +364,7 @@
 	breathe_gas_volume(breath, /datum/gas/plasma, /datum/gas/carbon_dioxide)
 	// Heal mob if not in crit.
 	if(breather.health >= breather.crit_threshold && breather.oxyloss)
-		breather.adjustOxyLoss(-5)
+		breather.adjust_oxy_loss(-5)
 
 /// Maximum Plasma effects. "Too much Plasma!"
 /obj/item/organ/lungs/proc/too_much_plasma(mob/living/carbon/breather, datum/gas_mixture/breath, plasma_pp, old_plasma_pp)
@@ -390,7 +390,7 @@
 	if(bz_pp > BZ_trip_balls_min)
 		breather.reagents.add_reagent(/datum/reagent/bz_metabolites, clamp(bz_pp, 1, 5))
 	if(bz_pp > BZ_brain_damage_min && prob(33))
-		breather.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150, ORGAN_ORGANIC)
+		breather.adjust_organ_loss(ORGAN_SLOT_BRAIN, 3, 150, ORGAN_ORGANIC)
 
 /// Breathing in refridgerator coolent, shit's caustic
 /obj/item/organ/lungs/proc/too_much_freon(mob/living/carbon/breather, datum/gas_mixture/breath, freon_pp, old_freon_pp)
@@ -402,12 +402,12 @@
 		to_chat(breather, span_alert("Your mouth feels like it's burning!"))
 	if (freon_pp > 40)
 		breather.emote("gasp")
-		breather.adjustFireLoss(15)
+		breather.adjust_fire_loss(15)
 		if (prob(freon_pp / 2))
 			to_chat(breather, span_alert("Your throat closes up!"))
 			breather.set_silence_if_lower(6 SECONDS)
 	else
-		breather.adjustFireLoss(freon_pp / 4)
+		breather.adjust_fire_loss(freon_pp / 4)
 
 /// Breathing in halon, convert it to a reagent
 /obj/item/organ/lungs/proc/too_much_halon(mob/living/carbon/breather, datum/gas_mixture/breath, halon_pp, old_halon_pp)
@@ -415,7 +415,7 @@
 	breathe_gas_volume(breath, /datum/gas/halon)
 	// Metabolize to reagent.
 	if(halon_pp > gas_stimulation_min)
-		breather.adjustOxyLoss(5)
+		breather.adjust_oxy_loss(5)
 		breather.reagents.add_reagent(/datum/reagent/halon, max(0, 1 - breather.reagents.get_reagent_amount(/datum/reagent/halon)))
 
 /// Sleeping gas with healing properties.
@@ -555,7 +555,7 @@
 	// Random chance to inflict side effects increases with pressure.
 	if((prob(nitrium_pp) && (nitrium_pp > 15)))
 		// Nitrium side-effect.
-		breather.adjustOrganLoss(ORGAN_SLOT_LUNGS, nitrium_pp * 0.1)
+		breather.adjust_organ_loss(ORGAN_SLOT_LUNGS, nitrium_pp * 0.1)
 		to_chat(breather, span_notice("You feel a burning sensation in your chest"))
 	// Metabolize to reagents.
 	if (nitrium_pp > 5)
@@ -572,7 +572,7 @@
 	// Tritium side-effects.
 	if(gas_breathed > moles_visible)
 		var/ratio = gas_breathed * 15
-		breather.adjustToxLoss(clamp(ratio, MIN_TOXIC_GAS_DAMAGE, MAX_TOXIC_GAS_DAMAGE))
+		breather.adjust_tox_loss(clamp(ratio, MIN_TOXIC_GAS_DAMAGE, MAX_TOXIC_GAS_DAMAGE))
 	// If you're breathing in half an atmosphere of radioactive gas, you fucked up.
 	if((trit_pp > tritium_irradiation_moles_min) && SSradiation.can_irradiate_basic(breather))
 		var/lerp_scale = min(tritium_irradiation_moles_max, trit_pp - tritium_irradiation_moles_min) / (tritium_irradiation_moles_max - tritium_irradiation_moles_min)
@@ -635,7 +635,7 @@
 		breather.failed_last_breath = FALSE
 		// Vacuum-adapted lungs regenerate oxyloss even when breathing nothing.
 		if(breather.health >= breather.crit_threshold && breather.oxyloss)
-			breather.adjustOxyLoss(-5)
+			breather.adjust_oxy_loss(-5)
 	else
 		// Can't breathe!
 		breather.failed_last_breath = TRUE
@@ -904,7 +904,7 @@
 	desc = "A plasma filter that look discolored, a result from smoking a lot."
 	icon_state = "lungs_plasma_smoker"
 	breath_noise = "a wheezing crackle, like crushed foam"
-	maxHealth = SMOKER_ORGAN_HEALTH
+	max_health = SMOKER_ORGAN_HEALTH
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/lungs/slime
@@ -924,7 +924,7 @@
 	desc = "A pair of lungs that look sickly, a result from smoking a lot."
 	icon_state = "lungs_smoker"
 	breath_noise = "an unsteady, wheezing rhythm"
-	maxHealth = SMOKER_ORGAN_HEALTH
+	max_health = SMOKER_ORGAN_HEALTH
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/lungs/cybernetic
@@ -934,7 +934,7 @@
 	icon_state = "lungs-c"
 	breath_noise = "a steady whirr"
 	organ_flags = ORGAN_ROBOTIC
-	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.5
+	max_health = STANDARD_ORGAN_THRESHOLD * 0.5
 	var/emp_vulnerability = 80 //Chance of permanent effects if emp-ed.
 
 /obj/item/organ/lungs/cybernetic/emp_act(severity)
@@ -951,7 +951,7 @@
 	name = "cybernetic lungs"
 	desc = "A cybernetic version of the lungs found in traditional humanoid entities. Allows for greater intakes of oxygen than organic lungs, requiring slightly less pressure."
 	icon_state = "lungs-c-u"
-	maxHealth = 1.5 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.5 * STANDARD_ORGAN_THRESHOLD
 	safe_oxygen_min = 13
 	emp_vulnerability = 40
 
@@ -961,7 +961,7 @@
 	icon_state = "lungs-c-u2"
 	safe_plasma_max = 20
 	safe_co2_max = 20
-	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 2 * STANDARD_ORGAN_THRESHOLD
 	safe_oxygen_min = 13
 	emp_vulnerability = 20
 
@@ -975,7 +975,7 @@
 		Offer no protection against EMPs."
 	breath_noise = "a concerningly unstable scratchy whirr. You <b>shouldn't touch this</b> while it's running"
 	icon_state = "lungs-c-s"
-	maxHealth = 0.35 * STANDARD_ORGAN_THRESHOLD
+	max_health = 0.35 * STANDARD_ORGAN_THRESHOLD
 	emp_vulnerability = 100
 
 //surplus organs are so awful that they explode when removed, unless failing
@@ -1100,7 +1100,7 @@
 	desc = "A pair of exotic lungs that look pale and sickly, a result from smoking a lot."
 	icon_state = "lungs_ethereal_smoker"
 	breath_noise = "a spotty hum, like a broken lightbulb"
-	maxHealth = SMOKER_ORGAN_HEALTH
+	max_health = SMOKER_ORGAN_HEALTH
 	healing_factor = SMOKER_LUNG_HEALING
 
 /obj/item/organ/lungs/ethereal/Initialize(mapload)
@@ -1131,7 +1131,7 @@
 
 	safe_plasma_max = 8
 	safe_co2_max = 8
-	maxHealth = 1.2 * STANDARD_ORGAN_THRESHOLD
+	max_health = 1.2 * STANDARD_ORGAN_THRESHOLD
 	safe_oxygen_min = 8
 
 #undef BREATH_RELATIONSHIP_INITIAL_GAS

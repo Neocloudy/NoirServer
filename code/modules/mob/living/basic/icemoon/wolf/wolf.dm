@@ -17,7 +17,7 @@
 	)
 	crusher_loot = /obj/item/crusher_trophy/wolf_ear
 
-	maxHealth = 130
+	max_health = 130
 	health = 130
 	obj_damage = 15
 	melee_damage_lower = 7.5

@@ -13,7 +13,7 @@
 		/obj/item/stack/sheet/animalhide/xeno = 1,
 	)
 
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	bubble_icon = "alien"
 	combat_mode = TRUE

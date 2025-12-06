@@ -23,8 +23,8 @@
 	playsound(caster, 'sound/effects/magic/demon_consume.ogg', 50, TRUE)
 	var/mob/living/monster = .
 	monster.AddComponent(/datum/component/seethrough_mob)
-	monster.maxHealth *= 1.5
-	monster.health = monster.maxHealth
+	monster.max_health *= 1.5
+	monster.health = monster.max_health
 	monster.melee_damage_lower = max((monster.melee_damage_lower * 2), 40)
 	monster.melee_damage_upper = monster.melee_damage_upper / 2
 	monster.transform *= 1.5

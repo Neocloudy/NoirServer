@@ -4,7 +4,7 @@
 	desc = "A long, thin construct built to herald Nar'Sie's rise. It'll be all over soon."
 	icon_state = "harvester"
 	icon_living = "harvester"
-	maxHealth = 40
+	max_health = 40
 	health = 40
 	sight = SEE_MOBS
 	melee_damage_lower = 15
@@ -143,7 +143,7 @@
 	can_repair = FALSE
 	slowed_by_drag = FALSE
 	faction = list(FACTION_HERETIC)
-	maxHealth = 45
+	max_health = 45
 	health = 45
 	melee_damage_lower = 20
 	melee_damage_upper = 25

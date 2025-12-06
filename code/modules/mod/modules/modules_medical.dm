@@ -27,11 +27,11 @@
 /obj/item/mod/module/health_analyzer/add_ui_data()
 	. = ..()
 	.["health"] = mod.wearer?.health || 0
-	.["health_max"] = mod.wearer?.getMaxHealth() || 0
-	.["loss_brute"] = mod.wearer?.getBruteLoss() || 0
-	.["loss_fire"] = mod.wearer?.getFireLoss() || 0
-	.["loss_tox"] = mod.wearer?.getToxLoss() || 0
-	.["loss_oxy"] = mod.wearer?.getOxyLoss() || 0
+	.["health_max"] = mod.wearer?.get_max_health() || 0
+	.["loss_brute"] = mod.wearer?.get_brute_loss() || 0
+	.["loss_fire"] = mod.wearer?.get_fire_loss() || 0
+	.["loss_tox"] = mod.wearer?.get_tox_loss() || 0
+	.["loss_oxy"] = mod.wearer?.get_oxy_loss() || 0
 
 	return .
 

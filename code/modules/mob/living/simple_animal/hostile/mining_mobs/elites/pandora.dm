@@ -25,7 +25,7 @@
 	icon_dead = "pandora_dead"
 	icon_gib = "syndicate_gib"
 	health_doll_icon = "pandora"
-	maxHealth = 1000
+	max_health = 1000
 	health = 1000
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -98,10 +98,10 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/pandora/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	. = ..()
-	if(health >= maxHealth * 0.5)
+	if(health >= max_health * 0.5)
 		cooldown_time = 2 SECONDS
 		return
-	if(health < maxHealth * 0.5 && health > maxHealth * 0.25)
+	if(health < max_health * 0.5 && health > max_health * 0.25)
 		cooldown_time = 1.5 SECONDS
 		return
 	else

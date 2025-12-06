@@ -3,7 +3,7 @@
 	desc = "Attack the weak point for massive damage."
 	abstract_type = /mob/living/simple_animal/hostile/megafauna
 	health = 1000
-	maxHealth = 1000
+	max_health = 1000
 	combat_mode = TRUE
 	sentience_type = SENTIENCE_BOSS
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
@@ -141,13 +141,13 @@
 		return FALSE
 	celebrate_kill(victim)
 	if(!is_station_level(z) || client) //NPC monsters won't heal while on station
-		heal_overall_damage(victim.maxHealth * 0.5)
+		heal_overall_damage(victim.max_health * 0.5)
 	victim.investigate_log("has been devoured by [src].", INVESTIGATE_DEATHS)
 	if(iscarbon(victim))
 		qdel(victim.get_organ_slot(ORGAN_SLOT_LUNGS))
 		qdel(victim.get_organ_slot(ORGAN_SLOT_HEART))
 		qdel(victim.get_organ_slot(ORGAN_SLOT_LIVER))
-	victim.adjustBruteLoss(500)
+	victim.adjust_brute_loss(500)
 	victim.death() //make sure they die
 	victim.apply_status_effect(/datum/status_effect/gutted)
 	LoseTarget()
@@ -170,13 +170,13 @@
 /mob/living/simple_animal/hostile/megafauna/ex_act(severity, target)
 	switch (severity)
 		if (EXPLODE_DEVASTATE)
-			adjustBruteLoss(250)
+			adjust_brute_loss(250)
 
 		if (EXPLODE_HEAVY)
-			adjustBruteLoss(100)
+			adjust_brute_loss(100)
 
 		if (EXPLODE_LIGHT)
-			adjustBruteLoss(50)
+			adjust_brute_loss(50)
 
 	return TRUE
 

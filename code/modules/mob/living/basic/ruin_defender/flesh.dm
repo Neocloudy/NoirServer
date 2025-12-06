@@ -31,7 +31,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	health = 20
-	maxHealth = 20
+	max_health = 20
 	attack_sound = 'sound/items/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "tries desperately to attach to"

@@ -42,7 +42,7 @@
 	ranged_cooldown_time = 30
 	minimum_distance = 1
 	health = 4000
-	maxHealth = 4000 //for contrast, bubblegum and the colossus both have 2500 health
+	max_health = 4000 //for contrast, bubblegum and the colossus both have 2500 health
 	movement_type = GROUND
 	mouse_opacity = MOUSE_OPACITY_OPAQUE
 	loot = list(/obj/structure/closet/crate/necropolis/gladiator)
@@ -259,7 +259,7 @@
 
 /// Checks against the Marked One's current health and updates his phase accordingly. Uses variable shitcode to make sure his phase updates only ever happen *once*
 /mob/living/simple_animal/hostile/megafauna/gladiator/proc/update_phase()
-	var/healthpercentage = 100 * (health/maxHealth)
+	var/healthpercentage = 100 * (health/max_health)
 	if(src.stat >= DEAD)
 		return
 	switch(healthpercentage)

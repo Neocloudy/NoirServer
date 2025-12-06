@@ -7,7 +7,7 @@
 	icon_living = "evilbotold"
 	gender = NEUTER
 	basic_mob_flags = DEL_ON_DEATH
-	maxHealth = 125
+	max_health = 125
 	health = 125
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -59,7 +59,7 @@
 	icon = 'modular_nova/master_files/icons/mob/newmobs.dmi'
 	icon_state = "evilbotheavy"
 	health = 200
-	maxHealth = 200
+	max_health = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	attack_verb_continuous = "saws"
@@ -78,7 +78,7 @@
 	icon_state = "evilbotpeace"
 	icon_living = "evilbotpeace"
 	health = 125
-	maxHealth = 125
+	max_health = 125
 	melee_damage_lower = 18
 	melee_damage_upper = 18
 	attack_verb_continuous = "smacks"
@@ -97,7 +97,7 @@
 	icon_state = "evilbotengi"
 	icon_living = "evilbotengi"
 	health = 145
-	maxHealth = 145
+	max_health = 145
 	melee_damage_type = BURN
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -117,7 +117,7 @@
 	icon_state = "evilbotsec"
 	icon_living = "evilbotsec"
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	melee_damage_lower = 8
 	melee_damage_upper = 8
 	attack_verb_continuous = "gunbutts"
@@ -150,7 +150,7 @@
 	icon_state = "evilbotroomba"
 	icon_living = "evilbotroomba"
 	health = 110
-	maxHealth = 110
+	max_health = 110
 	melee_damage_lower = 12
 	melee_damage_upper = 12
 	attack_verb_continuous = "pokes"
@@ -169,7 +169,7 @@
 	icon_state = "evilbotmine"
 	icon_living = "evilbotmine"
 	health = 155
-	maxHealth = 155
+	max_health = 155
 	melee_damage_lower = 12
 	melee_damage_upper = 12
 	attack_verb_continuous = "cleaves"
@@ -188,7 +188,7 @@
 	icon_state = "evilbotelite" // ported from VORE
 	icon_living = "evilbotelite"
 	health = 180
-	maxHealth = 180
+	max_health = 180
 	melee_damage_lower = 18
 	melee_damage_upper = 18
 	attack_verb_continuous = "bites"
@@ -207,7 +207,7 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	health = 350
-	maxHealth = 350
+	max_health = 350
 	melee_damage_lower = 12
 	melee_damage_upper = 12
 	attack_verb_continuous = "gunbutts"
@@ -244,7 +244,7 @@
 	icon_living = "protectbot"
 	ranged_attacker = FALSE
 	health = 150
-	maxHealth = 150
+	max_health = 150
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	attack_verb_continuous = "claws"

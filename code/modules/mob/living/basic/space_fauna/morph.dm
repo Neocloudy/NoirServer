@@ -13,7 +13,7 @@
 	mob_biotypes = MOB_BEAST
 	pass_flags = PASSTABLE
 
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	habitable_atmos = null
 	minimum_survivable_temperature = TCMB

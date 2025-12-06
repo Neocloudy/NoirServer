@@ -8,7 +8,7 @@
 
 /mob/living/basic/trooper/syndicate/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	corpse = /obj/effect/gibspawner/human
 	unsuitable_atmos_damage = 0
@@ -22,7 +22,7 @@
 
 /mob/living/basic/trooper/syndicate/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
 
@@ -45,7 +45,7 @@
 
 /mob/living/basic/trooper/syndicate/melee/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
@@ -58,7 +58,7 @@
 
 /mob/living/basic/trooper/syndicate/melee/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
 
@@ -78,7 +78,7 @@
 
 /mob/living/basic/trooper/syndicate/melee/sword/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
@@ -91,7 +91,7 @@
 
 /mob/living/basic/trooper/syndicate/melee/sword/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	projectile_deflect_chance = 50
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
@@ -129,7 +129,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
@@ -142,7 +142,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
 
@@ -168,7 +168,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/smg/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
@@ -181,7 +181,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/smg/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
 
@@ -194,7 +194,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/shotgun/space
 	name = "Syndicate Commando"
-	maxHealth = 170
+	max_health = 170
 	health = 170
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = 0
@@ -207,7 +207,7 @@
 
 /mob/living/basic/trooper/syndicate/ranged/shotgun/space/stormtrooper
 	name = "Syndicate Stormtrooper"
-	maxHealth = 250
+	max_health = 250
 	health = 250
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/syndicatestormtrooper
 
@@ -227,7 +227,7 @@
 	maximum_survivable_temperature = 700
 	unsuitable_cold_damage = 0
 	health = 25
-	maxHealth = 25
+	max_health = 25
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	wound_bonus = -10

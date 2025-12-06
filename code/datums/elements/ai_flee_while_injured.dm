@@ -32,7 +32,7 @@
 	if (isnull(source.ai_controller))
 		return
 
-	var/current_health_percentage = source.health / source.maxHealth
+	var/current_health_percentage = source.health / source.max_health
 	if (source.ai_controller.blackboard[BB_BASIC_MOB_STOP_FLEEING])
 		if (current_health_percentage > start_fleeing_below)
 			return

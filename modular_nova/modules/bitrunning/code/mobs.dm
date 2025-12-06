@@ -1,5 +1,5 @@
 /mob/living/basic/construct/juggernaut/angelic/bitrunning
-	maxHealth = 300
+	max_health = 300
 	health = 300
 	obj_damage = 40
 	move_force = MOVE_FORCE_VERY_STRONG
@@ -16,7 +16,7 @@
 	AddElement(/datum/element/wall_tearer, allow_reinforced = TRUE)
 
 /mob/living/basic/construct/wraith/angelic/bitrunning
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	faction = list(FACTION_NEUTRAL)
 	construct_spells = list(
@@ -49,7 +49,7 @@
 	icon_gib = "palm1"
 	health_doll_icon = "palm1"
 	faction = list(FACTION_NEUTRAL)
-	maxHealth = 100
+	max_health = 100
 	health = 100
 	paralyze_prob = 0
 	paralyze_value = 0
@@ -58,7 +58,7 @@
 /mob/living/basic/mimic/crate/minor_illusion
 	faction = list(FACTION_NEUTRAL)
 	speed = 1
-	maxHealth = 100
+	max_health = 100
 	health = 100
 
 /mob/living/basic/mimic/watermelon
@@ -79,7 +79,7 @@
 	melee_damage_upper = 9
 	obj_damage = 5
 	speed = 0
-	maxHealth = 50
+	max_health = 50
 	health = 50
 
 /mob/living/basic/mimic/watermelon/Initialize(mapload)

@@ -106,14 +106,14 @@
 /// The actual proc that will apply the damage to the suiciding mob. damage_type is the actual type of damage we want to deal, if that matters.
 /// Return TRUE if we actually apply any real damage, FALSE otherwise.
 /mob/living/proc/apply_suicide_damage(obj/item/suicide_tool, damage_type = NONE)
-	adjustOxyLoss(max(maxHealth * 2 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
+	adjust_oxy_loss(max(max_health * 2 - get_tox_loss() - get_fire_loss() - get_brute_loss() - get_oxy_loss(), 0))
 	return TRUE
 
 /// If we want to apply multiple types of damage to a carbon mob based on the way they suicide, this is the proc that handles that.
 /// Currently only compatible with Brute, Burn, Toxin, and Suffocation Damage. damage_type is the bitflag that carries the information.
 /mob/living/proc/handle_suicide_damage_spread(damage_type)
 	// We split up double the total health the mob has, then spread it out.
-	var/damage_to_apply = (maxHealth * 2) // For humans, this value comes out to 200.
+	var/damage_to_apply = (max_health * 2) // For humans, this value comes out to 200.
 	// The multiplier that we divide damage_to_apply by.
 	var/damage_mod = 0
 	// We don't want to damage_type again and again, this will hold the results.
@@ -131,10 +131,10 @@
 	for(var/filtered_type in filtered_damage_types)
 		switch(filtered_type)
 			if(BRUTELOSS)
-				adjustBruteLoss(damage_to_apply)
+				adjust_brute_loss(damage_to_apply)
 			if(FIRELOSS)
-				adjustFireLoss(damage_to_apply)
+				adjust_fire_loss(damage_to_apply)
 			if(OXYLOSS)
-				adjustOxyLoss(damage_to_apply)
+				adjust_oxy_loss(damage_to_apply)
 			if(TOXLOSS)
-				adjustToxLoss(damage_to_apply)
+				adjust_tox_loss(damage_to_apply)

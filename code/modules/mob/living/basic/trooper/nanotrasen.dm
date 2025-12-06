@@ -62,7 +62,7 @@
 /mob/living/basic/trooper/nanotrasen/ranged/elite
 	name = "Nanotrasen Elite Assault Officer"
 	desc = "Pray for your life, syndicate. Run while you can."
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	habitable_atmos = null
 	unsuitable_cold_damage = 0

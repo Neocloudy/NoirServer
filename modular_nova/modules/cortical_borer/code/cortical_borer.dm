@@ -83,7 +83,7 @@ GLOBAL_LIST_EMPTY(cortical_borers)
 	icon_state = "brainslug"
 	icon_living = "brainslug"
 	icon_dead = "brainslug_dead"
-	maxHealth = 25
+	max_health = 25
 	health = 25
 	//they need to be able to pass tables and mobs
 	pass_flags = PASSTABLE | PASSMOB
@@ -298,8 +298,8 @@ GLOBAL_LIST_EMPTY(cortical_borers)
 		return
 
 	//there needs to be a negative to having a borer
-	if(prob(5 * host_harm_multiplier * ((upgrade_flags & BORER_STEALTH_MODE) ? 0.1 : 1)) && human_host.getToxLoss() <= (80 * host_harm_multiplier))
-		human_host.adjustToxLoss(5 * host_harm_multiplier, TRUE, TRUE)
+	if(prob(5 * host_harm_multiplier * ((upgrade_flags & BORER_STEALTH_MODE) ? 0.1 : 1)) && human_host.get_tox_loss() <= (80 * host_harm_multiplier))
+		human_host.adjust_tox_loss(5 * host_harm_multiplier, TRUE, TRUE)
 
 	human_host.apply_status_effect(/datum/status_effect/grouped/screwy_hud/fake_healthy, type)
 
@@ -317,9 +317,9 @@ GLOBAL_LIST_EMPTY(cortical_borers)
 			chemical_storage = min(chemical_storage + chemical_regen, max_chemical_storage)
 
 	//this is regenerating health
-	if(health < maxHealth)
+	if(health < max_health)
 		if(!(upgrade_flags & BORER_STEALTH_MODE))
-			health = min(health * health_regen, maxHealth)
+			health = min(health * health_regen, max_health)
 
 	//this is so they can evolve
 	if(timed_maturity < world.time)
@@ -476,15 +476,15 @@ GLOBAL_LIST_EMPTY(cortical_borers)
 /// Use to recalculate a borer's health and chemical stats when something retroactively affects them
 /mob/living/basic/cortical_borer/proc/recalculate_stats()
 	var/old_health = health
-	maxHealth = initial(maxHealth) + (level * health_per_level)
+	max_health = initial(max_health) + (level * health_per_level)
 	health_regen = initial(health_regen) + (level * health_regen_per_level)
 	max_chemical_storage = initial(max_chemical_storage) + (level * chem_storage_per_level)
 	chemical_regen = initial(chemical_regen) + (level * chem_regen_per_level)
-	health = clamp(old_health, 1, maxHealth)
+	health = clamp(old_health, 1, max_health)
 
 // Only able to spawn from an egg burst from a corpse, starts off stronger
 /mob/living/basic/cortical_borer/empowered
-	maxHealth = 150
+	max_health = 150
 	health = 150
 	health_per_level = 15
 	health_regen_per_level = 0.04

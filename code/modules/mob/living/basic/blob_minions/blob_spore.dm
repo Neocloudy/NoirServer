@@ -10,7 +10,7 @@
 	icon_living = "blobpod"
 	health_doll_icon = "blobpod"
 	health = BLOBMOB_SPORE_HEALTH
-	maxHealth = BLOBMOB_SPORE_HEALTH
+	max_health = BLOBMOB_SPORE_HEALTH
 	verb_say = "psychically pulses"
 	verb_ask = "psychically probes"
 	verb_exclaim = "psychically yells"
@@ -105,7 +105,7 @@
 /mob/living/basic/blob_minion/spore/minion/weak
 	name = "fragile blob spore"
 	health = BLOBMOB_SPORE_HEALTH / 2
-	maxHealth = BLOBMOB_SPORE_HEALTH / 2
+	max_health = BLOBMOB_SPORE_HEALTH / 2
 	melee_damage_lower = BLOBMOB_SPORE_DMG_LOWER / 2
 	melee_damage_upper = BLOBMOB_SPORE_DMG_UPPER / 2
 	death_cloud_size = BLOBMOB_CLOUD_SMALL

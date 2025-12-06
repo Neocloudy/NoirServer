@@ -28,7 +28,7 @@
 	faction = list(FACTION_NEUTRAL)
 	can_be_held = FALSE
 	health = 100
-	maxHealth = 100
+	max_health = 100
 	light_range = 1.5 // Bioluminescence!
 	minimum_survivable_temperature = T20C - 100
 	maximum_survivable_temperature = T20C + 120

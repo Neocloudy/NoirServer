@@ -314,7 +314,7 @@ GLOBAL_LIST_INIT(mook_commands, list(
 /datum/ai_behavior/find_hunt_target/injured_mooks
 
 /datum/ai_behavior/find_hunt_target/injured_mooks/valid_dinner(mob/living/source, mob/living/injured_mook)
-	return (injured_mook.health < injured_mook.maxHealth)
+	return (injured_mook.health < injured_mook.max_health)
 
 /datum/ai_behavior/hunt_target/interact_with_target/injured_mooks
 	always_reset_target = TRUE

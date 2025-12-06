@@ -10,7 +10,7 @@ I'd rather there be something than the clockwork ruin be entirely empty though s
 	name = "clockwork defender"
 	desc = "A traitorous clockwork knight who lived on, despite its creators destruction."
 	health = 300
-	maxHealth = 300
+	max_health = 300
 	icon_state = "clockwork_defender"
 	icon_living = "clockwork_defender"
 	icon = 'icons/mob/simple/icemoon/icemoon_monsters.dmi'

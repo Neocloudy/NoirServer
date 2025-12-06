@@ -18,7 +18,7 @@
 	maximum_survivable_temperature = INFINITY
 	friendly_verb_continuous = "chatters near"
 	friendly_verb_simple = "chatter near"
-	maxHealth = 1
+	max_health = 1
 	health = 1
 	melee_damage_lower = 12
 	melee_damage_upper = 12

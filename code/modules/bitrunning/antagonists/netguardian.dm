@@ -16,7 +16,7 @@
 	mob_size = MOB_SIZE_HUGE
 
 	health = 500
-	maxHealth = 500
+	max_health = 500
 	melee_damage_lower = 45
 	melee_damage_upper = 65
 

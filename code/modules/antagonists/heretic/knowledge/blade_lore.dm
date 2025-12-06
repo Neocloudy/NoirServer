@@ -156,14 +156,14 @@
 /datum/heretic_knowledge/duel_stance/proc/on_health_update(mob/living/source)
 	SIGNAL_HANDLER
 
-	if(in_duelist_stance && source.health > source.maxHealth * 0.5)
+	if(in_duelist_stance && source.health > source.max_health * 0.5)
 		source.balloon_alert(source, "exited duelist stance")
 		in_duelist_stance = FALSE
 		source.remove_traits(list(TRAIT_HARDLY_WOUNDED), type)
 		source.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown, TRUE)
 		return
 
-	if(!in_duelist_stance && source.health <= source.maxHealth * 0.5)
+	if(!in_duelist_stance && source.health <= source.max_health * 0.5)
 		source.balloon_alert(source, "entered duelist stance")
 		in_duelist_stance = TRUE
 		ADD_TRAIT(source, TRAIT_HARDLY_WOUNDED, type)

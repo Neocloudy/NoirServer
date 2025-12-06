@@ -29,7 +29,7 @@
 	if(!isliving(target))
 		return
 	var/mob/living/living_target = target
-	var/health_percentage = (living_target.health / living_target.maxHealth) * 100
+	var/health_percentage = (living_target.health / living_target.max_health) * 100
 	if(living_target.stat == DEAD || health_percentage > damage_percentage)
 		return
-	living_target.adjustBruteLoss(brute_damage_amount)
+	living_target.adjust_brute_loss(brute_damage_amount)

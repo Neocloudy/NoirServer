@@ -11,7 +11,7 @@
 	icon_dead = "headslug_dead"
 	gender = NEUTER
 	health = 50
-	maxHealth = 50
+	max_health = 50
 	max_stamina = 120
 	melee_damage_lower = 5
 	melee_damage_upper = 5
